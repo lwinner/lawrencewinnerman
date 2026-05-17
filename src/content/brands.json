@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Peptidings",
+    "url": "https://peptidings.com",
+    "role": "Founder & CEO",
+    "description": "A peer-reviewed-quality publication on therapeutic peptides. The institutional center of the portfolio."
+  },
+  {
+    "name": "Blue Amp Media",
+    "url": "https://blueamp.co",
+    "role": "Chief Operating Officer",
+    "description": "Progressive Democratic political media — YouTube channel @Cliffs_Edge, the Blue Letter newsletter, podcasts. With founder Cliff Schecter."
+  },
+  {
+    "name": "The Hinge & Near Field",
+    "url": "https://lwinner.substack.com",
+    "role": "Writer & Publisher",
+    "description": "Personal Substack. Essays on pivot moments in politics, technology, and culture; near-future scenarios; speculative fiction; The Shattered World Series."
+  },
+  {
+    "name": "The Imagination Project",
+    "url": "https://theimaginationproject.org",
+    "role": "Founder",
+    "description": "Futuretypes — a personality-archetype quiz built on literary archetypes rather than pop psychology."
+  },
+  {
+    "name": "PepDoc",
+    "url": null,
+    "role": "Subject & Author",
+    "description": "Documentary film and companion book about building Peptidings with Claude as an integrated executive partner. In production."
+  },
+  {
+    "name": "GenXy",
+    "url": "https://genxy.io",
+    "role": "Co-Founder & Co-Host",
+    "description": "Generational-politics community and podcast. The Daily Whatever Show with Dana DuBois (best friend of 47 years)."
+  }
+]

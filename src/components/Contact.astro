@@ -1,0 +1,45 @@
+---
+const email = "lwinner@gmail.com";
+---
+<section id="contact" class="contact">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h2>The door is open.</h2>
+    <p class="contact-lead">
+      For collaborations, sponsorships, speaking invitations, podcast bookings,
+      advising conversations, or just to say hello — write directly.
+    </p>
+    <p class="contact-email">
+      <a href={`mailto:${email}?subject=Hello%20Lawrence`} class="btn">Email me →</a>
+    </p>
+    <ul class="elsewhere" role="list">
+      <li><a href="https://lwinner.substack.com" rel="noopener">Substack</a></li>
+      <li><a href="https://www.linkedin.com/in/lawrencewinnerman" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://bsky.app/profile/lawrencewinnerman.com" rel="noopener">Bluesky</a></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .contact-lead {
+    max-width: 56ch;
+    font-style: italic;
+    margin: 0 0 2rem;
+  }
+  .contact-email { margin: 0 0 3rem; }
+  .elsewhere {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .elsewhere a { color: var(--lw-slate); }
+  .elsewhere a:hover { color: var(--lw-red); }
+</style>

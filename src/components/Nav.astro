@@ -1,0 +1,99 @@
+---
+// Sticky nav with anchor links and scroll-spy active state.
+const items = [
+  { href: "#bio",      label: "Bio" },
+  { href: "#work",     label: "Work" },
+  { href: "#writing",  label: "Writing" },
+  { href: "#contact",  label: "Contact" },
+];
+---
+<nav class="nav" aria-label="Primary">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="/sigil-master.svg" alt="" width="32" height="32" aria-hidden="true" />
+      <span>LAWRENCE WINNERMAN</span>
+    </a>
+    <ul class="links">
+      {items.map(item => (
+        <li><a href={item.href} data-spy={item.href.slice(1)}>{item.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--lw-cream) 92%, transparent);
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--lw-rule);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.16em;
+    color: var(--lw-slate);
+  }
+  .brand img { width: 32px; height: 32px; }
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  .links a {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lw-slate);
+    transition: color 0.15s ease;
+  }
+  .links a:hover,
+  .links a.active {
+    color: var(--lw-red);
+  }
+  @media (max-width: 640px) {
+    .brand span { display: none; }
+    .links { gap: 1.25rem; }
+  }
+</style>
+
+<script>
+  // Simple scroll-spy — highlight active section in the nav
+  const links = document.querySelectorAll<HTMLAnchorElement>(".links a[data-spy]");
+  const map = new Map<string, HTMLAnchorElement>();
+  links.forEach(a => map.set(a.dataset.spy!, a));
+
+  const sections = Array.from(map.keys())
+    .map(id => document.getElementById(id))
+    .filter(Boolean) as HTMLElement[];
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const a = map.get(entry.target.id);
+      if (!a) return;
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove("active"));
+        a.classList.add("active");
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px", threshold: 0 });
+
+  sections.forEach(s => io.observe(s));
+</script>

@@ -1,0 +1,78 @@
+---
+import brands from "../content/brands.json";
+---
+<section id="work" class="work">
+  <div class="container">
+    <p class="eyebrow">The work</p>
+    <h2>Six brands, one thesis.</h2>
+    <p class="work-lead">
+      The brands are not a portfolio I chose. They are the visible shape of a mind that won't stop
+      pattern-matching across politics, science, technology, generational theory, and the felt
+      experience of being alive. The personal brand is the gravity well they all orbit.
+    </p>
+    <ul class="brand-grid" role="list">
+      {brands.map(b => (
+        <li class="brand-card">
+          <h3 class="brand-name">{b.name}</h3>
+          <p class="brand-role">{b.role}</p>
+          <p class="brand-desc">{b.description}</p>
+          {b.url && (
+            <a class="brand-link" href={b.url} rel="noopener">
+              Visit <span aria-hidden="true">→</span>
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .work-lead {
+    max-width: 56ch;
+    margin: 0 0 3rem;
+    font-style: italic;
+    color: var(--lw-slate);
+  }
+  .brand-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .brand-card {
+    padding: 1.75rem;
+    border: 1px solid var(--lw-rule);
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--lw-cream) 60%, white);
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-name {
+    font-family: var(--font-subhead);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem;
+  }
+  .brand-role {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lw-red);
+    margin: 0 0 1rem;
+  }
+  .brand-desc { margin: 0 0 1.5rem; flex: 1; }
+  .brand-link {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--fs-small);
+    color: var(--lw-slate);
+    letter-spacing: 0.04em;
+    align-self: flex-start;
+  }
+  .brand-link:hover { color: var(--lw-red); }
+</style>

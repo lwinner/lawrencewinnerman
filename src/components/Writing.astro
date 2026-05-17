@@ -1,0 +1,57 @@
+---
+import pieces from "../content/writing.json";
+---
+<section id="writing" class="writing">
+  <div class="container">
+    <p class="eyebrow">The writing</p>
+    <h2>Three places to start.</h2>
+    <ul class="writing-list" role="list">
+      {pieces.map(p => (
+        <li class="piece">
+          <p class="piece-section">{p.section}</p>
+          <h3 class="piece-title">
+            <a href={p.url} rel="noopener">{p.title}</a>
+          </h3>
+          <p class="piece-kicker">{p.kicker}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="writing-cta">
+      <a class="btn" href="https://lwinner.substack.com" rel="noopener">
+        Read the full Substack →
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .writing-list {
+    list-style: none;
+    margin: 0 0 3rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 64ch;
+  }
+  .piece { border-top: 1px solid var(--lw-rule); padding-top: 1.75rem; }
+  .piece-section {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lw-muted);
+    margin: 0 0 0.5rem;
+  }
+  .piece-title {
+    font-family: var(--font-subhead);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem;
+  }
+  .piece-title a { color: var(--lw-slate); }
+  .piece-title a:hover { color: var(--lw-red); }
+  .piece-kicker { font-style: italic; max-width: 56ch; }
+  .writing-cta { margin-top: 1rem; }
+</style>

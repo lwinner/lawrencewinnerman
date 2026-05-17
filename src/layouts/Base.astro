@@ -1,0 +1,70 @@
+---
+// Base layout — Typekit, color tokens, meta tags, font preconnects.
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+const {
+  title = "Lawrence Winnerman — Writing the hinge. Building the future.",
+  description = "Lawrence Winnerman: founder-operator, writer, strategist. Writing the hinge. Building the future.",
+  ogImage = "/og-mark-name.png",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.href} />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180.png" sizes="180x180" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Typography: Adobe Typekit kit qbo5oht (Arno Pro + Acumin Pro, slim) -->
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/qbo5oht.css" />
+
+    <!-- Person schema (helps Google know who this site is about) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Lawrence Winnerman",
+      url: "https://lawrencewinnerman.com",
+      jobTitle: "Founder & Operator",
+      description,
+      sameAs: [
+        "https://lwinner.substack.com",
+        "https://www.linkedin.com/in/lawrencewinnerman",
+      ],
+    })} />
+
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>
