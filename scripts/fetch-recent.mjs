@@ -1,9 +1,13 @@
 // Build-time RSS fetch for the "Recent stories" section (spec Option A).
 //
-// Runs as the `prebuild` npm lifecycle step (npm runs it automatically before
-// `build`). Fetches the Substack feed(s), maps each item to card data per the
-// build spec §6, and writes src/data/recent.json for RecentStories.astro to
-// import at build time. No client fetch, no CORS.
+// Invoked two ways, both of which end up calling fetchRecent():
+//   - the Astro integration in astro.config.mjs (astro:build:start) — the
+//     primary path, so it runs on ANY `astro build` regardless of whether the
+//     host calls `npm run build` or `astro build` directly;
+//   - `npm run fetch:recent` for a manual refresh / debugging.
+// Fetches the Substack feed(s), maps each item to card data per the build spec
+// §6, and writes src/data/recent.json for RecentStories.astro to import at
+// build time. No client fetch, no CORS.
 //
 // Refresh cadence: a daily GitHub Action pings a Cloudflare Pages Deploy Hook,
 // which reruns this script on a fresh build so new posts appear (spec §5).
@@ -169,7 +173,7 @@ async function fetchFeed(feed) {
 
 // ---- Main -------------------------------------------------------------------
 
-async function main() {
+async function build() {
   let all = [];
   for (const feed of FEEDS) {
     const items = await fetchFeed(feed); // throw → caught below → keep last-good
@@ -200,21 +204,33 @@ async function main() {
   console.log(`[recent] wrote ${stories.length} stories → src/data/recent.json`);
 }
 
-main().catch((err) => {
-  console.warn(`[recent] fetch failed: ${err.message}`);
-  if (existsSync(OUT)) {
-    try {
-      const prior = JSON.parse(readFileSync(OUT, "utf8"));
-      if (prior && Array.isArray(prior.stories) && prior.stories.length) {
-        console.warn("[recent] keeping last-good src/data/recent.json");
-        process.exit(0);
-      }
-    } catch { /* fall through to writing an empty payload */ }
+// Never throws — on failure it keeps last-good data (or writes an { ok:false }
+// payload if there is none) so the build always succeeds and the section never
+// renders a broken block.
+export async function fetchRecent() {
+  try {
+    await build();
+  } catch (err) {
+    console.warn(`[recent] fetch failed: ${err.message}`);
+    if (existsSync(OUT)) {
+      try {
+        const prior = JSON.parse(readFileSync(OUT, "utf8"));
+        if (prior && Array.isArray(prior.stories) && prior.stories.length) {
+          console.warn("[recent] keeping last-good src/data/recent.json");
+          return;
+        }
+      } catch { /* fall through to writing an empty payload */ }
+    }
+    // No prior data — write an explicit failure payload so the section renders
+    // the graceful archive fallback instead of a broken/empty block.
+    mkdirSync(dirname(OUT), { recursive: true });
+    writeFileSync(OUT, JSON.stringify({ ok: false, generatedAt: new Date().toISOString(), stories: [] }, null, 2) + "\n");
+    console.warn("[recent] wrote fallback { ok:false } payload");
   }
-  // No prior data — write an explicit failure payload so the section renders
-  // the graceful archive fallback instead of a broken/empty block.
-  mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, JSON.stringify({ ok: false, generatedAt: new Date().toISOString(), stories: [] }, null, 2) + "\n");
-  console.warn("[recent] wrote fallback { ok:false } payload");
-  process.exit(0); // never fail the build
-});
+}
+
+// Run directly (npm run fetch:recent) — as opposed to being imported by the
+// Astro integration.
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
+  fetchRecent();
+}
