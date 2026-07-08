@@ -4,6 +4,8 @@ dist/
 
 # Dependencies
 node_modules/
+# Lockfile intentionally omitted — Cloudflare Pages builds via `npm install`.
+package-lock.json
 
 # Astro
 .astro/
@@ -23,6 +25,7 @@ pnpm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 .idea/
+.claude/
 
 # macOS / Windows
 .DS_Store

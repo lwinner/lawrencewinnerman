@@ -6,11 +6,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "fetch:recent": "node scripts/fetch-recent.mjs",
+    "prebuild": "node scripts/fetch-recent.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "fast-xml-parser": "^4.5.7"
   }
 }

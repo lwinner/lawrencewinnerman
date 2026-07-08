@@ -2,19 +2,25 @@
 import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
+import CurrentlyStrip from "../components/CurrentlyStrip.astro";
 import Bio from "../components/Bio.astro";
+import PullQuote from "../components/PullQuote.astro";
 import Work from "../components/Work.astro";
-import Writing from "../components/Writing.astro";
+import RecentStories from "../components/RecentStories.astro";
+import Subscribe from "../components/Subscribe.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 ---
 <Base>
   <Nav />
+  <Hero />
+  <CurrentlyStrip />
   <main>
-    <Hero />
     <Bio />
+    <PullQuote />
     <Work />
-    <Writing />
+    <RecentStories />
+    <Subscribe />
     <Contact />
   </main>
   <Footer />

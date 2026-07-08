@@ -1,0 +1,36 @@
+name: Refresh recent stories
+
+# Daily scheduled rebuild (spec Option A, §5). Pings the Cloudflare Pages Deploy
+# Hook so a fresh build re-runs scripts/fetch-recent.mjs and picks up new
+# Substack posts — no manual deploy needed.
+#
+# ONE-TIME SETUP (owner):
+#   1. Cloudflare Pages → the lawrencewinnerman project → Settings → Builds &
+#      deployments → Deploy hooks → create a hook (e.g. "daily-refresh", branch
+#      main). Copy the URL.
+#   2. GitHub → this repo → Settings → Secrets and variables → Actions → New
+#      repository secret named CF_DEPLOY_HOOK_URL with that URL as the value.
+# Until the secret exists the job no-ops safely (it won't fail loudly).
+
+on:
+  schedule:
+    - cron: "0 11 * * *" # 11:00 UTC daily (~6–7am US Eastern)
+  workflow_dispatch: {} # allow manual "Run workflow" from the Actions tab
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Cloudflare Pages deploy hook
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "CF_DEPLOY_HOOK_URL secret not set — skipping. See workflow header for setup."
+            exit 0
+          fi
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          echo "Deploy hook responded HTTP $code"
+          if [ "$code" -ge 400 ]; then
+            echo "Deploy hook failed"; exit 1
+          fi

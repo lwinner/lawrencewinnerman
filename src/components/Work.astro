@@ -1,5 +1,7 @@
 ---
 import brands from "../content/brands.json";
+const featured = brands.filter(b => b.tier === "featured");
+const constellation = brands.filter(b => b.tier === "constellation");
 ---
 <section id="work" class="work">
   <div class="container">
@@ -8,9 +10,26 @@ import brands from "../content/brands.json";
     <p class="work-lead">
       These started as side projects that didn't know they were supposed to stay small. They're related&mdash;variations on paying close attention to what's happening in politics, technology, and culture, and trying to make something useful from it&mdash;but they're also genuinely their own things. I run them all because I can't seem to stop.
     </p>
-    <ul class="brand-grid" role="list">
-      {brands.map(b => (
+
+    <ul class="brand-grid featured" role="list">
+      {featured.map(b => (
         <li class="brand-card">
+          <h3 class="brand-name">{b.name}</h3>
+          <p class="brand-role">{b.role}</p>
+          <p class="brand-desc">{b.description}</p>
+          {b.url && (
+            <a class="brand-link" href={b.url} rel="noopener">
+              Visit <span aria-hidden="true">→</span>
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <p class="constellation-label">Also in the constellation</p>
+    <ul class="brand-grid constellation" role="list">
+      {constellation.map(b => (
+        <li class="brand-card brand-card--small">
           <h3 class="brand-name">{b.name}</h3>
           <p class="brand-role">{b.role}</p>
           <p class="brand-desc">{b.description}</p>
@@ -28,7 +47,7 @@ import brands from "../content/brands.json";
 <style>
   .work-lead {
     max-width: 56ch;
-    margin: 0 0 3rem;
+    margin: 0 0 2.75rem;
     font-style: italic;
     color: var(--lw-slate);
   }
@@ -37,23 +56,40 @@ import brands from "../content/brands.json";
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  .brand-grid.featured {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .brand-grid.constellation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .constellation-label {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lw-muted);
+    margin: 3rem 0 1.25rem;
   }
   .brand-card {
     padding: 1.75rem;
     border: 1px solid var(--lw-rule);
     border-radius: 6px;
-    background: color-mix(in srgb, var(--lw-cream) 60%, white);
+    background: var(--lw-cream-card);
     display: flex;
     flex-direction: column;
   }
+  .brand-card--small { padding: 1.5rem; }
   .brand-name {
     font-family: var(--font-subhead);
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0 0 0.25rem;
   }
+  .brand-card--small .brand-name { font-size: 1.3rem; }
   .brand-role {
     font-family: var(--font-ui);
     font-weight: 500;
@@ -64,6 +100,7 @@ import brands from "../content/brands.json";
     margin: 0 0 1rem;
   }
   .brand-desc { margin: 0 0 1.5rem; flex: 1; }
+  .brand-card--small .brand-desc { font-size: var(--fs-small); }
   .brand-link {
     font-family: var(--font-ui);
     font-weight: 600;
@@ -73,4 +110,12 @@ import brands from "../content/brands.json";
     align-self: flex-start;
   }
   .brand-link:hover { color: var(--lw-red); }
+
+  /* Constellation collapses on narrower viewports (site breakpoints). */
+  @media (max-width: 900px) {
+    .brand-grid.constellation { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .brand-grid.constellation { grid-template-columns: 1fr; }
+  }
 </style>

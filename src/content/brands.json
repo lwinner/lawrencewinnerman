@@ -1,44 +1,58 @@
 [
   {
+    "tier": "featured",
     "name": "Peptidings",
     "url": "https://peptidings.com",
     "role": "Founder & CEO",
     "description": "A serious publication on therapeutic peptides—Dutch Uncle voice, careful sourcing, no hype. Written for people who want to actually understand what they're considering putting in their body."
   },
   {
+    "tier": "featured",
     "name": "Blue Amp Media",
     "url": "https://blueamp.co",
     "role": "Chief Operating Officer",
     "description": "Progressive political media with Cliff Schecter—the YouTube channel @Cliffs_Edge, the Blue Letter newsletter, the podcasts—aimed at organizing against the predator class. I'm the operational spine; Cliff is the on-camera voice."
   },
   {
+    "tier": "featured",
     "name": "The Hinge & Near Field",
     "url": "https://lwinner.substack.com",
     "role": "Writer & Publisher",
     "description": "My personal Substack. Essays on hinge moments in politics, technology, and culture; near-future scenarios; speculative fiction; a novel-in-progress called The Shattered World Series; and memoir when the mood strikes."
   },
   {
-    "name": "The Imagination Project",
-    "url": "https://theimaginationproject.org",
-    "role": "Founder",
-    "description": "Futuretypes—a personality-archetype quiz built on literary archetypes rather than pop psychology. Result pages written in Margaret-Atwood-meets-Mary-Oliver mode, which is a sentence I will defend in court."
+    "tier": "constellation",
+    "name": "The Daily Whatever Show",
+    "url": "https://thedailywhatevershow.com",
+    "role": "Co-Host",
+    "description": "A podcast I co-host with Dana DuBois, my best friend of 47 years. Generational politics, current events, the felt experience of being Gen X right now. Mostly an excuse to keep showing up for each other."
   },
   {
+    "tier": "constellation",
+    "name": "alpacalunch",
+    "url": "https://alpacalunch.com",
+    "role": "Proprietor",
+    "description": "A T-shirt and merch shop for rebels, ranters, and smartasses—funny, political, occasionally vulgar, and proudly left-leaning. Wearable resistance, including a collection inspired by The Shattered World Series. Yes, the name is one word."
+  },
+  {
+    "tier": "constellation",
     "name": "Moondark",
     "url": "https://moondark.app",
     "role": "Maker",
     "description": "A phone app that tells you whether the moon is currently void of course. For astrologers, witches, and anyone else who has learned the hard way not to schedule important things during a void Moon. Quiet, contemplative, and very specific in what it does."
   },
   {
+    "tier": "constellation",
+    "name": "The Imagination Project",
+    "url": "https://theimaginationproject.org",
+    "role": "Founder",
+    "description": "Futuretypes—a personality-archetype quiz built on literary archetypes rather than pop psychology. Result pages written in Margaret-Atwood-meets-Mary-Oliver mode, which is a sentence I will defend in court."
+  },
+  {
+    "tier": "constellation",
     "name": "PepDoc",
     "url": null,
     "role": "Subject & Author",
     "description": "A documentary and a companion book about building Peptidings with Claude—what it actually looks like, week by week, to run a serious publication with an AI as your integrated executive partner. In production. The book is half-drafted."
-  },
-  {
-    "name": "The Daily Whatever Show",
-    "url": "https://thedailywhatevershow.com",
-    "role": "Co-Host",
-    "description": "A podcast I co-host with Dana DuBois, my best friend of 47 years. Generational politics, current events, the felt experience of being Gen X right now. Mostly an excuse to keep showing up for each other."
   }
 ]

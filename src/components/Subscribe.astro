@@ -1,0 +1,67 @@
+---
+// Subscribe (#subscribe) — NEW. Sits between Recent stories and Contact and
+// hosts the single Substack inline signup embed for the site (the old embeds in
+// Writing / Contact / Footer are removed so there is exactly one).
+---
+<section id="subscribe" class="subscribe">
+  <div class="container">
+    <div class="subscribe-card">
+      <p class="eyebrow">Subscribe</p>
+      <h2>Get the next one in your inbox.</h2>
+      <p class="subscribe-lead">
+        <em>The Hinge &amp; Near Field</em>&mdash;essays, near-future scenarios, and fiction, delivered as they publish.
+      </p>
+      <div class="subscribe-embed">
+        <iframe
+          title="Subscribe to The Hinge & Near Field on Substack"
+          src="https://lwinner.substack.com/embed?transparent=1"
+          width="480"
+          height="150"
+          loading="lazy"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .subscribe {
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+    padding-bottom: clamp(4rem, 10vw, 7rem);
+  }
+  .subscribe-card {
+    max-width: 680px;
+    margin-inline: auto;
+    background: var(--lw-cream-card);
+    border: 1px solid var(--lw-rule);
+    border-top: 3px solid var(--lw-red);
+    border-radius: 6px;
+    padding: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+  }
+  .subscribe-card .eyebrow { margin-bottom: 1.1rem; }
+  .subscribe-card h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin: 0 0 0.75rem;
+  }
+  .subscribe-lead {
+    font-style: italic;
+    font-size: var(--fs-body);
+    color: var(--lw-slate-soft);
+    max-width: 44ch;
+    margin: 0 auto 1.5rem;
+  }
+  .subscribe-embed {
+    display: flex;
+    justify-content: center;
+  }
+  .subscribe-embed iframe {
+    border: 0;
+    background: transparent;
+    width: 480px;
+    max-width: 100%;
+    height: 150px;
+  }
+</style>

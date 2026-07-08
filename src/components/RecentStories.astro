@@ -1,0 +1,146 @@
+---
+// Recent stories (#writing) — replaces the hard-coded trio. Renders the latest
+// posts from the H&NF Substack, fetched at BUILD time by scripts/fetch-recent.mjs
+// (spec Option A). No client fetch, no CORS. See src/data/recent.json.
+import recent from "../data/recent.json";
+
+const ARCHIVE = "https://lwinner.substack.com/archive";
+const stories = recent.ok ? recent.stories : [];
+const feedFailed = !recent.ok || stories.length === 0;
+---
+<section id="writing" class="writing" aria-label="Recent stories">
+  <div class="container">
+    <div class="writing-head">
+      <div>
+        <p class="eyebrow">The writing</p>
+        <h2>Recent stories.</h2>
+      </div>
+      <a class="writing-more" href={ARCHIVE} rel="noopener" target="_blank">
+        Read the full Substack <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    {feedFailed ? (
+      <p class="writing-fallback">
+        The latest essays are on Substack—<a href={ARCHIVE} rel="noopener" target="_blank">read the archive →</a>
+      </p>
+    ) : (
+      <div class="story-grid" role="list">
+        {stories.map(s => (
+          <a class="story" href={s.link} rel="noopener" target="_blank" role="listitem">
+            <div class="story-media">
+              {s.image && (
+                <img src={s.image} alt={s.title} loading="lazy" width="640" height="360" />
+              )}
+            </div>
+            <div class="story-body">
+              <p class="story-date">{s.date}</p>
+              <h3 class="story-title">{s.title}</h3>
+              {s.excerpt && <p class="story-excerpt">{s.excerpt}</p>}
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .writing-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .writing-head h2 { margin: 0; }
+  .writing-head .eyebrow { margin-bottom: 1.25rem; }
+  .writing-more {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--fs-small);
+    letter-spacing: 0.04em;
+    color: var(--lw-slate);
+    white-space: nowrap;
+    padding-bottom: 0.35rem;
+  }
+  .writing-more:hover { color: var(--lw-red); }
+
+  .writing-fallback {
+    font-style: italic;
+    border-top: 1px solid var(--lw-rule);
+    padding-top: 1.75rem;
+    margin: 0;
+  }
+  .writing-fallback a { color: var(--lw-slate); text-decoration: underline; text-decoration-color: var(--lw-rule); text-underline-offset: 3px; }
+  .writing-fallback a:hover { color: var(--lw-red); }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .story {
+    display: flex;
+    flex-direction: column;
+    background: var(--lw-cream-card);
+    border: 1px solid var(--lw-rule);
+    border-radius: 6px;
+    overflow: hidden;
+    color: var(--lw-slate);
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .story:hover {
+    color: var(--lw-slate);
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(67, 74, 82, 0.08);
+  }
+  .story-media {
+    aspect-ratio: 16 / 9;
+    background: var(--lw-rule);
+    overflow: hidden;
+  }
+  .story-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .story-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1.25rem 1.5rem;
+    flex: 1;
+  }
+  .story-date {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lw-muted);
+    margin: 0;
+    white-space: nowrap;
+  }
+  .story-title {
+    font-family: var(--font-subhead);
+    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--lw-slate);
+  }
+  .story-excerpt {
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--lw-slate-soft);
+    margin: 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .story { transition: none; }
+    .story:hover { transform: none; }
+  }
+</style>

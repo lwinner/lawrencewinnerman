@@ -7,11 +7,14 @@
 
 :root {
   /* Color tokens — LOCKED */
-  --lw-cream:  #F4F1EB;
-  --lw-red:    #C73526;
-  --lw-slate:  #434A52;
-  --lw-muted:  #9A9489;
-  --lw-rule:   #C9C5BC;
+  --lw-cream:       #F4F1EB;
+  --lw-cream-card:  #F9F7F2;  /* card fill, from the locked token set */
+  --lw-red:         #C73526;
+  --lw-red-hover:   #B22E20;  /* red hover, from the locked token set */
+  --lw-slate:       #434A52;
+  --lw-slate-soft:  #5C636B;  /* secondary body / lead, from the locked token set */
+  --lw-muted:       #9A9489;
+  --lw-rule:        #C9C5BC;
 
   /* Type stacks — Adobe Typekit kit qbo5oht */
   --font-display: "arno-pro-display", "arno-pro", Georgia, "Times New Roman", serif;

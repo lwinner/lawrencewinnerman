@@ -1,0 +1,39 @@
+---
+// Pull quote — Margaret Mead, centered, between Bio and Work.
+---
+<aside class="pullquote" aria-label="Pull quote">
+  <div class="container">
+    <hr class="rule-red" aria-hidden="true" />
+    <blockquote>
+      Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it&rsquo;s the only thing that ever has.
+    </blockquote>
+    <p class="attribution">Margaret Mead</p>
+  </div>
+</aside>
+
+<style>
+  .pullquote {
+    padding: clamp(2.5rem, 6vw, 4rem) 0;
+  }
+  .pullquote .container { text-align: center; }
+  .pullquote .rule-red { margin: 0 auto 1.75rem; }
+  .pullquote blockquote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+    line-height: 1.25;
+    color: var(--lw-slate);
+    max-width: 30ch;
+    margin: 0 auto;
+  }
+  .attribution {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lw-muted);
+    margin: 1.5rem 0 0;
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+// Credibility strip — hairline band under the hero. "CURRENTLY" eyebrow plus
+// four name + note pairs. Matches the approved design reference.
+const items = [
+  { name: "Peptidings", note: "Founder & CEO" },
+  { name: "Blue Amp Media", note: "COO · with Cliff Schecter" },
+  { name: "lwinner.substack.com", note: "Essayist & Novelist" },
+  { name: "The Daily Whatever Show", note: "Co-Host" },
+];
+---
+<div class="currently" aria-label="Current work and affiliations">
+  <div class="container currently-inner">
+    <p class="currently-label">Currently</p>
+    <div class="currently-items">
+      {items.map(i => (
+        <p class="currently-item">
+          <span class="currently-name">{i.name}</span>
+          <span class="currently-note">{i.note}</span>
+        </p>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .currently {
+    border-top: 1px solid var(--lw-rule);
+    border-bottom: 1px solid var(--lw-rule);
+  }
+  .currently-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .currently-label {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--fs-eyebrow);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lw-muted);
+    margin: 0;
+  }
+  .currently-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2.25rem;
+  }
+  .currently-item {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    margin: 0;
+  }
+  .currently-name { font-weight: 600; color: var(--lw-slate); }
+  .currently-note { color: var(--lw-muted); }
+</style>
