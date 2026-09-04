@@ -1,7 +1,12 @@
 ---
-// Recent stories (#writing) — replaces the hard-coded trio. Renders the latest
-// posts from the H&NF Substack, fetched at BUILD time by scripts/fetch-recent.mjs
-// (spec Option A). No client fetch, no CORS. See src/data/recent.json.
+// Recent stories (#writing). Two layers:
+//   1. BUILD time — scripts/fetch-recent.mjs writes src/data/recent.json, which
+//      renders the cards below. Correct first paint, works with JS off.
+//   2. LOAD time — the <script> at the bottom asks /api/recent (a Cloudflare
+//      Pages Function, functions/api/recent.js) for the live top four and swaps
+//      them in if they differ. New posts appear within ~10 minutes of
+//      publishing, with no redeploy. Cards are cloned from the <template> so
+//      Astro's scoped styles apply to client-built markup too.
 import recent from "../data/recent.json";
 
 const ARCHIVE = "https://lwinner.substack.com/archive";
@@ -42,8 +47,77 @@ const feedFailed = !recent.ok || stories.length === 0;
         ))}
       </div>
     )}
+
+    <template id="story-template">
+      <a class="story" href="" rel="noopener" target="_blank" role="listitem">
+        <div class="story-media"></div>
+        <div class="story-body">
+          <p class="story-date"></p>
+          <h3 class="story-title"></h3>
+          <p class="story-excerpt"></p>
+        </div>
+      </a>
+    </template>
   </div>
 </section>
+
+<script>
+  // Refresh the build-time cards with the live feed. Silent on any failure:
+  // the build-time render is always a valid page on its own.
+  const section = document.getElementById("writing");
+  const tpl = document.getElementById("story-template") as HTMLTemplateElement | null;
+
+  type Story = {
+    id: string; title: string; link: string; date: string;
+    excerpt: string; image: string | null;
+  };
+
+  function buildCard(s: Story): HTMLElement {
+    const node = (tpl!.content.firstElementChild as HTMLElement).cloneNode(true) as HTMLElement;
+    (node as HTMLAnchorElement).href = s.link;
+    if (s.image) {
+      const img = document.createElement("img");
+      img.src = s.image;
+      img.alt = s.title;
+      img.loading = "lazy";
+      img.width = 640;
+      img.height = 360;
+      node.querySelector(".story-media")!.appendChild(img);
+    }
+    node.querySelector(".story-date")!.textContent = s.date;
+    node.querySelector(".story-title")!.textContent = s.title;
+    const ex = node.querySelector(".story-excerpt")!;
+    if (s.excerpt) ex.textContent = s.excerpt; else ex.remove();
+    return node;
+  }
+
+  async function refresh() {
+    if (!section || !tpl) return;
+    const res = await fetch("/api/recent", { headers: { accept: "application/json" } });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data || !data.ok || !Array.isArray(data.stories) || !data.stories.length) return;
+
+    const current = Array.from(section.querySelectorAll<HTMLAnchorElement>(".story-grid .story"))
+      .map((a) => a.href.replace(/[?#].*$/, ""));
+    const incoming = (data.stories as Story[]).map((s) => s.link.replace(/[?#].*$/, ""));
+    if (current.length === incoming.length && current.every((h, i) => h === incoming[i])) return;
+
+    const grid = document.createElement("div");
+    grid.className = "story-grid";
+    grid.setAttribute("role", "list");
+    // Copy Astro's scoping attribute so the grid itself picks up scoped CSS.
+    for (const attr of Array.from(tpl.attributes)) {
+      if (attr.name.startsWith("data-astro-cid")) grid.setAttribute(attr.name, attr.value);
+    }
+    for (const s of data.stories as Story[]) grid.appendChild(buildCard(s));
+
+    const old = section.querySelector(".story-grid, .writing-fallback");
+    if (old) old.replaceWith(grid); else tpl.before(grid);
+  }
+
+  refresh().catch(() => { /* keep build-time cards */ });
+</script>
 
 <style>
   .writing-head {

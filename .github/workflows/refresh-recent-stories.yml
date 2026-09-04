@@ -1,8 +1,12 @@
 name: Refresh recent stories
 
-# Daily scheduled rebuild (spec Option A, §5). Pings the Cloudflare Pages Deploy
-# Hook so a fresh build re-runs scripts/fetch-recent.mjs and picks up new
-# Substack posts — no manual deploy needed.
+# Daily scheduled rebuild. Pings the Cloudflare Pages Deploy Hook so a fresh
+# build re-runs scripts/fetch-recent.mjs and refreshes the BUILD-TIME cards.
+#
+# Since the /api/recent Pages Function (functions/api/recent.js) went live, this
+# is belt-and-suspenders only: the page already refreshes itself from the live
+# feed on load. It keeps the no-JS first paint from drifting too far behind.
+# Note: GitHub pauses scheduled workflows after 60 days without repo activity.
 #
 # ONE-TIME SETUP (owner):
 #   1. Cloudflare Pages → the lawrencewinnerman project → Settings → Builds &
