@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "the-fed-is-hitting-the-brakes-ai-is-flooring-the-gas",
+      "title": "The Fed Is Hitting the Brakes. AI Is Flooring the Gas.",
+      "dek": "Higher rates are supposed to make borrowers flinch. Families are. Businesses are. But Big Tech is borrowing hundreds of billions to win the AI race, and taking whatever price the market gives them.",
+      "date": "2026-10-04",
+      "tags": [
+        "AI",
+        "Economy",
+        "Interest Rates"
+      ],
+      "summary": [
+        "In July I wrote about the Layer War, the split between the Builders pouring hundreds of billions into AI data centers and the Layerers betting that intelligence becomes a cheap commodity. Right now the Builders look like they’re winning, and they’re no longer paying cash. Morgan Stanley expects the six biggest hyperscalers to spend $785 billion this year and close to a trillion next year, much of it borrowed. One strategist called them “price takers”: they will pay whatever the market charges, because pausing the race feels fatal.",
+        "Then I come home to northeast Indiana, where a $250,000 house is still real and a mortgage just jumped to 7.28 percent. Higher rates are supposed to make everyone flinch together. That’s how the brakes work. When one borrower refuses to flinch, the price of money rises until everyone else steps aside. The brake still slows traffic. It just changes who gets rear-ended."
+      ],
+      "links": [
+        {
+          "label": "Bouncin’ and Behavin’ Blogs",
+          "platform": "Medium",
+          "url": "https://medium.com/bouncin-and-behavin-blogs/the-fed-is-hitting-the-brakes-ai-is-flooring-the-gas-3aadf24d3a95?sk=26437962cfa654bbf1c341d84143caae"
+        },
+        {
+          "label": "Blue Amp Media",
+          "platform": "Substack",
+          "url": "https://www.blueamp.co/p/ai-data-center-debt-interest-rates-fed"
+        }
+      ],
+      "image": "/stories/the-fed-is-hitting-the-brakes-ai-is-flooring-the-gas.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "russias-anti-plague-lab-had-a-plague",
       "title": "Russia’s Anti-Plague Lab Had a Plague. Then Officials Refused to Say “Plague.”",
       "dek": "Six days, a dead lab tech, two hundred people in quarantine, and not one official who will say the word.",
