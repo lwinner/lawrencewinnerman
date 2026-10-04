@@ -1,0 +1,77 @@
+---
+// /writing/ — every story, newest first, grouped by year. Each card opens the
+// story's page on this site, which summarizes it and links to every version.
+import Base from "../../layouts/Base.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { stories } from "../../lib/stories";
+
+const years = [...new Set(stories.map((s) => s.date.slice(0, 4)))];
+const title = "Writing—Lawrence Winnerman";
+const description = `Essays, satire, and speculative fiction by Lawrence Winnerman: ${stories.length} stories on politics, technology, queer life, and the hinge moments of now, with links to every place each one is published.`;
+const site = Astro.site!;
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Writing by Lawrence Winnerman",
+  url: new URL("/writing/", site).href,
+  description,
+  author: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
+  hasPart: stories.map((s) => ({
+    "@type": "Article",
+    headline: s.title,
+    url: new URL(`/writing/${s.slug}/`, site).href,
+    datePublished: s.date,
+  })),
+};
+---
+<Base title={title} description={description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <Nav />
+  <main>
+    <section class="index-head">
+      <div class="container">
+        <p class="eyebrow">The writing</p>
+        <h1>Every story, in one place.</h1>
+        <p class="lead">
+          I publish in a lot of places: The Hinge &amp; The Near Field and The Daily Whatever Show on Substack, and several publications on Medium. Each story gets a page here with a short note from me and links to every version, so you can read it wherever you like.
+        </p>
+      </div>
+    </section>
+    {years.map((y) => (
+      <section class="year" aria-labelledby={`y${y}`}>
+        <div class="container">
+          <h2 id={`y${y}`} class="year-label">{y}</h2>
+          <div class="story-grid" role="list">
+            {stories.filter((s) => s.date.startsWith(y)).map((s, i) => (
+              <StoryCard story={s} eager={y === years[0] && i < 3} />
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .index-head { padding-bottom: 2rem; }
+  h1 {
+    font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h2);
+    line-height: 1.05; margin: 0 0 1.5rem; color: var(--lw-slate);
+  }
+  .lead { max-width: 44rem; color: var(--lw-slate-soft); margin: 0; }
+  .year { padding-top: 1.5rem; padding-bottom: 2.5rem; }
+  .year:last-of-type { padding-bottom: var(--section-pad-y); }
+  .year-label {
+    font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow);
+    letter-spacing: 0.18em; color: var(--lw-muted); margin: 0 0 1.25rem;
+    padding-top: 1.25rem; border-top: 1px solid var(--lw-rule);
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+</style>

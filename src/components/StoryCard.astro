@@ -1,0 +1,55 @@
+---
+// One story card for the /writing index and "more stories" rows.
+// Mirrors the card styling in RecentStories.astro so the site reads as one system.
+import { type Story, storyPath, shortDate } from "../lib/stories";
+interface Props { story: Story; eager?: boolean }
+const { story: s, eager = false } = Astro.props;
+---
+<a class="story" href={storyPath(s)} role="listitem">
+  <div class="story-media">
+    {s.image && (
+      <img src={s.image} alt="" loading={eager ? "eager" : "lazy"} width="640" height="360" />
+    )}
+  </div>
+  <div class="story-body">
+    <p class="story-date">{shortDate(s.date)}{s.tags[0] && <span> &middot; {s.tags[0]}</span>}</p>
+    <h3 class="story-title">{s.title}</h3>
+    {s.dek && <p class="story-excerpt">{s.dek}</p>}
+  </div>
+</a>
+
+<style>
+  .story {
+    display: flex;
+    flex-direction: column;
+    background: var(--lw-cream-card);
+    border: 1px solid var(--lw-rule);
+    border-radius: 6px;
+    overflow: hidden;
+    color: var(--lw-slate);
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .story:hover {
+    color: var(--lw-slate);
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(67, 74, 82, 0.08);
+  }
+  .story:hover .story-title { color: var(--lw-red); }
+  .story-media { aspect-ratio: 16 / 9; background: var(--lw-rule); overflow: hidden; }
+  .story-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .story-body { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.25rem 1.25rem 1.5rem; flex: 1; }
+  .story-date {
+    font-family: var(--font-ui); font-weight: 500; font-size: var(--fs-eyebrow);
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--lw-muted); margin: 0;
+  }
+  .story-title {
+    font-family: var(--font-subhead); font-weight: 700; font-size: 1.35rem;
+    line-height: 1.15; margin: 0; color: var(--lw-slate); transition: color 0.15s ease;
+  }
+  .story-excerpt { font-size: var(--fs-small); line-height: 1.55; color: var(--lw-slate-soft); margin: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    .story { transition: none; }
+    .story:hover { transform: none; }
+  }
+</style>

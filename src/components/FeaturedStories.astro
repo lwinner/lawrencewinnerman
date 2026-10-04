@@ -5,8 +5,12 @@
 // Edit src/content/featured.json to add or retire entries; an empty list hides
 // the section entirely. Card styles mirror RecentStories.astro.
 import featured from "../content/featured.json";
+import { localPathFor } from "../lib/stories";
 
-const stories = featured.stories ?? [];
+const stories = (featured.stories ?? []).map((s) => {
+  const local = localPathFor(s.link);
+  return { ...s, href: local ?? s.link, external: !local };
+});
 ---
 {stories.length > 0 && (
   <section id="featured" class="featured" aria-label="Featured stories">
@@ -15,7 +19,7 @@ const stories = featured.stories ?? [];
       <h2>Just published.</h2>
       <div class="story-grid" role="list">
         {stories.map(s => (
-          <a class="story" href={s.link} rel="noopener" target="_blank" role="listitem">
+          <a class="story" href={s.href} rel={s.external ? "noopener" : undefined} target={s.external ? "_blank" : undefined} role="listitem">
             <div class="story-media">
               {s.image && (
                 <img src={s.image} alt={s.title} loading="eager" width="640" height="360" />

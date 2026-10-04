@@ -1,0 +1,182 @@
+---
+// /writing/<slug>/ — one page per story: a short first-person note from
+// Lawrence plus links to every place the full piece is published. The note is
+// original text that lives on this domain (the point, for search), and the
+// links send readers on to Substack or Medium.
+import Base from "../../layouts/Base.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import StoryCard from "../../components/StoryCard.astro";
+import { stories, type Story, longDate } from "../../lib/stories";
+
+export function getStaticPaths() {
+  return stories.map((story) => ({ params: { slug: story.slug }, props: { story } }));
+}
+
+const { story: s } = Astro.props as { story: Story };
+const site = Astro.site!;
+const url = new URL(`/writing/${s.slug}/`, site).href;
+const description = s.summary[0].length > 300 ? s.summary[0].slice(0, 297).replace(/\s+\S*$/, "") + "…" : s.summary[0];
+
+// Related: share a tag first, then fill with the newest others.
+const others = stories.filter((o) => o.slug !== s.slug);
+const tagged = others.filter((o) => o.tags.some((t) => s.tags.includes(t)));
+const related = [...tagged, ...others.filter((o) => !tagged.includes(o))].slice(0, 3);
+
+const ld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: s.title,
+    alternativeHeadline: s.dek,
+    description,
+    datePublished: s.date,
+    url,
+    mainEntityOfPage: url,
+    image: s.image ? new URL(s.image, site).href : undefined,
+    keywords: s.tags.join(", "),
+    author: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
+    publisher: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
+    sameAs: s.links.map((l) => l.url),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.href },
+      { "@type": "ListItem", position: 2, name: "Writing", item: new URL("/writing/", site).href },
+      { "@type": "ListItem", position: 3, name: s.title, item: url },
+    ],
+  },
+];
+---
+<Base
+  title={`${s.title}—Lawrence Winnerman`}
+  description={description}
+  ogImage={s.image ?? undefined}
+  ogType="article"
+  ogImageWidth={s.imageWidth}
+  ogImageHeight={s.imageHeight}
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content={s.date} />
+    <meta property="article:author" content="Lawrence Winnerman" />
+    {s.tags.map((t) => <meta property="article:tag" content={t} />)}
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </Fragment>
+  <Nav />
+  <main>
+    <article class="story-page">
+      <header class="container narrow head">
+        <p class="crumbs"><a href="/writing/">Writing</a> <span aria-hidden="true">/</span></p>
+        <p class="eyebrow"><time datetime={s.date}>{longDate(s.date)}</time>{s.tags.length > 0 && <span class="tags"> &middot; {s.tags.join(" · ")}</span>}</p>
+        <h1>{s.title}</h1>
+        {s.dek && <p class="dek">{s.dek}</p>}
+      </header>
+
+      {s.image && (
+        <figure class="container wide hero">
+          <img src={s.image} alt="" width={s.imageWidth ?? 1280} height={s.imageHeight ?? 720} loading="eager" fetchpriority="high" />
+        </figure>
+      )}
+
+      <div class="container narrow body">
+        <p class="note-label">A note from Lawrence</p>
+        {s.summary.map((p) => <p>{p}</p>)}
+
+        <div class="read" aria-labelledby="read-h">
+          <h2 id="read-h">Read the full story</h2>
+          <ul class="read-list">
+            {s.links.map((l, i) => (
+              <li>
+                <a class={i === 0 ? "read-link primary" : "read-link"} href={l.url} rel="noopener" target="_blank">
+                  <span class="read-platform">{l.platform}</span>
+                  <span class="read-label">{l.label}</span>
+                  <span class="read-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <section class="more" aria-labelledby="more-h">
+      <div class="container">
+        <div class="more-head">
+          <h2 id="more-h">More stories.</h2>
+          <a class="all" href="/writing/">All writing <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="story-grid" role="list">
+          {related.map((o) => <StoryCard story={o} />)}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .narrow { max-width: calc(46rem + 2 * var(--gutter)); }
+  .wide { max-width: calc(64rem + 2 * var(--gutter)); }
+  .head { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+  .crumbs {
+    font-family: var(--font-ui); font-size: var(--fs-small); color: var(--lw-muted);
+    margin: 0 0 1.25rem;
+  }
+  .crumbs a { color: var(--lw-slate-soft); text-decoration: underline; text-decoration-color: var(--lw-rule); text-underline-offset: 3px; }
+  .crumbs a:hover { color: var(--lw-red); }
+  .eyebrow .tags { color: var(--lw-muted); }
+  h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2.125rem, 5vw, 3.5rem); line-height: 1.04;
+    letter-spacing: -0.01em; color: var(--lw-slate); margin: 0 0 1.25rem;
+  }
+  .dek {
+    font-family: var(--font-display); font-style: italic;
+    font-size: var(--fs-tagline); line-height: 1.3; color: var(--lw-slate-soft); margin: 0;
+  }
+  .hero { margin-block: 2.5rem 0; }
+  .hero img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; border: 1px solid var(--lw-rule); }
+  .body { padding-top: 2.5rem; padding-bottom: 1rem; }
+  .body p { font-size: 1.25rem; line-height: 1.6; }
+  .note-label {
+    font-family: var(--font-ui) !important; font-weight: 600; font-size: var(--fs-eyebrow) !important;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--lw-muted);
+    margin: 0 0 1rem;
+  }
+  .read { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--lw-rule); }
+  .read h2 { font-size: var(--fs-h3); margin: 0 0 1rem; }
+  .read-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .read-link {
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem;
+    padding: 1rem 1.25rem; background: var(--lw-cream-card);
+    border: 1px solid var(--lw-rule); border-radius: 6px; color: var(--lw-slate);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .read-link:hover { border-color: var(--lw-red); color: var(--lw-slate); transform: translateY(-1px); }
+  .read-link.primary { background: var(--lw-red); border-color: var(--lw-red); color: var(--lw-cream); }
+  .read-link.primary:hover { background: var(--lw-red-hover); color: var(--lw-cream); }
+  .read-platform {
+    font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow);
+    letter-spacing: 0.14em; text-transform: uppercase; min-width: 5.5rem;
+  }
+  .read-label { font-family: var(--font-subhead); font-weight: 700; font-size: 1.125rem; line-height: 1.2; }
+  .read-arrow { font-family: var(--font-ui); font-size: 1.25rem; }
+  .more { padding-top: 3rem; }
+  .more-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
+  .more-head h2 { margin: 0; }
+  .all { font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-small); letter-spacing: 0.04em; color: var(--lw-slate); }
+  .all:hover { color: var(--lw-red); }
+  .story-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  @media (max-width: 520px) {
+    .read-link { grid-template-columns: 1fr auto; gap: 0.25rem 1rem; }
+    .read-platform { grid-column: 1; }
+    .read-label { grid-column: 1; }
+    .read-arrow { grid-column: 2; grid-row: 1 / span 2; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .read-link { transition: none; }
+    .read-link:hover { transform: none; }
+  }
+</style>

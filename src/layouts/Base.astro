@@ -4,11 +4,17 @@ export interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
 }
 const {
   title = "Lawrence Winnerman—Writing the hinge. Building the future.",
   description = "Lawrence Winnerman: founder-operator, writer, strategist. Writing the hinge. Building the future.",
   ogImage = "/og-mark-name.png",
+  ogType = "website",
+  ogImageWidth = 1200,
+  ogImageHeight = 630,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -30,13 +36,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon-180.png" sizes="180x180" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content={String(ogImageWidth)} />
+    <meta property="og:image:height" content={String(ogImageHeight)} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Typography: Adobe Typekit kit qbo5oht (Arno Pro + Acumin Pro, slim) -->
@@ -57,6 +63,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         "https://www.linkedin.com/in/lawrencewinnerman",
       ],
     })} />
+
+    <link rel="alternate" type="application/rss+xml" title="The Hinge & The Near Field" href="https://lwinner.substack.com/feed" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <slot name="head" />
 
     <link rel="stylesheet" href="/styles/global.css" />
   </head>

@@ -8,21 +8,31 @@
 //      publishing, with no redeploy. Cards are cloned from the <template> so
 //      Astro's scoped styles apply to client-built markup too.
 import recent from "../data/recent.json";
+import { localPathFor, pathByUrlKey } from "../lib/stories";
 
 const ARCHIVE = "https://lwinner.substack.com/archive";
-const stories = recent.ok ? recent.stories : [];
+// Cards open the story's page on this site when one exists, else the Substack post.
+const stories = (recent.ok ? recent.stories : []).map((s) => {
+  const local = localPathFor(s.link);
+  return { ...s, href: local ?? s.link, external: !local };
+});
 const feedFailed = !recent.ok || stories.length === 0;
 ---
-<section id="writing" class="writing" aria-label="Recent stories">
+<section id="writing" class="writing" aria-label="Recent stories" data-local={JSON.stringify(pathByUrlKey)}>
   <div class="container">
     <div class="writing-head">
       <div>
         <p class="eyebrow">The writing</p>
         <h2>Recent stories.</h2>
       </div>
-      <a class="writing-more" href={ARCHIVE} rel="noopener" target="_blank">
-        Read the full Substack <span aria-hidden="true">→</span>
-      </a>
+      <div class="writing-links">
+        <a class="writing-more" href="/writing/">
+          All my writing <span aria-hidden="true">→</span>
+        </a>
+        <a class="writing-more" href={ARCHIVE} rel="noopener" target="_blank">
+          Read the full Substack <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
 
     {feedFailed ? (
@@ -32,7 +42,7 @@ const feedFailed = !recent.ok || stories.length === 0;
     ) : (
       <div class="story-grid" role="list">
         {stories.map(s => (
-          <a class="story" href={s.link} rel="noopener" target="_blank" role="listitem">
+          <a class="story" href={s.href} rel={s.external ? "noopener" : undefined} target={s.external ? "_blank" : undefined} role="listitem">
             <div class="story-media">
               {s.image && (
                 <img src={s.image} alt={s.title} loading="lazy" width="640" height="360" />
@@ -72,9 +82,24 @@ const feedFailed = !recent.ok || stories.length === 0;
     excerpt: string; image: string | null;
   };
 
+  // Map Substack/Medium URLs to this site's story pages (same keys as src/lib/stories.ts).
+  let local: Record<string, string> = {};
+  try { local = JSON.parse(section?.dataset.local || "{}"); } catch { /* none */ }
+  function localPath(url: string): string | null {
+    try {
+      const u = new URL(url);
+      const p = u.pathname.replace(/\/+$/, "");
+      const m = u.hostname.endsWith("medium.com") ? p.match(/-([0-9a-f]{12})$/) : p.match(/\/p\/([^/]+)$/);
+      if (!m) return null;
+      return local[(u.hostname.endsWith("medium.com") ? "med:" : "sub:") + m[1]] ?? null;
+    } catch { return null; }
+  }
+
   function buildCard(s: Story): HTMLElement {
     const node = (tpl!.content.firstElementChild as HTMLElement).cloneNode(true) as HTMLElement;
-    (node as HTMLAnchorElement).href = s.link;
+    const lp = localPath(s.link);
+    (node as HTMLAnchorElement).href = lp ?? s.link;
+    if (lp) { node.removeAttribute("target"); node.removeAttribute("rel"); }
     if (s.image) {
       const img = document.createElement("img");
       img.src = s.image;
@@ -100,7 +125,10 @@ const feedFailed = !recent.ok || stories.length === 0;
 
     const current = Array.from(section.querySelectorAll<HTMLAnchorElement>(".story-grid .story"))
       .map((a) => a.href.replace(/[?#].*$/, ""));
-    const incoming = (data.stories as Story[]).map((s) => s.link.replace(/[?#].*$/, ""));
+    const incoming = (data.stories as Story[]).map((s) => {
+      const lp = localPath(s.link);
+      return lp ? new URL(lp, location.origin).href : s.link.replace(/[?#].*$/, "");
+    });
     if (current.length === incoming.length && current.every((h, i) => h === incoming[i])) return;
 
     const grid = document.createElement("div");
@@ -130,6 +158,7 @@ const feedFailed = !recent.ok || stories.length === 0;
   }
   .writing-head h2 { margin: 0; }
   .writing-head .eyebrow { margin-bottom: 1.25rem; }
+  .writing-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
   .writing-more {
     font-family: var(--font-ui);
     font-weight: 600;
