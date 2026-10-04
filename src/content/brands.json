@@ -8,20 +8,13 @@
   },
   {
     "tier": "featured",
-    "name": "Blue Amp Media",
-    "url": "https://blueamp.co",
-    "role": "Chief Operating Officer",
-    "description": "Progressive political media with Cliff Schecter—the YouTube channel @Cliffs_Edge, the Blue Letter newsletter, the podcasts—aimed at organizing against the predator class. I'm the operational spine; Cliff is the on-camera voice."
-  },
-  {
-    "tier": "featured",
     "name": "The Hinge & Near Field",
     "url": "https://lwinner.substack.com",
     "role": "Writer & Publisher",
     "description": "My personal Substack. Essays on hinge moments in politics, technology, and culture; near-future scenarios; speculative fiction; a novel-in-progress called The Shattered World Series; and memoir when the mood strikes."
   },
   {
-    "tier": "constellation",
+    "tier": "featured",
     "name": "The Daily Whatever Show",
     "url": "https://thedailywhatevershow.com",
     "role": "Co-Host",
