@@ -1,0 +1,21 @@
+{
+  "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
+  "stories": [
+    {
+      "title": "Russia’s Anti-Plague Lab Had a Plague. Then Officials Refused to Say “Plague.”",
+      "link": "https://medium.com/the-daily-whatever-show/russias-anti-plague-lab-had-a-plague-then-officials-refused-to-say-plague-fc9f10a1088f?sk=5d38c98ba2dc6497f57533850f526f75",
+      "date": "Oct 4, 2026",
+      "outlet": "Medium",
+      "excerpt": "A 28-year-old lab assistant broke a tube of live bacteria and died. 197 contacts, a sealed hospital, and not one official willing to say the word.",
+      "image": "/featured/plague-lab.jpg"
+    },
+    {
+      "title": "Trump Made a 13-Year-Old Be His Own Lawyer. It’s Exactly as F@#ked Up as It Sounds.",
+      "link": "https://open.substack.com/pub/thedailywhatevershow/p/fucked-up-friday-13-year-old-own-lawyer-deported?r=56yuuv",
+      "date": "Oct 3, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "No lawyer, two bad choices, and a deportation order for a kid who told the judge, “I have no one.”",
+      "image": "/featured/13-year-old-lawyer.jpg"
+    }
+  ]
+}
