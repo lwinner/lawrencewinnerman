@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "irkutsk-plague-story-doesnt-add-up",
+      "title": "Something About the Irkutsk Plague Story Doesn’t Add Up",
+      "dek": "The dead lab worker. The extraordinary containment response. The Kremlin’s silence. The more we learn, the stranger this gets.",
+      "date": "2026-10-06",
+      "tags": [
+        "Russia",
+        "Biosecurity",
+        "The Hinge"
+      ],
+      "summary": [
+        "I woke up thinking about a question that has been staring at us from the beginning. If Daria Shipilova was a lab tech at a place called the Anti-Plague Institute and broke a tube in an accidental exposure, wouldn’t she, of all people, know that antibiotics in the first twenty-four hours were the difference between living and dying? And wouldn’t that building have them? Yesterday I wanted people informed. Today I am more skeptical, and in a strange way both more hopeful about good outcomes and more wary of a real crisis.",
+        "Julie Roginsky makes the case that this is less a problem of epidemiology than of Kremlinology, and Kevin Esvelt, who leads a biosecurity lab at MIT, has called the Irkutsk facility a weapons-lineage lab. What we have is a mystery with potentially civilization-level stakes, told by an unreliable narrator, in a place where no independent reporting can reach. My biggest hope is that I am completely wrong. My biggest fear is that the people who know are telling us to pay attention, and the wrong people are in charge."
+      ],
+      "links": [
+        {
+          "label": "The Hinge & Near Field",
+          "platform": "Substack",
+          "url": "https://lwinner.substack.com/p/irkutsk-plague-mystery-russia-anti-plague-institute"
+        },
+        {
+          "label": "Bouncin’ and Behavin’ Blogs",
+          "platform": "Medium",
+          "url": "https://medium.com/bouncin-and-behavin-blogs/something-about-the-irkutsk-plague-story-doesnt-add-up-c946a3092b8d?sk=5902288b399e92dc63b5c203fb796003"
+        }
+      ],
+      "image": "/stories/irkutsk-plague-story-doesnt-add-up.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "the-fed-is-hitting-the-brakes-ai-is-flooring-the-gas",
       "title": "The Fed Is Hitting the Brakes. AI Is Flooring the Gas.",
       "dek": "Higher rates are supposed to make borrowers flinch. Families are. Businesses are. But Big Tech is borrowing hundreds of billions to win the AI race, and taking whatever price the market gives them.",
