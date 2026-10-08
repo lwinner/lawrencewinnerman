@@ -2,36 +2,36 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
-      "title": "Something About the Irkutsk Plague Story Doesn’t Add Up",
-      "link": "https://lwinner.substack.com/p/irkutsk-plague-mystery-russia-anti-plague-institute",
-      "date": "Oct 6, 2026",
-      "outlet": "The Hinge & Near Field",
-      "excerpt": "A lab tech at an anti-plague institute who didn’t take the antibiotics. A sealed hospital. A Kremlin that won’t say the word. The more we learn, the stranger it gets.",
-      "image": "/featured/irkutsk-plague.jpg"
-    },
-    {
-      "title": "The Fed Is Hitting the Brakes. AI Is Flooring the Gas.",
-      "link": "https://medium.com/bouncin-and-behavin-blogs/the-fed-is-hitting-the-brakes-ai-is-flooring-the-gas-3aadf24d3a95?sk=26437962cfa654bbf1c341d84143caae",
-      "date": "Oct 4, 2026",
-      "outlet": "Medium",
-      "excerpt": "Big Tech is borrowing hundreds of billions to win the AI race and taking whatever price the market gives it. Everyone else gets the bill.",
-      "image": "/featured/fed-brakes-ai-gas.jpg"
-    },
-    {
-      "title": "Russia’s Anti-Plague Lab Had a Plague. Then Officials Refused to Say “Plague.”",
-      "link": "https://medium.com/the-daily-whatever-show/russias-anti-plague-lab-had-a-plague-then-officials-refused-to-say-plague-fc9f10a1088f?sk=5d38c98ba2dc6497f57533850f526f75",
-      "date": "Oct 4, 2026",
-      "outlet": "Medium",
-      "excerpt": "A 28-year-old lab assistant broke a tube of live bacteria and died. 197 contacts, a sealed hospital, and not one official willing to say the word.",
-      "image": "/featured/plague-lab.jpg"
-    },
-    {
-      "title": "Trump Made a 13-Year-Old Be His Own Lawyer. It’s Exactly as F@#ked Up as It Sounds.",
-      "link": "https://open.substack.com/pub/thedailywhatevershow/p/fucked-up-friday-13-year-old-own-lawyer-deported?r=56yuuv",
-      "date": "Oct 3, 2026",
+      "title": "Trump Called Two American Cities a “Small Price.” Hurricane Isaias Would Like a F@#king Word.",
+      "link": "https://www.thedailywhatevershow.com/p/hurricane-isaias-gas-prices-trump-small-price-midterms",
+      "date": "Oct 8, 2026",
       "outlet": "The Daily Whatever Show",
-      "excerpt": "No lawyer, two bad choices, and a deportation order for a kid who told the judge, “I have no one.”",
-      "image": "/featured/13-year-old-lawyer.jpg"
+      "excerpt": "He offered up Los Angeles and San Diego as a “small price.” Four days later the Gulf is sending the invoice, twenty-six days before the midterms.",
+      "image": "/featured/trump-called-two-american-cities-a-small-price.jpg"
+    },
+    {
+      "title": "Ottumwa, Iowa Invited Religious Freedom and Got Exactly What It Ordered",
+      "link": "https://www.thedailywhatevershow.com/p/ottumwa-satanic-invocation-religious-freedom",
+      "date": "Oct 8, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "The council adopted a policy welcoming every belief and none. Then someone showed up with a different belief, and a pastor demanded the curse be reversed.",
+      "image": "/featured/ottumwa-invited-religious-freedom-and-got-exactly-what-it-ordered.jpg"
+    },
+    {
+      "title": "The Irkutsk Mystery: What Is Russia Hiding?",
+      "link": "https://lwinner.substack.com/p/irkutsk-plague-russia-kremlin-bioweapons",
+      "date": "Oct 7, 2026",
+      "outlet": "The Hinge & Near Field",
+      "excerpt": "A dead lab worker, vanished reports, and a changing story. With Julie Roginsky and Michelle Kinney on what Moscow would rather the world forget.",
+      "image": "/featured/the-irkutsk-mystery-what-is-russia-hiding.jpg"
+    },
+    {
+      "title": "If I’d Known You Were Gonna Die, I Wouldn’t Have Baked You That Cake",
+      "link": "https://medium.com/genxy/if-id-known-you-were-gonna-die-i-wouldn-t-have-baked-you-that-cake-ac9f96b27f57?sk=68309b8c1f4efeca733f0b9da3b41f7e",
+      "date": "Oct 6, 2026",
+      "outlet": "Medium",
+      "excerpt": "April 11, 1984, was my father’s forty-sixth birthday. I was fourteen, and I decided I would bake him a cake.",
+      "image": "/featured/if-id-known-you-were-gonna-die-i-wouldnt-have-baked-you-that-cake.jpg"
     }
   ]
 }
