@@ -2,6 +2,22 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "You Have Died of Dysentery",
+      "link": "https://www.thedailywhatevershow.com/p/drug-resistant-shigella-sti-cdc",
+      "date": "Oct 9, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Shigella is back, it’s an STI now, it shrugs off all five oral antibiotics, and the CDC tracks it under food poisoning.",
+      "image": "/featured/you-have-died-of-dysentery.jpg"
+    },
+    {
+      "title": "Trump Keeps Committing Treason Live On Camera",
+      "link": "https://www.thedailywhatevershow.com/p/trump-let-them-take-out-los-angeles-san-diego-treason",
+      "date": "Oct 8, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Three times in three days he invited Iran to hit Los Angeles and San Diego. Article III defines exactly one crime.",
+      "image": "/featured/trump-keeps-committing-treason-live-on-camera.jpg"
+    },
+    {
       "title": "Trump Called Two American Cities a “Small Price.” Hurricane Isaias Would Like a F@#king Word.",
       "link": "https://www.thedailywhatevershow.com/p/hurricane-isaias-gas-prices-trump-small-price-midterms",
       "date": "Oct 8, 2026",
@@ -16,22 +32,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "The council adopted a policy welcoming every belief and none. Then someone showed up with a different belief, and a pastor demanded the curse be reversed.",
       "image": "/featured/ottumwa-invited-religious-freedom-and-got-exactly-what-it-ordered.jpg"
-    },
-    {
-      "title": "The Irkutsk Mystery: What Is Russia Hiding?",
-      "link": "https://lwinner.substack.com/p/irkutsk-plague-russia-kremlin-bioweapons",
-      "date": "Oct 7, 2026",
-      "outlet": "The Hinge & Near Field",
-      "excerpt": "A dead lab worker, vanished reports, and a changing story. With Julie Roginsky and Michelle Kinney on what Moscow would rather the world forget.",
-      "image": "/featured/the-irkutsk-mystery-what-is-russia-hiding.jpg"
-    },
-    {
-      "title": "If I’d Known You Were Gonna Die, I Wouldn’t Have Baked You That Cake",
-      "link": "https://medium.com/genxy/if-id-known-you-were-gonna-die-i-wouldn-t-have-baked-you-that-cake-ac9f96b27f57?sk=68309b8c1f4efeca733f0b9da3b41f7e",
-      "date": "Oct 6, 2026",
-      "outlet": "Medium",
-      "excerpt": "April 11, 1984, was my father’s forty-sixth birthday. I was fourteen, and I decided I would bake him a cake.",
-      "image": "/featured/if-id-known-you-were-gonna-die-i-wouldnt-have-baked-you-that-cake.jpg"
     }
   ]
 }

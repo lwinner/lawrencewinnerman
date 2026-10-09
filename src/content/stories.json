@@ -1,6 +1,65 @@
 {
   "stories": [
     {
+      "slug": "you-have-died-of-dysentery",
+      "title": "You Have Died of Dysentery",
+      "dek": "The Oregon Trail disease is back, it’s an STI now, and the CDC filed it under food poisoning.",
+      "date": "2026-10-09",
+      "tags": [
+        "Public Health",
+        "CDC",
+        "Antibiotic Resistance",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Shigella, the bacterium that killed your pixelated ox-cart family on an Apple IIe in 1987, has spent the last decade reinventing itself as a sexually transmitted infection. The CDC’s own April report examined 16,788 samples: extensively drug-resistant cases, immune to all five oral antibiotics we would normally use, went from zero in 2011 to 280 in 2023, and more than a third of those patients were hospitalized. The treatment recommendation, quoted in full: there isn’t one.",
+        "How do you breed a superbug? A 2026 Lancet study calls it bystander resistance: you prescribe azithromycin for gonorrhea, and the shigella living in the same patient sits in on the course and graduates. We didn’t lose the fight to this bug. We trained it. And the agency responsible for noticing tracks it through its foodborne surveillance system, which is like tracking carjackings through the DMV."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/drug-resistant-shigella-sti-cdc"
+        },
+        {
+          "label": "genXy",
+          "platform": "Medium",
+          "url": "https://medium.com/genxy/you-have-died-of-dysentery-66820b1509c5"
+        }
+      ],
+      "image": "/stories/you-have-died-of-dysentery.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
+      "slug": "trump-keeps-committing-treason-live-on-camera",
+      "title": "Trump Keeps Committing Treason Live On Camera",
+      "dek": "Article III defines exactly one crime. He is committing it on tape, to applause.",
+      "date": "2026-10-08",
+      "tags": [
+        "Trump",
+        "Treason",
+        "Iran",
+        "Los Angeles",
+        "San Diego",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Three times in three days, the president stood in front of a wall of American flags and invited a country we are at war with to hit two American cities. Monday in Grand Island: “Let ’em take out Los Angeles. Let ’em take out San Diego.” Wednesday in San Antonio: “I said it the other day: let them hit a missile into San Diego or Los Angeles.” He opened with “I said it the other day.” He knew, and he did it again as a callback. Comedians do callbacks. Presidents are not supposed to do them with the names of cities.",
+        "Thirteen million people live in those two counties, and San Diego is the home port of the Pacific Fleet, so the commander in chief invited an enemy to put a missile into his own ships. The Constitution defines exactly one crime. Article III, Section 3: adhering to their enemies, giving them aid and comfort. When Republicans on the ballot are breaking with you over which American cities you’d sacrifice, you have located a brand-new bottom."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/trump-let-them-take-out-los-angeles-san-diego-treason"
+        }
+      ],
+      "image": "/stories/trump-keeps-committing-treason-live-on-camera.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "trump-called-two-american-cities-a-small-price",
       "title": "Trump Called Two American Cities a “Small Price.” Hurricane Isaias Would Like a F@#king Word.",
       "dek": "Twenty-six days before the midterms, the Gulf is about to send Republicans an invoice. Some might call it karma, but lives are at stake.",
