@@ -1,0 +1,14 @@
+{
+  "name": "Lawrence Winnerman",
+  "short_name": "Winnerman",
+  "description": "Lawrence Winnerman is a Gen X writer and strategist, a former Amazon and Microsoft program leader, writing about AI, work, democracy, and the near future.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F4F1EB",
+  "theme_color": "#F4F1EB",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

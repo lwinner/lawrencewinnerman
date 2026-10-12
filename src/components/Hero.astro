@@ -1,10 +1,12 @@
 ---
-// Hero — sigil + name lockup + locked tagline.
+// Hero, Layout A: the sigil leads; the name, rule, and slogan; then the photo
+// byline with the role eyebrow, the hero sentence (workbook 2.1), and the doors.
+import { BOOKING_URL } from "../data/site-schema";
 ---
 <section id="top" class="hero">
   <div class="container hero-grid">
     <div class="hero-mark">
-      <img src="/sigil-master.svg" alt="Lawrence Winnerman sigil—nested chevron mark" width="420" height="420" />
+      <img src="/sigil-master.svg" alt="Lawrence Winnerman's sigil, the letters L and W as nested red chevrons." width="420" height="420" />
     </div>
     <div class="hero-name">
       <h1 class="display-name">
@@ -16,7 +18,22 @@
         <span>Writing the hinge.</span>
         <span>Building the future.</span>
       </p>
-      <p class="hero-credential">Founder &amp; CEO, Peptidings &middot; Essayist &amp; Novelist</p>
+      <div class="byline">
+        <picture>
+          <source srcset="/images/lawrence-winnerman-headshot-192.avif" type="image/avif" />
+          <source srcset="/images/lawrence-winnerman-headshot-192.webp" type="image/webp" />
+          <img src="/images/lawrence-winnerman-headshot-192.jpg" alt="Lawrence Winnerman" width="56" height="56" />
+        </picture>
+        <p class="roles">Essayist · Novelist · Strategist · Podcaster</p>
+      </div>
+      <p class="hero-sentence">
+        Lawrence Winnerman is a Gen X writer and strategist working the seam where institutions break: what comes next, and how we build it.
+      </p>
+      <div class="doors">
+        <a class="btn" href="#featured">Read the latest <span aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary" href="#consulting">Work with me</a>
+        <a class="door-link" href={BOOKING_URL} rel="noopener" target="_blank">Book a call <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -24,7 +41,7 @@
 <style>
   .hero {
     padding-top: clamp(3rem, 8vw, 6rem);
-    padding-bottom: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 7rem);
   }
   .hero-grid {
     display: grid;
@@ -39,17 +56,56 @@
     aspect-ratio: 1 / 1;
   }
   .hero-name h1 span { display: block; }
-  .hero-credential {
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: var(--space-6) 0 0;
+  }
+  .byline img {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3px var(--color-border);
+  }
+  .roles {
     font-family: var(--font-ui);
-    font-size: var(--fs-small);
-    letter-spacing: 0.02em;
-    color: var(--lw-slate-soft);
-    margin: 1.1rem 0 0;
+    font-weight: 600;
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0;
+  }
+  .hero-sentence {
+    font-size: var(--text-lead);
+    line-height: 1.5;
+    max-width: 40ch;
+    margin: var(--space-5) 0 0;
+  }
+  .doors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4) var(--space-6);
+    margin-top: var(--space-8);
+  }
+  .door-link {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--text-small);
+    letter-spacing: 0.04em;
+    text-decoration: underline;
+    text-decoration-color: var(--color-border);
+    text-underline-offset: 4px;
   }
   @media (max-width: 720px) {
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
     .hero-mark { justify-self: center; max-width: 220px; }
     .hero-mark img { max-width: 220px; }
     .rule-red { margin-inline: auto; }
+    .byline, .doors { justify-content: center; }
+    .hero-sentence { margin-inline: auto; }
   }
 </style>

@@ -8,6 +8,7 @@ import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import StoryCard from "../../components/StoryCard.astro";
 import { stories, type Story, longDate } from "../../lib/stories";
+import { PERSON_ID, WEBSITE_ID } from "../../data/site-schema";
 
 export function getStaticPaths() {
   return stories.map((story) => ({ params: { slug: story.slug }, props: { story } }));
@@ -16,7 +17,7 @@ export function getStaticPaths() {
 const { story: s } = Astro.props as { story: Story };
 const site = Astro.site!;
 const url = new URL(`/writing/${s.slug}/`, site).href;
-const description = s.summary[0].length > 300 ? s.summary[0].slice(0, 297).replace(/\s+\S*$/, "") + "…" : s.summary[0];
+const description = s.summary[0].length > 155 ? s.summary[0].slice(0, 154).replace(/\s+\S*$/, "") + "…" : s.summary[0];
 
 // Related: share a tag first, then fill with the newest others.
 const others = stories.filter((o) => o.slug !== s.slug);
@@ -35,8 +36,9 @@ const ld = [
     mainEntityOfPage: url,
     image: s.image ? new URL(s.image, site).href : undefined,
     keywords: s.tags.join(", "),
-    author: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
-    publisher: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
     sameAs: s.links.map((l) => l.url),
   },
   {
@@ -51,7 +53,7 @@ const ld = [
 ];
 ---
 <Base
-  title={`${s.title}—Lawrence Winnerman`}
+  title={`${s.title} | Lawrence Winnerman`}
   description={description}
   ogImage={s.image ?? undefined}
   ogType="article"
@@ -121,12 +123,12 @@ const ld = [
   .wide { max-width: calc(64rem + 2 * var(--gutter)); }
   .head { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
   .crumbs {
-    font-family: var(--font-ui); font-size: var(--fs-small); color: var(--lw-muted);
+    font-family: var(--font-ui); font-size: var(--fs-small); color: var(--color-text-secondary);
     margin: 0 0 1.25rem;
   }
   .crumbs a { color: var(--lw-slate-soft); text-decoration: underline; text-decoration-color: var(--lw-rule); text-underline-offset: 3px; }
   .crumbs a:hover { color: var(--lw-red); }
-  .eyebrow .tags { color: var(--lw-muted); }
+  .eyebrow .tags { color: var(--color-text-secondary); }
   h1 {
     font-family: var(--font-display); font-weight: 700;
     font-size: clamp(2.125rem, 5vw, 3.5rem); line-height: 1.04;
@@ -142,7 +144,7 @@ const ld = [
   .body p { font-size: 1.25rem; line-height: 1.6; }
   .note-label {
     font-family: var(--font-ui) !important; font-weight: 600; font-size: var(--fs-eyebrow) !important;
-    letter-spacing: 0.18em; text-transform: uppercase; color: var(--lw-muted);
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-text-secondary);
     margin: 0 0 1rem;
   }
   .read { margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--lw-rule); }

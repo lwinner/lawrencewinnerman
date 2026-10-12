@@ -1,51 +1,51 @@
 [
   {
     "tier": "featured",
-    "name": "Peptidings",
-    "url": "https://peptidings.com",
-    "role": "Founder & CEO",
-    "description": "A serious publication on therapeutic peptides—Dutch Uncle voice, careful sourcing, no hype. Written for people who want to actually understand what they're considering putting in their body."
-  },
-  {
-    "tier": "featured",
-    "name": "The Hinge & Near Field",
-    "url": "https://lwinner.substack.com",
-    "role": "Writer & Publisher",
-    "description": "My personal Substack. Essays on hinge moments in politics, technology, and culture; near-future scenarios; speculative fiction; a novel-in-progress called The Shattered World Series; and memoir when the mood strikes."
+    "name": "The Hinge & The Near Field",
+    "url": "https://lwinner.substack.com/",
+    "role": "Writer and Publisher",
+    "description": "My Substack. Essays on AI and work, democracy and power, and the near future; near-future scenarios; and Light Shines Through, the first novel in The Shattered World series, serialized chapter by chapter."
   },
   {
     "tier": "featured",
     "name": "The Daily Whatever Show",
-    "url": "https://thedailywhatevershow.com",
-    "role": "Co-Host",
-    "description": "A podcast I co-host with Dana DuBois, my best friend of 47 years. Generational politics, current events, the felt experience of being Gen X right now. Mostly an excuse to keep showing up for each other."
+    "url": "https://www.thedailywhatevershow.com/",
+    "role": "Co-host and Co-owner",
+    "description": "Satire and news commentary I co-host and co-own with Dana DuBois, my closest friend for more than four decades. Generational politics, current events, the felt experience of being Gen X right now. Mostly an excuse to keep showing up for each other."
   },
   {
-    "tier": "constellation",
-    "name": "alpacalunch",
-    "url": "https://alpacalunch.com",
-    "role": "Proprietor",
-    "description": "A T-shirt and merch shop for rebels, ranters, and smartasses—funny, political, occasionally vulgar, and proudly left-leaning. Wearable resistance, including a collection inspired by The Shattered World Series. Yes, the name is one word."
+    "tier": "featured",
+    "name": "The Shattered World",
+    "url": "https://lwinner.substack.com/",
+    "role": "Author",
+    "description": "My speculative-fiction series. Book One, Light Shines Through, is serializing chapter by chapter on The Hinge & The Near Field. Book Two, Any Open Door, is in development."
   },
   {
-    "tier": "constellation",
+    "tier": "also",
     "name": "Moondark",
-    "url": "https://moondark.app",
-    "role": "Maker",
-    "description": "A phone app that tells you whether the moon is currently void of course. For astrologers, witches, and anyone else who has learned the hard way not to schedule important things during a void Moon. Quiet, contemplative, and very specific in what it does."
+    "url": "https://moondark.app/",
+    "role": "Creator",
+    "description": "A web app that tells you whether the Moon is void of course right now, for astrologers, witches, and anyone who has learned the hard way not to schedule important things during a void Moon. Phone app coming."
   },
   {
-    "tier": "constellation",
-    "name": "The Imagination Project",
-    "url": "https://theimaginationproject.org",
+    "tier": "also",
+    "name": "alpacalunch",
+    "url": "https://alpacalunch.com/",
     "role": "Founder",
-    "description": "Futuretypes—a personality-archetype quiz built on literary archetypes rather than pop psychology. Result pages written in Margaret-Atwood-meets-Mary-Oliver mode, which is a sentence I will defend in court."
+    "description": "A T-shirt and merch shop for rebels, ranters, and smartasses: funny, political, occasionally vulgar, and proudly left-leaning. Yes, the name is one word."
   },
   {
-    "tier": "constellation",
-    "name": "PepDoc",
-    "url": null,
-    "role": "Subject & Author",
-    "description": "A documentary and a companion book about building Peptidings with Claude—what it actually looks like, week by week, to run a serious publication with an AI as your integrated executive partner. In production. The book is half-drafted."
+    "tier": "also",
+    "name": "genXy",
+    "url": "https://medium.com/genxy",
+    "role": "Co-founder",
+    "description": "A generational-writing publication on Medium, where I write alongside other Gen X voices."
+  },
+  {
+    "tier": "also",
+    "name": "Peptidings",
+    "url": "https://peptidings.com/",
+    "role": "Founder · On hiatus",
+    "description": "A serious publication on peptide science: careful sourcing, no hype. On hiatus for now."
   }
 ]

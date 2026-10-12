@@ -4,11 +4,11 @@
 // "Writing" goes to the story index.
 const isHome = Astro.url.pathname === "/";
 const items = [
-  { href: "#bio",       label: "Bio" },
-  { href: "#work",      label: "Work" },
-  { href: "#writing",   label: "Writing" },
-  { href: "#subscribe", label: "Subscribe" },
-  { href: "#contact",   label: "Contact" },
+  { href: "#about",      label: "About" },
+  { href: "#work",       label: "Work" },
+  { href: "#writing",    label: "Writing" },
+  { href: "#consulting", label: "Consulting" },
+  { href: "#contact",    label: "Contact" },
 ].map((i) => ({
   ...i,
   spy: i.href.slice(1),
@@ -80,9 +80,10 @@ const items = [
     .brand span { display: none; }
     .links { gap: 1.25rem; }
   }
-  @media (max-width: 420px) {
-    .links { gap: 0.85rem; }
-    .links a { letter-spacing: 0.08em; }
+  @media (max-width: 520px) {
+    .links li:nth-child(2) { display: none; } /* Work: the homepage scroll reaches it */
+    .links { gap: 0.9rem; }
+    .links a { letter-spacing: 0.06em; }
   }
 </style>
 

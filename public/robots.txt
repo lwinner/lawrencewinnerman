@@ -1,3 +1,6 @@
+# lawrencewinnerman.com — every crawler is welcome, search and AI alike.
+# Keep this file and Cloudflare's AI Crawl Control in agreement: if the
+# edge blocks a bot, this file is not the whole truth.
 User-agent: *
 Allow: /
 

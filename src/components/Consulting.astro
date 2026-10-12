@@ -1,0 +1,50 @@
+---
+// Consulting (#consulting): the homepage door to the consulting work (workbook
+// 8.4). No client names, no logos, no prices, ever. The full brochure page
+// (/consulting/) comes in Phase 2.
+import { BOOKING_URL } from "../data/site-schema";
+const services = [
+  { name: "Content strategy and search", note: "For publishers and newsletters: search and answer-engine optimization, story-page systems, and the work you see on this site." },
+  { name: "Fractional operations leadership", note: "For independent media companies that need an operator: the job I did as COO of Blue Amp Media." },
+  { name: "AI-assisted editorial operations", note: "Skill-based workflows for small teams that want them, designed by someone who runs them every day." },
+  { name: "Program leadership for complex launches", note: "Twenty-five years of it, including Microsoft-scale programs across three continents." },
+];
+---
+<section id="consulting" class="consulting">
+  <div class="container">
+    <p class="eyebrow">Hire the strategist</p>
+    <h2>Consulting and Strategy</h2>
+    <p class="consulting-lead">
+      I take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential.
+    </p>
+    <ul class="services" role="list">
+      {services.map((s) => (
+        <li class="service">
+          <h3 class="service-name">{s.name}</h3>
+          <p class="service-note">{s.note}</p>
+        </li>
+      ))}
+    </ul>
+    <div class="consulting-actions">
+      <a class="btn" href={BOOKING_URL} rel="noopener" target="_blank">Book a call <span aria-hidden="true">→</span></a>
+      <p class="talk">Let’s talk.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .consulting-lead { max-width: 62ch; margin: 0 0 var(--space-10); }
+  .services {
+    list-style: none; margin: 0 0 var(--space-10); padding: 0;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6);
+  }
+  .service { border-top: var(--border-hairline); padding-top: var(--space-5); }
+  .service-name {
+    font-family: var(--font-subhead); font-weight: 700; font-size: var(--text-card);
+    line-height: 1.15; margin: 0 0 var(--space-2);
+  }
+  .service-note { font-size: var(--text-small); line-height: 1.55; color: var(--color-text-secondary); margin: 0; max-width: 46ch; }
+  .consulting-actions { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-6); }
+  .talk { font-family: var(--font-display); font-style: italic; font-size: var(--text-tagline); margin: 0; }
+  @media (max-width: 720px) { .services { grid-template-columns: 1fr; } }
+</style>

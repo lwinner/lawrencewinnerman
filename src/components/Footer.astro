@@ -1,20 +1,39 @@
 ---
+import { EMAIL, PROFILES } from "../data/site-schema";
 const year = new Date().getFullYear();
+const nav = [
+  { href: "/#about", label: "About" },
+  { href: "/writing/", label: "Writing" },
+  { href: "/#consulting", label: "Consulting" },
+  { href: "/#contact", label: "Contact" },
+];
 ---
 <footer class="footer">
   <div class="container footer-inner">
-    <p class="meta">© {year} Lawrence Winnerman · Writing the hinge. Building the future.</p>
+    <div class="footer-brand">
+      <img src="/sigil-master.svg" alt="" width="40" height="40" aria-hidden="true" />
+      <p class="footer-slogan"><span>Writing the hinge.</span><span>Building the future.</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul role="list">{nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}</ul>
+      <ul role="list" class="profiles">{PROFILES.map((p) => <li><a href={p.url} rel="me noopener">{p.label}</a></li>)}</ul>
+    </nav>
+    <p class="meta">© {year} Lawrence Winnerman · <!--email_off--><a href={`mailto:${EMAIL}`}>{EMAIL}</a><!--/email_off--></p>
   </div>
 </footer>
 
 <style>
-  .footer {
-    border-top: 1px solid var(--lw-rule);
-    padding: 0;
-  }
-  .footer-inner {
-    padding-top: 1.5rem;
-    padding-bottom: 2.5rem;
-  }
+  .footer { border-top: 1px solid var(--color-border); padding: 0; }
+  .footer-inner { padding-top: var(--space-10); padding-bottom: var(--space-10); display: grid; gap: var(--space-6); }
+  .footer-brand { display: flex; align-items: center; gap: var(--space-4); }
+  .footer-brand img { width: 40px; height: 40px; }
+  .footer-slogan { font-family: var(--font-display); font-style: italic; font-size: 1.125rem; line-height: 1.3; margin: 0; }
+  .footer-slogan span { display: block; }
+  .footer-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+  .footer-nav ul + ul { margin-top: var(--space-3); }
+  .footer-nav a { font-family: var(--font-ui); font-weight: 500; font-size: var(--text-small); }
+  .footer-nav ul:first-child a { font-size: var(--text-label); letter-spacing: 0.14em; text-transform: uppercase; }
+  .profiles a { color: var(--color-text-secondary); }
   .meta { margin: 0; }
+  .meta a { text-decoration: underline; text-decoration-color: var(--color-border); text-underline-offset: 3px; }
 </style>

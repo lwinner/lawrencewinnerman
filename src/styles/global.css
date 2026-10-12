@@ -1,40 +1,135 @@
 /* ============================================================
    Lawrence Winnerman — global styles
-   Implements the locked brand system (see ../brand-foundation.md
-   and ../brand-assets/brand-reference.md). Do NOT add new tokens
-   without updating those documents first.
+   Implements the locked brand system (brand-reference.md in
+   Documents\Claude\_Hub\Brand). Tokens come from design-system v1.0
+   (October 2026). Do NOT add new tokens without updating the
+   reference first.
    ============================================================ */
 
-:root {
-  /* Color tokens — LOCKED */
-  --lw-cream:       #F4F1EB;
-  --lw-cream-card:  #F9F7F2;  /* card fill, from the locked token set */
-  --lw-red:         #C73526;
-  --lw-red-hover:   #B22E20;  /* red hover, from the locked token set */
-  --lw-slate:       #434A52;
-  --lw-slate-soft:  #5C636B;  /* secondary body / lead, from the locked token set */
-  --lw-muted:       #9A9489;
-  --lw-rule:        #C9C5BC;
+/* ==================================================================
+   Lawrence Winnerman — design tokens, v1.0 (October 2026)
+   Source of truth for every value the site uses. Replaces the :root
+   block in src/styles/global.css. Components read SEMANTIC tokens
+   (--color-*, --text-*, --space-*), never raw hex.
 
-  /* Type stacks — Adobe Typekit kit qbo5oht */
+   Palette rule: three brand colors are locked (cream, red, slate).
+   The five supporting values below were already in production and are
+   now codified, not invented. No new colors were added in v1.0.
+   ================================================================== */
+
+:root {
+  /* ---------- 1. Brand palette (LOCKED) ---------- */
+  --lw-cream:       #F4F1EB;  /* page background */
+  --lw-red:         #C73526;  /* the sigil; accents; 4.70:1 on cream */
+  --lw-slate:       #434A52;  /* text; never pure black; 7.96:1 on cream */
+
+  /* ---------- 2. Supporting values (codified from production) ---------- */
+  --lw-cream-card:  #F9F7F2;  /* raised surfaces: cards, subscribe panel */
+  --lw-red-hover:   #B22E20;  /* hover/pressed red; 5.64:1 on cream */
+  --lw-slate-soft:  #5C636B;  /* secondary text; 5.40:1 on cream */
+  --lw-muted:       #9A9489;  /* DECORATIVE ONLY: 2.67:1 fails for text */
+  --lw-rule:        #C9C5BC;  /* hairlines and dividers; decorative only */
+
+  /* ---------- 3. Semantic color roles (use these in components) ---------- */
+  --color-bg:              var(--lw-cream);
+  --color-surface:         var(--lw-cream-card);
+  --color-text:            var(--lw-slate);
+  --color-text-secondary:  var(--lw-slate-soft);  /* dates, metadata, captions, footer */
+  --color-accent:          var(--lw-red);         /* eyebrows, links, primary buttons, rules */
+  --color-accent-hover:    var(--lw-red-hover);
+  --color-on-accent:       var(--lw-cream);       /* text on red; 4.70:1 */
+  --color-border:          var(--lw-rule);        /* card and section hairlines */
+  --color-border-strong:   var(--lw-slate-soft);  /* form fields, focus-adjacent UI (needs 3:1) */
+  --color-decoration:      var(--lw-muted);       /* ornaments, image placeholders, separators */
+  --color-focus:           var(--lw-red);
+
+  /* ---------- 4. Type families (Adobe Fonts kit qbo5oht; 8 faces) ---------- */
   --font-display: "arno-pro-display", "arno-pro", Georgia, "Times New Roman", serif;
   --font-subhead: "arno-pro-subhead", "arno-pro", Georgia, "Times New Roman", serif;
   --font-body:    "arno-pro", Georgia, "Times New Roman", serif;
   --font-ui:      "acumin-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Type scale */
-  --fs-hero:        clamp(3rem, 8vw, 6rem);     /* Display name */
-  --fs-tagline:     clamp(1.25rem, 2.4vw, 1.75rem);
-  --fs-h2:          clamp(1.875rem, 4vw, 3rem);
-  --fs-h3:          clamp(1.25rem, 2.2vw, 1.5rem);
-  --fs-body:        1.125rem;
-  --fs-small:       0.9375rem;
-  --fs-eyebrow:     0.8125rem;
+  /* ---------- 5. Type scale ---------- */
+  --text-hero:     clamp(3rem, 8vw, 6rem);         /* display name; Arno Display 700 */
+  --text-h1:       clamp(2.125rem, 5vw, 3.5rem);   /* inner-page H1; Arno Display 700 */
+  --text-h2:       clamp(1.875rem, 4vw, 3rem);     /* section heading; Arno Subhead 700 */
+  --text-h3:       clamp(1.25rem, 2.2vw, 1.5rem);  /* Arno 400 */
+  --text-card:     1.35rem;                        /* card titles; Arno Subhead 700 */
+  --text-tagline:  clamp(1.25rem, 2.4vw, 1.75rem); /* Arno Display 400 italic */
+  --text-quote:    clamp(1.6rem, 3.2vw, 2.5rem);   /* pull quotes; Arno Display 400 italic */
+  --text-lead:     1.25rem;                        /* story notes, About lead */
+  --text-body:     1.125rem;                       /* 18px default */
+  --text-small:    0.9375rem;                      /* 15px; UI, card deks */
+  --text-label:    0.8125rem;                      /* 13px; eyebrows, dates, nav */
 
-  /* Layout */
-  --max-width:      1200px;
-  --gutter:         clamp(1.5rem, 4vw, 4rem);
-  --section-pad-y:  clamp(4rem, 10vw, 8rem);
+  --leading-tight: 1.04;
+  --leading-heading: 1.12;
+  --leading-body:  1.6;
+  --tracking-label: 0.16em;   /* uppercase Acumin labels only */
+  --measure:       62ch;      /* longest comfortable line for body text */
+
+  /* ---------- 6. Spacing (4px base; rem so it scales with user font size) ---------- */
+  --space-1:  0.25rem;  /*  4 */
+  --space-2:  0.5rem;   /*  8 */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.25rem;  /* 20 */
+  --space-6:  1.5rem;   /* 24 */
+  --space-8:  2rem;     /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 */
+  --space-16: 4rem;     /* 64 */
+  --space-section: clamp(4rem, 10vw, 8rem);
+
+  /* ---------- 7. Layout ---------- */
+  --width-page:   1200px;
+  --width-wide:   64rem;   /* story hero images */
+  --width-narrow: 46rem;   /* story notes, About, consulting body */
+  --gutter:       clamp(1.5rem, 4vw, 4rem);
+  --nav-height:   72px;
+  /* Breakpoints (for reference; CSS vars can't drive @media):
+     sm 480px · md 720px · lg 960px */
+
+  /* ---------- 8. Shape, border, elevation ---------- */
+  --radius-sm: 4px;   /* buttons, inputs */
+  --radius-md: 6px;   /* cards, images */
+  --radius-full: 999px; /* headshot byline */
+  --border-hairline: 1px solid var(--color-border);
+  --border-accent-top: 3px solid var(--color-accent);   /* featured panels */
+  --rule-accent-width: 4rem;   /* the short red rule under the name */
+  --rule-accent-height: 6px;
+  --shadow-lift: 0 1px 2px rgba(67, 74, 82, 0.08);
+
+  /* ---------- 9. Motion ---------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --lift-distance: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --lift-distance: 0px; }
+}
+
+/* Focus: visible on every interactive element, keyboard only. Red on
+   cream is 4.70:1, above the 3:1 required for focus indicators. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Back-compat aliases so existing components keep working during migration.
+   Delete once every component reads the semantic names. */
+:root {
+  --fs-hero: var(--text-hero);
+  --fs-tagline: var(--text-tagline);
+  --fs-h2: var(--text-h2);
+  --fs-h3: var(--text-h3);
+  --fs-body: var(--text-body);
+  --fs-small: var(--text-small);
+  --fs-eyebrow: var(--text-label);
+  --max-width: var(--width-page);
+  --section-pad-y: var(--space-section);
 }
 
 /* Reset --------------------------------------------------- */
@@ -146,14 +241,16 @@ em, i { font-style: italic; }
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
-.btn:hover { color: var(--lw-cream); opacity: 0.92; transform: translateY(-1px); }
+.btn:hover { color: var(--color-on-accent); background: var(--color-accent-hover); transform: translateY(-1px); }
+.btn-secondary { background: transparent; color: var(--color-text); border: 1px solid var(--color-border-strong); }
+.btn-secondary:hover { background: transparent; color: var(--color-accent); border-color: var(--color-accent); }
 
 /* Footer / metadata */
 .meta {
   font-family: var(--font-ui);
   font-weight: 400;
   font-size: var(--fs-small);
-  color: var(--lw-muted);
+  color: var(--color-text-secondary);
 }
 
 /* Section separator */

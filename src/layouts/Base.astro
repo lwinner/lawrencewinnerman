@@ -1,5 +1,6 @@
 ---
-// Base layout — Typekit, color tokens, meta tags, font preconnects.
+// Base layout: meta tags, Open Graph, structured data, favicons, fonts.
+import { sitewideGraph } from "../data/site-schema";
 export interface Props {
   title?: string;
   description?: string;
@@ -7,36 +8,45 @@ export interface Props {
   ogType?: string;
   ogImageWidth?: number;
   ogImageHeight?: number;
+  noindex?: boolean;
+  graph?: object[];
 }
 const {
-  title = "Lawrence Winnerman—Writing the hinge. Building the future.",
-  description = "Lawrence Winnerman: founder-operator, writer, strategist. Writing the hinge. Building the future.",
-  ogImage = "/og-mark-name.png",
+  title = "Lawrence Winnerman | Writer and Strategist",
+  description = "Lawrence Winnerman, Gen X writer and strategist, on AI and work, American democracy, and the near future. Essays, fiction, a podcast, and consulting.",
+  ogImage = "/og/og-default-1280x720.png",
   ogType = "website",
-  ogImageWidth = 1200,
-  ogImageHeight = 630,
+  ogImageWidth = 1280,
+  ogImageHeight = 720,
+  noindex = false,
+  graph = [],
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ld = { "@context": "https://schema.org", "@graph": [...sitewideGraph, ...graph] };
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.href} />
+    {noindex && <meta name="robots" content="noindex" />}
 
-    <!-- Favicons -->
+    <!-- Icons -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon-180.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#F4F1EB" />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Lawrence Winnerman" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
@@ -45,30 +55,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:image:height" content={String(ogImageHeight)} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Typography: Adobe Typekit kit qbo5oht (Arno Pro + Acumin Pro, slim) -->
+    <!-- Typography: Adobe Fonts kit qbo5oht (Arno Pro + Acumin Pro, 8 faces) -->
     <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="preconnect" href="https://p.typekit.net" crossorigin />
     <link rel="stylesheet" href="https://use.typekit.net/qbo5oht.css" />
 
-    <!-- Person schema (helps Google know who this site is about) -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Lawrence Winnerman",
-      url: "https://lawrencewinnerman.com",
-      jobTitle: "Founder & Operator",
-      description,
-      sameAs: [
-        "https://lwinner.substack.com",
-        "https://www.linkedin.com/in/lawrencewinnerman",
-      ],
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
 
     <link rel="alternate" type="application/rss+xml" title="The Hinge & The Near Field" href="https://lwinner.substack.com/feed" />
     <link rel="sitemap" href="/sitemap.xml" />
     <slot name="head" />
-
-    <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
     <slot />

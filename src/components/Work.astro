@@ -1,14 +1,14 @@
 ---
 import brands from "../content/brands.json";
 const featured = brands.filter(b => b.tier === "featured");
-const constellation = brands.filter(b => b.tier === "constellation");
+const also = brands.filter(b => b.tier === "also");
 ---
 <section id="work" class="work">
   <div class="container">
-    <p class="eyebrow">Work</p>
-    <h2>What I'm building.</h2>
+    <p class="eyebrow">The work</p>
+    <h2>Essays, Fiction, and the Podcast</h2>
     <p class="work-lead">
-      These started as side projects that didn't know they were supposed to stay small. They're related&mdash;variations on paying close attention to what's happening in politics, technology, and culture, and trying to make something useful from it&mdash;but they're also genuinely their own things. I run them all because I can't seem to stop.
+      These started as side projects that didn’t know they were supposed to stay small. They’re related&mdash;variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it&mdash;but they’re also genuinely their own things. I run them all because I can’t seem to stop.
     </p>
 
     <ul class="brand-grid featured" role="list">
@@ -26,9 +26,9 @@ const constellation = brands.filter(b => b.tier === "constellation");
       ))}
     </ul>
 
-    <p class="constellation-label">Also in the constellation</p>
-    <ul class="brand-grid constellation" role="list">
-      {constellation.map(b => (
+    <p class="also-label">Also made</p>
+    <ul class="brand-grid also" role="list">
+      {also.map(b => (
         <li class="brand-card brand-card--small">
           <h3 class="brand-name">{b.name}</h3>
           <p class="brand-role">{b.role}</p>
@@ -61,17 +61,17 @@ const constellation = brands.filter(b => b.tier === "constellation");
   .brand-grid.featured {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
-  .brand-grid.constellation {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .brand-grid.also {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.25rem;
   }
-  .constellation-label {
+  .also-label {
     font-family: var(--font-ui);
     font-weight: 500;
     font-size: var(--fs-eyebrow);
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--lw-muted);
+    color: var(--color-text-secondary);
     margin: 3rem 0 1.25rem;
   }
   .brand-card {
@@ -111,11 +111,11 @@ const constellation = brands.filter(b => b.tier === "constellation");
   }
   .brand-link:hover { color: var(--lw-red); }
 
-  /* Constellation collapses on narrower viewports (site breakpoints). */
-  @media (max-width: 900px) {
-    .brand-grid.constellation { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* The "Also made" row collapses on narrower viewports. */
+  @media (max-width: 960px) {
+    .brand-grid.also { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
-  @media (max-width: 560px) {
-    .brand-grid.constellation { grid-template-columns: 1fr; }
+  @media (max-width: 480px) {
+    .brand-grid.also { grid-template-columns: 1fr; }
   }
 </style>

@@ -4,10 +4,11 @@ import { stories } from "../lib/stories";
 
 export const GET: APIRoute = ({ site }) => {
   const base = site!;
-  const today = new Date().toISOString().slice(0, 10);
+  // lastmod comes from real content dates, never the build date.
+  const latest = stories[0]?.date ?? "2026-10-11";
   const urls = [
-    { loc: new URL("/", base).href, lastmod: today, priority: "1.0" },
-    { loc: new URL("/writing/", base).href, lastmod: stories[0]?.date ?? today, priority: "0.9" },
+    { loc: new URL("/", base).href, lastmod: latest, priority: "1.0" },
+    { loc: new URL("/writing/", base).href, lastmod: latest, priority: "0.9" },
     ...stories.map((s) => ({ loc: new URL(`/writing/${s.slug}/`, base).href, lastmod: s.date, priority: "0.7" })),
   ];
   const body = `<?xml version="1.0" encoding="UTF-8"?>

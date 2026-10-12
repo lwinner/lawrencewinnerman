@@ -1,0 +1,34 @@
+---
+// Real not-found page. With a 404.html in the build, Cloudflare Pages serves
+// it with a 404 status instead of falling back to the homepage.
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { stories, storyPath } from "../lib/stories";
+const latest = stories[0];
+---
+<Base title="Page Not Found | Lawrence Winnerman" description="This page isn’t here. Find Lawrence Winnerman's essays, fiction, and consulting from the homepage." noindex>
+  <Nav />
+  <main>
+    <section class="nf">
+      <div class="container">
+        <p class="eyebrow">404</p>
+        <h1>That page isn’t here.</h1>
+        <p class="lead">It may have moved, or the link may be off by a letter. Here’s where to go instead.</p>
+        <ul class="nf-links" role="list">
+          <li><a class="btn" href="/">Home <span aria-hidden="true">→</span></a></li>
+          <li><a class="btn btn-secondary" href="/writing/">All writing</a></li>
+          {latest && <li><a class="nf-latest" href={storyPath(latest)}>The latest: {latest.title}</a></li>}
+        </ul>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .nf h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-h1); line-height: var(--leading-tight); margin: 0 0 var(--space-5); }
+  .lead { font-size: var(--text-lead); color: var(--color-text-secondary); max-width: 46ch; margin: 0 0 var(--space-8); }
+  .nf-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
+  .nf-latest { font-family: var(--font-ui); font-weight: 600; font-size: var(--text-small); text-decoration: underline; text-decoration-color: var(--color-border); text-underline-offset: 4px; }
+</style>

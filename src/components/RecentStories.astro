@@ -45,7 +45,7 @@ const feedFailed = !recent.ok || stories.length === 0;
           <a class="story" href={s.href} rel={s.external ? "noopener" : undefined} target={s.external ? "_blank" : undefined} role="listitem">
             <div class="story-media">
               {s.image && (
-                <img src={s.image} alt={s.title} loading="lazy" width="640" height="360" />
+                <img src={s.image} alt="" loading="lazy" width="640" height="360" />
               )}
             </div>
             <div class="story-body">
@@ -103,7 +103,7 @@ const feedFailed = !recent.ok || stories.length === 0;
     if (s.image) {
       const img = document.createElement("img");
       img.src = s.image;
-      img.alt = s.title;
+      img.alt = "";
       img.loading = "lazy";
       img.width = 640;
       img.height = 360;
@@ -224,7 +224,7 @@ const feedFailed = !recent.ok || stories.length === 0;
     font-size: var(--fs-eyebrow);
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--lw-muted);
+    color: var(--color-text-secondary);
     margin: 0;
     white-space: nowrap;
   }

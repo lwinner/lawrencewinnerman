@@ -1,17 +1,20 @@
 ---
-const email = "lwinner@gmail.com";
+// Contact (#contact). The email is plain text; the email_off comments keep
+// Cloudflare's obfuscation from hiding it from search engines (workbook 8.5).
+import { BOOKING_URL, EMAIL, PROFILES } from "../data/site-schema";
 const asks = [
-  { label: "Podcasts & press", note: "Long-form audio, panels, on-the-record commentary." },
-  { label: "Speaking", note: "Conferences and panels at the seam of politics, tech, and culture." },
-  { label: "Advising", note: "Founders and operators building media in the new mode." },
+  { label: "Podcasts and press", note: "Long-form audio, panels, and on-the-record commentary on AI and Gen X workers, democracy as infrastructure, and the generational turning." },
+  { label: "Speaking", note: "Running a one-person media company with AI, and what the near future asks of the rest of us." },
+  { label: "Consulting", note: "Content strategy, search, operations, and AI-assisted editorial work. Book a call and we’ll see if it fits." },
 ];
 ---
 <section id="contact" class="contact">
   <div class="container">
-    <p class="eyebrow">Contact</p>
-    <h2>The door is open.</h2>
+    <p class="eyebrow">The door is open</p>
+    <h2>Contact, Speaking, and Press</h2>
     <p class="contact-lead">
-      For collaborations, sponsorships, speaking invitations, podcast bookings, advising conversations, or just to say hello&mdash;write directly.
+      For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at
+      <!--email_off--><a class="email" href={`mailto:${EMAIL}`}>{EMAIL}</a><!--/email_off-->.
     </p>
 
     <div class="asks" role="list">
@@ -24,72 +27,31 @@ const asks = [
     </div>
 
     <div class="contact-actions">
-      <a href={`mailto:${email}?subject=Hello%20Lawrence`} class="btn">
-        Email me <span aria-hidden="true">→</span>
+      <a href={BOOKING_URL} class="btn" rel="noopener" target="_blank">
+        Book a call <span aria-hidden="true">→</span>
       </a>
-      <a href={`mailto:${email}?subject=Press%20%26%20booking%20kit%20request`} class="btn btn-secondary">
-        Press &amp; booking kit
-      </a>
+      <!--email_off--><a href={`mailto:${EMAIL}?subject=Hello%20Lawrence`} class="btn btn-secondary">Email me</a><!--/email_off-->
     </div>
 
     <ul class="elsewhere" role="list">
-      <li><a href="https://lwinner.substack.com" rel="noopener">Substack</a></li>
-      <li><a href="https://www.linkedin.com/in/lawrencewinnerman" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://bsky.app/profile/lawrencewinnerman.com" rel="noopener">Bluesky</a></li>
+      {PROFILES.map((p) => <li><a href={p.url} rel="me noopener">{p.label}</a></li>)}
     </ul>
   </div>
 </section>
 
 <style>
-  .contact-lead {
-    max-width: 56ch;
-    margin: 0 0 2rem;
-  }
-  .asks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 56ch;
-    margin: 0 0 2.5rem;
-  }
+  .contact-lead { max-width: 62ch; margin: 0 0 2rem; }
+  .email { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+  .asks { display: flex; flex-direction: column; gap: 1rem; max-width: 62ch; margin: 0 0 2.5rem; }
   .ask { margin: 0; font-size: var(--fs-body); }
   .ask-label {
-    display: block;
-    font-family: var(--font-ui);
-    font-weight: 600;
-    font-size: var(--fs-eyebrow);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--lw-red);
-    margin-bottom: 0.2rem;
+    display: block; font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow);
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--lw-red); margin-bottom: 0.2rem;
   }
-  .contact-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  .btn-secondary {
-    background: transparent;
-    color: var(--lw-slate);
-    border: 1px solid var(--lw-rule);
-  }
-  .btn-secondary:hover {
-    color: var(--lw-red);
-    border-color: var(--lw-red);
-    opacity: 1;
-  }
+  .contact-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
   .elsewhere {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.75rem;
-    flex-wrap: wrap;
-    font-family: var(--font-ui);
-    font-weight: 500;
-    font-size: var(--fs-small);
-    letter-spacing: 0.04em;
+    list-style: none; margin: 0; padding: 0; display: flex; gap: 0.75rem 1.75rem; flex-wrap: wrap;
+    font-family: var(--font-ui); font-weight: 500; font-size: var(--fs-small); letter-spacing: 0.04em;
   }
   .elsewhere a { color: var(--lw-slate); }
   .elsewhere a:hover { color: var(--lw-red); }

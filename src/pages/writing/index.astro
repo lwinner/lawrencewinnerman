@@ -8,8 +8,8 @@ import StoryCard from "../../components/StoryCard.astro";
 import { stories } from "../../lib/stories";
 
 const years = [...new Set(stories.map((s) => s.date.slice(0, 4)))];
-const title = "Writing—Lawrence Winnerman";
-const description = `Essays, satire, and speculative fiction by Lawrence Winnerman: ${stories.length} stories on politics, technology, queer life, and the hinge moments of now, with links to every place each one is published.`;
+const title = "Essays and Fiction by Lawrence Winnerman";
+const description = "Essays, satire, and fiction by Lawrence Winnerman on AI and work, democracy and power, and the near future, with links to every place each piece lives.";
 const site = Astro.site!;
 const ld = {
   "@context": "https://schema.org",
@@ -17,7 +17,8 @@ const ld = {
   name: "Writing by Lawrence Winnerman",
   url: new URL("/writing/", site).href,
   description,
-  author: { "@type": "Person", name: "Lawrence Winnerman", url: site.href },
+  author: { "@id": "https://lawrencewinnerman.com/#person" },
+  isPartOf: { "@id": "https://lawrencewinnerman.com/#website" },
   hasPart: stories.map((s) => ({
     "@type": "Article",
     headline: s.title,
@@ -66,7 +67,7 @@ const ld = {
   .year:last-of-type { padding-bottom: var(--section-pad-y); }
   .year-label {
     font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow);
-    letter-spacing: 0.18em; color: var(--lw-muted); margin: 0 0 1.25rem;
+    letter-spacing: 0.18em; color: var(--color-text-secondary); margin: 0 0 1.25rem;
     padding-top: 1.25rem; border-top: 1px solid var(--lw-rule);
   }
   .story-grid {
