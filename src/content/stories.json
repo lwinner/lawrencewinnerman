@@ -433,8 +433,8 @@
         }
       ],
       "image": "/stories/the-day-i-decided-not-to-become-a-jewish-warrior-for-israel.jpg",
-      "imageWidth": 1024,
-      "imageHeight": 1024
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "why-we-must-stand-with-our-trans-siblings",
@@ -458,8 +458,8 @@
         }
       ],
       "image": "/stories/why-we-must-stand-with-our-trans-siblings.jpg",
-      "imageWidth": 1080,
-      "imageHeight": 1080
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "naza-documentary-gaza-israel-and-the-question-of-war-crimes",
@@ -569,7 +569,7 @@
       ],
       "image": "/stories/the-men-racing-to-build-superintelligence.jpg",
       "imageWidth": 1280,
-      "imageHeight": 853
+      "imageHeight": 720
     },
     {
       "slug": "calculating-your-impending-p-doom",
@@ -799,7 +799,7 @@
       ],
       "image": "/stories/they-threw-our-trans-siblings-overboard-again.jpg",
       "imageWidth": 1280,
-      "imageHeight": 854
+      "imageHeight": 720
     },
     {
       "slug": "dolly-left-us-one-last-song",
@@ -824,7 +824,7 @@
       ],
       "image": "/stories/dolly-left-us-one-last-song.jpg",
       "imageWidth": 1280,
-      "imageHeight": 853
+      "imageHeight": 720
     },
     {
       "slug": "cowards",
@@ -848,8 +848,8 @@
         }
       ],
       "image": "/stories/cowards.jpg",
-      "imageWidth": 1024,
-      "imageHeight": 675
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "you-cant-opt-out-of-ai",
@@ -873,8 +873,8 @@
         }
       ],
       "image": "/stories/you-cant-opt-out-of-ai.jpg",
-      "imageWidth": 1200,
-      "imageHeight": 675
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "power-comes-first",
@@ -898,8 +898,8 @@
         }
       ],
       "image": "/stories/power-comes-first.jpg",
-      "imageWidth": 1200,
-      "imageHeight": 675
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "the-guardrails-were-us",
@@ -923,8 +923,8 @@
         }
       ],
       "image": "/stories/the-guardrails-were-us.jpg",
-      "imageWidth": 1200,
-      "imageHeight": 675
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "the-layer-war",
@@ -979,7 +979,7 @@
       ],
       "image": "/stories/the-wren-in-the-house.jpg",
       "imageWidth": 1280,
-      "imageHeight": 960
+      "imageHeight": 720
     },
     {
       "slug": "your-2027-grocery-bill-was-signed-on-june-29",
@@ -1064,7 +1064,7 @@
       ],
       "image": "/stories/we-believe-everyone-except-the-jews.jpg",
       "imageWidth": 1280,
-      "imageHeight": 672
+      "imageHeight": 720
     },
     {
       "slug": "rise-up-corporate-america",
@@ -1093,8 +1093,8 @@
         }
       ],
       "image": "/stories/rise-up-corporate-america.jpg",
-      "imageWidth": 1080,
-      "imageHeight": 1080
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "i-love-you-dieter-murphy",
@@ -1118,8 +1118,8 @@
         }
       ],
       "image": "/stories/i-love-you-dieter-murphy.jpg",
-      "imageWidth": 640,
-      "imageHeight": 640
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "a-gun-virgin-no-more",
@@ -1144,7 +1144,7 @@
       ],
       "image": "/stories/a-gun-virgin-no-more.jpg",
       "imageWidth": 1280,
-      "imageHeight": 1280
+      "imageHeight": 720
     },
     {
       "slug": "current-events-are-killing-my-novel",
@@ -1168,8 +1168,8 @@
         }
       ],
       "image": "/stories/current-events-are-killing-my-novel.jpg",
-      "imageWidth": 816,
-      "imageHeight": 1056
+      "imageWidth": 1280,
+      "imageHeight": 720
     },
     {
       "slug": "were-already-at-war",
@@ -1194,7 +1194,7 @@
       ],
       "image": "/stories/were-already-at-war.jpg",
       "imageWidth": 1280,
-      "imageHeight": 731
+      "imageHeight": 720
     },
     {
       "slug": "in-between",
@@ -1218,8 +1218,8 @@
         }
       ],
       "image": "/stories/in-between.jpg",
-      "imageWidth": 1024,
-      "imageHeight": 1024
+      "imageWidth": 1280,
+      "imageHeight": 720
     }
   ]
 }

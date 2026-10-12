@@ -2,15 +2,34 @@
 // Featured stories (#featured). Hand-pinned pieces that live off the Hinge &
 // Near Field feed (Medium, The Daily Whatever Show), shown right under the
 // hero so visitors arriving from a social bio link see the newest work first.
-// Edit src/content/featured.json to add or retire entries; an empty list hides
-// the section entirely. Card styles mirror RecentStories.astro.
+// Edit src/content/featured.json to pin entries; the newest catalog stories
+// fill the rest of the six slots. Card styles mirror RecentStories.astro.
 import featured from "../content/featured.json";
-import { localPathFor } from "../lib/stories";
+import { localPathFor, stories as catalog, storyPath, shortDate } from "../lib/stories";
 
-const stories = (featured.stories ?? []).map((s) => {
+// Always a six-up: hand-pinned entries from featured.json first, then the
+// newest catalog stories that aren't pinned and don't live on The Hinge &
+// The Near Field (Recent stories already shows that feed).
+const SLOTS = 6;
+const pinned = (featured.stories ?? []).map((s) => {
   const local = localPathFor(s.link);
   return { ...s, href: local ?? s.link, external: !local };
 });
+const taken = new Set(pinned.map((s) => s.href));
+const fill = catalog
+  .filter((c) => !taken.has(storyPath(c)))
+  .filter((c) => !c.links.some((l) => l.url.includes("lwinner.substack.com")))
+  .slice(0, Math.max(0, SLOTS - pinned.length))
+  .map((c) => ({
+    title: c.title,
+    href: storyPath(c),
+    external: false,
+    date: shortDate(c.date),
+    outlet: c.links[0]?.label,
+    excerpt: c.dek,
+    image: c.image,
+  }));
+const stories = [...pinned, ...fill].slice(0, SLOTS);
 ---
 {stories.length > 0 && (
   <section id="featured" class="featured" aria-label="Featured stories">
@@ -40,7 +59,9 @@ const stories = (featured.stories ?? []).map((s) => {
 <style>
   .featured h2 { margin: 0 0 2.5rem; }
   .featured .eyebrow { margin-bottom: 1.25rem; }
-  .featured .story-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .featured .story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 960px) { .featured .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .featured .story-grid { grid-template-columns: 1fr; } }
   .featured .story-date { white-space: normal; }
   .story-grid {
     display: grid;
