@@ -2,6 +2,22 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
+      "link": "https://www.thedailywhatevershow.com/p/yandex-data-centers-down-russian-bots-twitter-quiet",
+      "date": "Oct 11, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Drones took out three Yandex data centers, the bot traffic flatlined, and my mentions are nothing but people.",
+      "image": "/stories/ukraine-took-out-the-bot-farms-servers.jpg"
+    },
+    {
+      "title": "The Götterdämmerung of Software",
+      "link": "https://medium.com/bouncin-and-behavin-blogs/the-g%C3%B6tterd%C3%A4mmerung-of-software-cad4a1aaf555?sk=65687eb97c944d74f4db67f92b534edb",
+      "date": "Oct 11, 2026",
+      "outlet": "Bouncin’ and Behavin’ Blogs",
+      "excerpt": "Seven Adobe apps, cloned in a week with an AI model. Napster already showed us who gets paid when the walls come down.",
+      "image": "/stories/the-gotterdammerung-of-software.jpg"
+    },
+    {
       "title": "You Have Died of Dysentery",
       "link": "https://www.thedailywhatevershow.com/p/drug-resistant-shigella-sti-cdc",
       "date": "Oct 9, 2026",

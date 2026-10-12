@@ -1,6 +1,66 @@
 {
   "stories": [
     {
+      "slug": "ukraine-took-out-the-bot-farms-servers",
+      "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
+      "dek": "A bot-traffic chart flatlined at zero, Yandex’s status page called a fire “power interruptions,” and my mentions are nothing but people. Real people! Yippee-ki-yay.",
+      "date": "2026-10-11",
+      "tags": [
+        "Russia",
+        "Ukraine",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "This weekend I posted about Russia on X, and my replies were full of humans. Between October 8 and 11, Ukrainian drones hit three Yandex data centers, in Sasovo, Kaluga, and Vladimir, two of them home to the company’s three AI supercomputers. More than 80 Yandex Cloud services went down, and Yandex Cloud’s status update described a building on fire as “power interruptions.”",
+        "Then there’s the chart. Cloudflare Radar tracks automated traffic by network, and the line for Yandex’s network fell to zero by Sunday morning. The bald-eagle reply guys vanished, and Twitter felt like the Fail Whale years again. Elon Musk promised in 2022 to defeat the spam bots or die trying. The guys who got it done fly drones out of Ukraine for a living."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/yandex-data-centers-down-russian-bots-twitter-quiet"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/ukraine-took-out-the-bot-farms-servers-and-twitter-is-f-king-delightful-again-6ac513a233a4?sk=c58e8a482b9d91f8b36f810f1145e79e"
+        }
+      ],
+      "image": "/stories/ukraine-took-out-the-bot-farms-servers.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
+      "slug": "the-gotterdammerung-of-software",
+      "title": "The Götterdämmerung of Software",
+      "dek": "A developer cloned Adobe’s suite in a week with an AI model. Napster already showed us who gets paid when the walls come down.",
+      "date": "2026-10-11",
+      "tags": [
+        "AI",
+        "Technology",
+        "Business"
+      ],
+      "summary": [
+        "A developer named Brandon Thomas spent the first week of October posting free, open-source stand-ins for seven Adobe apps, Photoshop through Acrobat, written with Claude Opus 5.5. Adobe charges $69.99 a month for the suite; the clones cost nothing. They’re rough for now, and the project’s own README says they aren’t ready for daily professional work. I give that sentence until Thanksgiving.",
+        "Clean-room cloning has been legal for forty years, since Compaq and Phoenix rebuilt IBM’s BIOS, and copyright protects code, not what the code does. What really protected Photoshop was the payroll it took to copy it, and that bill now fits on a credit card. I spent twenty-five years in technology, including Amazon and Microsoft, and I’ve seen this movie. It’s Napster, round two, and last time the people who built things weren’t the ones who got paid."
+      ],
+      "links": [
+        {
+          "label": "Bouncin’ and Behavin’ Blogs",
+          "platform": "Medium",
+          "url": "https://medium.com/bouncin-and-behavin-blogs/the-g%C3%B6tterd%C3%A4mmerung-of-software-cad4a1aaf555?sk=65687eb97c944d74f4db67f92b534edb"
+        },
+        {
+          "label": "Blue Amp Media",
+          "platform": "Substack",
+          "url": "https://www.blueamp.co/p/adobe-ai-clones-napster-software"
+        }
+      ],
+      "image": "/stories/the-gotterdammerung-of-software.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "you-have-died-of-dysentery",
       "title": "You Have Died of Dysentery",
       "dek": "The Oregon Trail disease is back, it’s an STI now, and the CDC filed it under food poisoning.",
