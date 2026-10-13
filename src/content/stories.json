@@ -1,6 +1,91 @@
 {
   "stories": [
     {
+      "slug": "trump-looked-at-jon-husted",
+      "title": "Trump Looked at Jon Husted’s A$$, and Now We All Have To",
+      "dek": "“I don’t do this with men very often.” Very often. Basically, the locker-room talk has entered its Top Gun/Heated Rivalry era.",
+      "date": "2026-10-13",
+      "tags": [
+        "Politics",
+        "Humor",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "On Monday night in Youngstown, the president told a hockey arena full of Ohio Republicans that he had looked at Sen. Jon Husted’s ass, and he did not mumble it. He announced it like a man reading the specials. Then came the disclaimer I can’t stop hearing: “I don’t do this with men very often.” Very often. As a gay man who spent the 1980s studying locker-room ceiling tiles, I have notes on cruising, and the first one is that you don’t narrate it into a microphone.",
+        "Underneath the joke is a real campaign. Trump says Husted’s poll numbers have gone “through the roof,” but a CNN/SSRS poll has Sherrod Brown ahead, 49 to 43. And this is the same movement that pulled a picture book about two male penguins off library shelves. The punch line writes itself. The part where I stop laughing is the double standard."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/trump-jon-husted-body-comments-youngstown-rally"
+        },
+        {
+          "label": "Bouncin’ and Behavin’ Blogs",
+          "platform": "Medium",
+          "url": "https://medium.com/bouncin-and-behavin-blogs/trump-looked-at-jon-husteds-a-and-now-we-all-have-to-7d0f18198249"
+        }
+      ],
+      "image": "/stories/trump-looked-at-jon-husted.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
+      "slug": "collins-pac-wrong-portland",
+      "title": "Susan Collins’s Allies Can’t Find Maine with a F@#king Map",
+      "dek": "A GOP super PAC aimed its Troy Jackson attack ad at the wrong Portland, 3,000 miles off. Basically, the grown-ups are not in charge.",
+      "date": "2026-10-12",
+      "tags": [
+        "Politics",
+        "Maine",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Anyone who knows how ZIP codes work should have caught this. Maine’s start with 0, and everything the PAC was booking started with 97. Defending Main Street, a Republican super PAC that calls itself “the governing wing” of the party, spent $20,000 to $25,000 on a digital ad attacking Troy Jackson, the Democrat running against Susan Collins, and aimed it at Portland, Oregon, and Washington state. That’s more than 1.25 million impressions on the wrong ocean.",
+        "A woman out West named Lillian Belle noticed first, after five anti-Troy Jackson ads in a day. Jackson’s spokesman said Collins and her allies can’t even find Maine on a map. The vendor refunded the money, and the PAC says no donor funds were lost. Now the part I mean: don’t mistake a dumb PAC for a dead campaign. The ad is fixed, and two more debates are coming."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/collins-pac-wrong-portland-oregon-ads"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/which-portland-the-wrong-one-obviously-2a8236fea05a"
+        }
+      ],
+      "image": "/stories/collins-pac-wrong-portland.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
+      "slug": "seattle-flag-mountains-out",
+      "title": "Mountain’s Out: The Seattle Flag I Designed in 2019",
+      "dek": "In 2019, The Stranger asked Seattle for a better city flag. I sent one in. Here it is, with the 6 flags that inspired it.",
+      "date": "2026-10-12",
+      "tags": [
+        "Seattle",
+        "Design",
+        "The Hinge & The Near Field"
+      ],
+      "summary": [
+        "On July 15, 2019, I turned a two-slide PowerPoint deck into a PDF and sent it to The Stranger. The first slide was a flag. The second was everything I could think of to say about it. I called it “Mountain’s Out.” It didn’t make the finals, and nothing ever came of it. I’m still proud of it. Among my many unprofitable hobbies, I’m an amateur vexillologist, which means I hold opinions about flags that nobody requested.",
+        "The essay covers the flag Seattle already has, adopted in 1990 and built around a seal and lettering, which are two things vexillologists avoid. It also covers The Stranger’s People’s Flag contest, which drew more than 130 entries and ended in a ballot-stuffing scandal. Then I share what I sent in, lightly copyedited."
+      ],
+      "links": [
+        {
+          "label": "The Hinge & The Near Field",
+          "platform": "Substack",
+          "url": "https://lwinner.substack.com/p/seattle-flag-mountains-out-2019"
+        }
+      ],
+      "image": "/stories/seattle-flag-mountains-out.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "ukraine-took-out-the-bot-farms-servers",
       "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
       "dek": "A bot-traffic chart flatlined at zero, Yandex’s status page called a fire “power interruptions,” and my mentions are nothing but people. Real people! Yippee-ki-yay.",
@@ -113,6 +198,11 @@
           "label": "The Daily Whatever Show",
           "platform": "Substack",
           "url": "https://www.thedailywhatevershow.com/p/trump-let-them-take-out-los-angeles-san-diego-treason"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/trump-keeps-committing-treason-live-on-camera-47037c066c2f"
         }
       ],
       "image": "/stories/trump-keeps-committing-treason-live-on-camera.jpg",

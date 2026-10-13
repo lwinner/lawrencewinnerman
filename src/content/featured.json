@@ -2,6 +2,30 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Trump Looked at Jon Husted’s A$$, and Now We All Have To",
+      "link": "https://www.thedailywhatevershow.com/p/trump-jon-husted-body-comments-youngstown-rally",
+      "date": "Oct 13, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Trump announced he looked at Sen. Jon Husted’s ass, and the disclaimer is the best part.",
+      "image": "/stories/trump-looked-at-jon-husted.jpg"
+    },
+    {
+      "title": "Susan Collins’s Allies Can’t Find Maine with a F@#king Map",
+      "link": "https://www.thedailywhatevershow.com/p/collins-pac-wrong-portland-oregon-ads",
+      "date": "Oct 12, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "A GOP super PAC spent up to $25,000 attacking a Maine candidate in Portland, Oregon.",
+      "image": "/stories/collins-pac-wrong-portland.jpg"
+    },
+    {
+      "title": "Mountain’s Out: The Seattle Flag I Designed in 2019",
+      "link": "https://lwinner.substack.com/p/seattle-flag-mountains-out-2019",
+      "date": "Oct 12, 2026",
+      "outlet": "The Hinge & The Near Field",
+      "excerpt": "The flag I sent The Stranger in 2019, with the six flags that inspired it.",
+      "image": "/stories/seattle-flag-mountains-out.jpg"
+    },
+    {
       "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
       "link": "https://www.thedailywhatevershow.com/p/yandex-data-centers-down-russian-bots-twitter-quiet",
       "date": "Oct 11, 2026",
@@ -24,30 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Shigella is back, it’s an STI now, it shrugs off all five oral antibiotics, and the CDC tracks it under food poisoning.",
       "image": "/featured/you-have-died-of-dysentery.jpg"
-    },
-    {
-      "title": "Trump Keeps Committing Treason Live On Camera",
-      "link": "https://www.thedailywhatevershow.com/p/trump-let-them-take-out-los-angeles-san-diego-treason",
-      "date": "Oct 8, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Three times in three days he invited Iran to hit Los Angeles and San Diego. Article III defines exactly one crime.",
-      "image": "/featured/trump-keeps-committing-treason-live-on-camera.jpg"
-    },
-    {
-      "title": "Trump Called Two American Cities a “Small Price.” Hurricane Isaias Would Like a F@#king Word.",
-      "link": "https://www.thedailywhatevershow.com/p/hurricane-isaias-gas-prices-trump-small-price-midterms",
-      "date": "Oct 8, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "He offered up Los Angeles and San Diego as a “small price.” Four days later the Gulf is sending the invoice, twenty-six days before the midterms.",
-      "image": "/featured/trump-called-two-american-cities-a-small-price.jpg"
-    },
-    {
-      "title": "Ottumwa, Iowa Invited Religious Freedom and Got Exactly What It Ordered",
-      "link": "https://www.thedailywhatevershow.com/p/ottumwa-satanic-invocation-religious-freedom",
-      "date": "Oct 8, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "The council adopted a policy welcoming every belief and none. Then someone showed up with a different belief, and a pastor demanded the curse be reversed.",
-      "image": "/featured/ottumwa-invited-religious-freedom-and-got-exactly-what-it-ordered.jpg"
     }
   ]
 }
