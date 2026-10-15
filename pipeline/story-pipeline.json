@@ -119,6 +119,14 @@
       "seen_at": "2026-10-15",
       "decision": "linked",
       "story_slug": "ai-researchers-smoking"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/texas-found-the-real-horror-in-little",
+      "title": "A Texas School District Would Rather Kill a Musical Than Let a Girl Play Seymour",
+      "source": "dws",
+      "seen_at": "2026-10-15",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }
