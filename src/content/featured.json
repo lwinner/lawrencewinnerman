@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
+      "link": "https://www.thedailywhatevershow.com/p/palantir-cto-ai-researchers-smoking-cancer-cure",
+      "date": "Oct 15, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Palantir’s CTO says AI researchers are smoking to prove their faith. The real cancer cure is quitting.",
+      "image": "/stories/ai-researchers-smoking.jpg"
+    },
+    {
       "title": "Trump Looked at Jon Husted’s A$$, and Now We All Have To",
       "link": "https://www.thedailywhatevershow.com/p/trump-jon-husted-body-comments-youngstown-rally",
       "date": "Oct 13, 2026",
@@ -40,14 +48,6 @@
       "outlet": "Bouncin’ and Behavin’ Blogs",
       "excerpt": "Seven Adobe apps, cloned in a week with an AI model. Napster already showed us who gets paid when the walls come down.",
       "image": "/stories/the-gotterdammerung-of-software.jpg"
-    },
-    {
-      "title": "You Have Died of Dysentery",
-      "link": "https://www.thedailywhatevershow.com/p/drug-resistant-shigella-sti-cdc",
-      "date": "Oct 9, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Shigella is back, it’s an STI now, it shrugs off all five oral antibiotics, and the CDC tracks it under food poisoning.",
-      "image": "/featured/you-have-died-of-dysentery.jpg"
     }
   ]
 }

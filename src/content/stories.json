@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "ai-researchers-smoking",
+      "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
+      "dek": "Because somewhere in Silicon Valley, a Marlboro is now a prayer.",
+      "date": "2026-10-15",
+      "tags": [
+        "Technology",
+        "AI",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "On Sunday, Palantir’s chief technology officer told Margaret Brennan on Face the Nation that “so many AI researchers have started smoking” to signal how much they believe in AI. The logic: I’m so sure it will cure cancer, I’ll light up. Brennan said what everyone was thinking: “What? That makes no sense.” He named no researchers, and Fortune noted it’s unclear how many are smoking at all.",
+        "I went looking for what actually cures lung cancer, and it wasn’t a chatbot. The Annual Report to the Nation credits “accelerated progress against lung cancer,” and U.S. adult smoking hit an all-time low of 9% in 2025. Millions of boring people put the pack down. As far as I can tell, there is no AI cancer cure, only predictions. A prediction has never once shrunk a tumor."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/palantir-cto-ai-researchers-smoking-cancer-cure"
+        }
+      ],
+      "image": "/stories/ai-researchers-smoking.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "trump-looked-at-jon-husted",
       "title": "Trump Looked at Jon Husted’s A$$, and Now We All Have To",
       "dek": "“I don’t do this with men very often.” Very often. Basically, the locker-room talk has entered its Top Gun/Heated Rivalry era.",
