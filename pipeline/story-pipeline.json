@@ -111,6 +111,14 @@
       "seen_at": "2026-10-15",
       "decision": "page+campaign",
       "story_slug": "ai-researchers-smoking"
+    },
+    {
+      "url": "https://medium.com/the-daily-whatever-show/ai-optimists-ai-researchers-now-smoking-because-superintelligence-will-cure-cancer-533f7614aba9",
+      "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
+      "source": "medium",
+      "seen_at": "2026-10-15",
+      "decision": "linked",
+      "story_slug": "ai-researchers-smoking"
     }
   ]
 }
