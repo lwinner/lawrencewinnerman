@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "url": "https://medium.com/bouncin-and-behavin-blogs/jaime-west-said-what-every-hoosier-democrat-says-after-one-f-king-beer-0c588103961b",
+      "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
+      "source": "medium",
+      "seen_at": "2026-10-16",
+      "decision": "linked",
+      "story_slug": "jaime-west-fayette-county-forum"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/trump-told-his-own-rally-crowd-theyre",
+      "title": "Trump Told His Own Rally Crowd They’re “Collateral Damage”",
+      "source": "dws",
+      "seen_at": "2026-10-16",
+      "decision": "skip",
+      "story_slug": null
+    },
+    {
       "url": "https://www.thedailywhatevershow.com/p/jaime-west-fayette-county-viral-forum",
       "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
       "source": "Daily Whatever Show Substack",
