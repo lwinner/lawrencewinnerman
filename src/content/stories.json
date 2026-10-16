@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "jaime-west-fayette-county-forum",
+      "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
+      "dek": "Basically, the only candidate who showed up won the internet.",
+      "date": "2026-10-15",
+      "tags": [
+        "Indiana",
+        "Politics",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Asked at a Fayette County Council candidate forum what unpopular decision she would make, Jaime West said, “Firing all Republicans.” Then she kept going, with no notes, and closed with “We have guns too.” The clip hit Mediaite, the New York Post, TMZ, and Libs of TikTok, and BuzzFeed counted 8.2 million people engaging with it in a county of about 23,000.",
+        "West cleans houses and delivers groceries for a living. Her Republican opponent, Gary Keener Jr., skipped the forum and sent a statement to be read aloud. I’m a Hoosier, and I wrote about what happened next: the right-wing content machine tried to turn a working mom into a national exhibit, and it ended up doing her advance work for free."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/jaime-west-fayette-county-viral-forum"
+        }
+      ],
+      "image": "/stories/jaime-west-fayette-county-forum.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "ai-researchers-smoking",
       "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
       "dek": "Because somewhere in Silicon Valley, a Marlboro is now a prayer.",

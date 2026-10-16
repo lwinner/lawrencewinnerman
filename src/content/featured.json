@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
+      "link": "https://www.thedailywhatevershow.com/p/jaime-west-fayette-county-viral-forum",
+      "date": "Oct 15, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Asked what unpopular decision she’d make, a Fayette County candidate said, “Firing all Republicans.” Then came 8.2 million engagements.",
+      "image": "/stories/jaime-west-fayette-county-forum.jpg"
+    },
+    {
       "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
       "link": "https://www.thedailywhatevershow.com/p/palantir-cto-ai-researchers-smoking-cancer-cure",
       "date": "Oct 15, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Drones took out three Yandex data centers, the bot traffic flatlined, and my mentions are nothing but people.",
       "image": "/stories/ukraine-took-out-the-bot-farms-servers.jpg"
-    },
-    {
-      "title": "The Götterdämmerung of Software",
-      "link": "https://medium.com/bouncin-and-behavin-blogs/the-g%C3%B6tterd%C3%A4mmerung-of-software-cad4a1aaf555?sk=65687eb97c944d74f4db67f92b534edb",
-      "date": "Oct 11, 2026",
-      "outlet": "Bouncin’ and Behavin’ Blogs",
-      "excerpt": "Seven Adobe apps, cloned in a week with an AI model. Napster already showed us who gets paid when the walls come down.",
-      "image": "/stories/the-gotterdammerung-of-software.jpg"
     }
   ]
 }
