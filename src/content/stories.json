@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "meta-pays-anti-lgbtq-accounts",
+      "title": "Facebook Found a Way to Make Homophobia Financially Rewarding",
+      "dek": "At least 29 anti-LGBTQ accounts landed in Meta’s pay-for-engagement program. Apparently, just ruining Thanksgiving was leaving money on the table.",
+      "date": "2026-10-16",
+      "tags": [
+        "Media",
+        "LGBTQ",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "A new investigation from Uncloseted Media and The 19th found at least 29 accounts with a history of anti-LGBTQ rhetoric enrolled in Facebook Content Monetization, Meta’s invite-only program that pays creators for engagement. Libs of TikTok is in it. So are Benny Johnson, Candace Owens, Tucker Carlson, and Turning Point USA. Every account was still enrolled as of September 15.",
+        "I walk through how the money works, and why it was no accident. In January 2025, Meta rewrote its hateful-conduct rules and dropped third-party fact-checking. Its monetization policy bars only content “rated false by a third-party fact checker,” so now nothing can be. I came of age during the AIDS years, when the bigots worked for free. Now a trillion-dollar company cuts them a check."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/meta-monetization-anti-lgbtq-accounts-midterms"
+        }
+      ],
+      "image": "/stories/meta-pays-anti-lgbtq-accounts.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "jaime-west-fayette-county-forum",
       "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
       "dek": "Basically, the only candidate who showed up won the internet.",

@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Facebook Found a Way to Make Homophobia Financially Rewarding",
+      "link": "https://www.thedailywhatevershow.com/p/meta-monetization-anti-lgbtq-accounts-midterms",
+      "date": "Oct 16, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "At least 29 anti-LGBTQ accounts landed in Meta’s pay-for-engagement program. Apparently, just ruining Thanksgiving was leaving money on the table.",
+      "image": "/stories/meta-pays-anti-lgbtq-accounts.jpg"
+    },
+    {
       "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
       "link": "https://www.thedailywhatevershow.com/p/jaime-west-fayette-county-viral-forum",
       "date": "Oct 15, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Hinge & The Near Field",
       "excerpt": "The flag I sent The Stranger in 2019, with the six flags that inspired it.",
       "image": "/stories/seattle-flag-mountains-out.jpg"
-    },
-    {
-      "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
-      "link": "https://www.thedailywhatevershow.com/p/yandex-data-centers-down-russian-bots-twitter-quiet",
-      "date": "Oct 11, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Drones took out three Yandex data centers, the bot traffic flatlined, and my mentions are nothing but people.",
-      "image": "/stories/ukraine-took-out-the-bot-farms-servers.jpg"
     }
   ]
 }
