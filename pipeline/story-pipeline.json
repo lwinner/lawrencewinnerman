@@ -215,6 +215,14 @@
       "seen_at": "2026-10-17",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/bonjour-dumpster-fire",
+      "title": "Bonjour, Dumpster Fire",
+      "source": "dws",
+      "seen_at": "2026-10-18",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }
