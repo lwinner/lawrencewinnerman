@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "el-sayed-tommy-teepell",
+      "title": "El-Sayed Disavowed the Muslim Brotherhood on the Spot. Tommy Wouldn’t Disavow Sh!t.",
+      "dek": "A former Josh Hawley staffer demanded that Michigan’s Muslim Senate nominee disavow the Muslim Brotherhood. He did, on the spot. “Tommy” couldn’t disavow putting his own religion into our laws.",
+      "date": "2026-10-19",
+      "tags": [
+        "Politics",
+        "Religion",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "At a Michigan town hall, a young man named Tommy demanded that Abdul El-Sayed, the Democratic Senate nominee, disavow the Muslim Brotherhood. El-Sayed said yes on the spot, asked why the question was being asked, and handed it back: Would Tommy disavow reading religious doctrine into American law? Tommy said no. Journalist Marisa Kabas then identified him as a former operations director for Sen. Josh Hawley.",
+        "I break down El-Sayed’s answer in three moves, and why I want it taught in every debate class. Then I put it next to Hawley’s own press release, “The Christian Nationalism We Need,” and PRRI’s finding that 32% of Americans are Christian nationalism adherents or sympathizers. I close with a plan: Ask Tommy’s question back, find out who the polished questioners work for, and vote."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/abdul-el-sayed-tommy-teepell-christian-nationalism"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/el-sayed-disavowed-the-muslim-brotherhood-on-the-spot-tommy-wouldnt-disavow-sh-t-92edd9678c52"
+        }
+      ],
+      "image": "/stories/el-sayed-tommy-teepell.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "meta-pays-anti-lgbtq-accounts",
       "title": "Facebook Found a Way to Make Homophobia Financially Rewarding",
       "dek": "At least 29 anti-LGBTQ accounts landed in Meta’s pay-for-engagement program. Apparently, just ruining Thanksgiving was leaving money on the table.",
