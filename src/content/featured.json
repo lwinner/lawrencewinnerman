@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Trump Wants to Rename New Mexico “New America,” and Holy Sh!t, He’s Serious This Time",
+      "link": "https://www.thedailywhatevershow.com/p/trump-wants-to-rename-new-mexico",
+      "date": "Oct 19, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "One rebrand, four miracles, and the state’s name is 223 years older than the country he’s mad at.",
+      "image": "/stories/trump-new-america-new-mexico.jpg"
+    },
+    {
       "title": "El-Sayed Disavowed the Muslim Brotherhood on the Spot. Tommy Wouldn’t Disavow Sh!t.",
       "link": "https://www.thedailywhatevershow.com/p/abdul-el-sayed-tommy-teepell-christian-nationalism",
       "date": "Oct 19, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Trump announced he looked at Sen. Jon Husted’s ass, and the disclaimer is the best part.",
       "image": "/stories/trump-looked-at-jon-husted.jpg"
-    },
-    {
-      "title": "Susan Collins’s Allies Can’t Find Maine with a F@#king Map",
-      "link": "https://www.thedailywhatevershow.com/p/collins-pac-wrong-portland-oregon-ads",
-      "date": "Oct 12, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "A GOP super PAC spent up to $25,000 attacking a Maine candidate in Portland, Oregon.",
-      "image": "/stories/collins-pac-wrong-portland.jpg"
     }
   ]
 }

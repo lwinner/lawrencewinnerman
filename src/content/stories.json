@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "trump-new-america-new-mexico",
+      "title": "Trump Wants to Rename New Mexico “New America,” and Holy Sh!t, He’s Serious This Time",
+      "dek": "One rebrand, four miracles, and the state’s name is 223 years older than the country he’s mad at",
+      "date": "2026-10-19",
+      "tags": [
+        "Politics",
+        "Trump",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Donald Trump posted that New Mexico should “immediately change its name to New America,” promising higher home values, higher incomes, prouder flag salutes, and honest elections, 15 days before a midterm. It’s his third lap around this particular track, so I took the four promised miracles one at a time.",
+        "The name is roughly 223 years older than the country of Mexico, and it’s older than the United States, too. I put the home-value pitch next to the Upper West Side condo owners who paid to pry his name off six buildings, then explain why the only miracle he cares about is the one for losing a state that has never voted for him. Even the candidate he endorsed says a rename can’t happen, because it’s written into the state constitution and New Mexico voters would have to amend it."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/trump-wants-to-rename-new-mexico"
+        }
+      ],
+      "image": "/stories/trump-new-america-new-mexico.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "el-sayed-tommy-teepell",
       "title": "El-Sayed Disavowed the Muslim Brotherhood on the Spot. Tommy Wouldn’t Disavow Sh!t.",
       "dek": "A former Josh Hawley staffer demanded that Michigan’s Muslim Senate nominee disavow the Muslim Brotherhood. He did, on the spot. “Tommy” couldn’t disavow putting his own religion into our laws.",
