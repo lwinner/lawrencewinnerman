@@ -295,6 +295,22 @@
       "seen_at": "2026-10-20",
       "decision": "page+campaign",
       "story_slug": "world-war-three-started"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/in-florida-a-concealed-carry-permit",
+      "title": "In Florida, a Concealed Carry Permit Will Get You a Ballot (Dana DuBois)",
+      "source": "dws",
+      "seen_at": "2026-10-20",
+      "decision": "skip",
+      "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/mornings-with-tdws-ww3-youre-soaking",
+      "title": "Mornings with TDWS: WW3? You're Soaking In It!",
+      "source": "dws",
+      "seen_at": "2026-10-20",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }
