@@ -271,6 +271,22 @@
       "seen_at": "2026-10-18",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/ft-just-noticed-world-war-iii",
+      "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
+      "source": "dws",
+      "seen_at": "2026-10-20",
+      "decision": "page+campaign",
+      "story_slug": "ft-world-war-iii"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/mississippi-rules-shooting-a-baby",
+      "title": "Mississippi Rules Shooting a Baby in His Mother’s Arms Over Diapers Was “Justified”",
+      "source": "dws",
+      "seen_at": "2026-10-20",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }

@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "ft-world-war-iii",
+      "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
+      "dek": "Olga Lautman called it in 2024, Julie Roginsky put it in three headlines, and I said it in my very first post. Basically, the house has been on fire for years.",
+      "date": "2026-10-20",
+      "tags": [
+        "Politics",
+        "World War III",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "The Financial Times asked whether we’re sleepwalking into World War III, and I laughed until I had to sit down. Gideon Rachman cited a Houthi missile that killed 12 people at Riyadh’s main airport, more than 100 Ukrainian civilians killed in a week, Polish warnings of Russian attacks inside the EU, and Chinese live-fire drills, then ruled that none of it counts yet.",
+        "I said it on February 6, 2025, in the first thing I ever posted on this Substack, and I wasn’t first. Olga Lautman said it in 2024, and Julie Roginsky has put it in a headline three times this year. Then there’s Trump, who promised not to attack Iran before the midterms, then said, “We’re hitting Iran very hard,” and called Russia “fine” on the day a drone killed six people in Kharkiv Oblast, two of them children. Nobody’s sleepwalking. We’re wide awake inside it."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/ft-just-noticed-world-war-iii"
+        }
+      ],
+      "image": "/stories/ft-world-war-iii.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "trump-new-america-new-mexico",
       "title": "Trump Wants to Rename New Mexico “New America,” and Holy Sh!t, He’s Serious This Time",
       "dek": "One rebrand, four miracles, and the state’s name is 223 years older than the country he’s mad at",

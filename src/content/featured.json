@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
+      "link": "https://www.thedailywhatevershow.com/p/ft-just-noticed-world-war-iii",
+      "date": "Oct 20, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "The FT asked if we’re sleepwalking into World War III. Olga Lautman called it in 2024, Julie Roginsky put it in three headlines, and I said it in my very first post.",
+      "image": "/stories/ft-world-war-iii.jpg"
+    },
+    {
       "title": "Trump Wants to Rename New Mexico “New America,” and Holy Sh!t, He’s Serious This Time",
       "link": "https://www.thedailywhatevershow.com/p/trump-wants-to-rename-new-mexico",
       "date": "Oct 19, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Palantir’s CTO says AI researchers are smoking to prove their faith. The real cancer cure is quitting.",
       "image": "/stories/ai-researchers-smoking.jpg"
-    },
-    {
-      "title": "Trump Looked at Jon Husted’s A$$, and Now We All Have To",
-      "link": "https://www.thedailywhatevershow.com/p/trump-jon-husted-body-comments-youngstown-rally",
-      "date": "Oct 13, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Trump announced he looked at Sen. Jon Husted’s ass, and the disclaimer is the best part.",
-      "image": "/stories/trump-looked-at-jon-husted.jpg"
     }
   ]
 }
