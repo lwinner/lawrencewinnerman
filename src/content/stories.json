@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "world-war-three-started",
+      "title": "World War Three Is Here. We’re Still Arguing About the Start Date.",
+      "dek": "Ukraine. Iran. Sabotage in Europe. The next world war may already be underway—and Trump is making America’s promises impossible to trust.",
+      "date": "2026-10-20",
+      "tags": [
+        "World",
+        "World War III",
+        "Democracy and Power"
+      ],
+      "summary": [
+        "The Financial Times asked whether we’re sleepwalking into World War III, and its answer was that the line hasn’t been crossed yet. I think it’s drawn in the wrong place. Nobody in 1937 had a name for what they were living through, and the Second World War still has no agreed-upon birthday. Ask a European, an American, and a Chinese schoolchild, and you get three different dates.",
+        "I lay out the rhythm that came before 1914 and 1939, then set our own sequence beside it, from Georgia to Ukraine, Gaza, and Iran. The wiring today is the supply chain, not a set of treaties. Then I take on the guarantor problem: Donald Trump treats every promise America has made as a scrap of paper. The graduate students will fight over the date. What we still get to decide is how bad it gets."
+      ],
+      "links": [
+        {
+          "label": "The Hinge & The Near Field",
+          "platform": "Substack",
+          "url": "https://lwinner.substack.com/p/world-war-three-already-started"
+        }
+      ],
+      "image": "/stories/world-war-three-started.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "ft-world-war-iii",
       "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
       "dek": "Olga Lautman called it in 2024, Julie Roginsky put it in three headlines, and I said it in my very first post. Basically, the house has been on fire for years.",

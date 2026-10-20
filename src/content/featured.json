@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "World War Three Is Here. We’re Still Arguing About the Start Date.",
+      "link": "https://lwinner.substack.com/p/world-war-three-already-started",
+      "date": "Oct 20, 2026",
+      "outlet": "The Hinge & The Near Field",
+      "excerpt": "Ukraine. Iran. Sabotage in Europe. The next world war may already be underway, and nobody agrees on the start date.",
+      "image": "/stories/world-war-three-started.jpg"
+    },
+    {
       "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
       "link": "https://www.thedailywhatevershow.com/p/ft-just-noticed-world-war-iii",
       "date": "Oct 20, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Asked what unpopular decision she’d make, a Fayette County candidate said, “Firing all Republicans.” Then came 8.2 million engagements.",
       "image": "/stories/jaime-west-fayette-county-forum.jpg"
-    },
-    {
-      "title": "AI Optimists? AI Researchers Now Smoking Because Superintelligence Will Cure Cancer",
-      "link": "https://www.thedailywhatevershow.com/p/palantir-cto-ai-researchers-smoking-cancer-cure",
-      "date": "Oct 15, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Palantir’s CTO says AI researchers are smoking to prove their faith. The real cancer cure is quitting.",
-      "image": "/stories/ai-researchers-smoking.jpg"
     }
   ]
 }
