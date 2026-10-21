@@ -319,6 +319,22 @@
       "seen_at": "2026-10-20",
       "decision": "page+campaign",
       "story_slug": "anthropic-junior-hiring"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/morning-with-tdws-americas-war-on",
+      "title": "Morning with TDWS: America's War on America",
+      "source": "dws",
+      "seen_at": "2026-10-21",
+      "decision": "skip",
+      "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/abortion-bans-vanishing-ob-gyns-and",
+      "title": "Abortion Bans, Vanishing OB-GYNs, and a Women’s Health Task Force",
+      "source": "dws",
+      "seen_at": "2026-10-21",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }
