@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
+      "link": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund",
+      "date": "Oct 20, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Anthropic’s junior share of new technical hires fell from 27% to 9%, and AI agents now log six hours for every human hour.",
+      "image": "/stories/anthropic-junior-hiring.jpg"
+    },
+    {
       "title": "World War Three Is Here. We’re Still Arguing About the Start Date.",
       "link": "https://lwinner.substack.com/p/world-war-three-already-started",
       "date": "Oct 20, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "At least 29 anti-LGBTQ accounts landed in Meta’s pay-for-engagement program. Apparently, just ruining Thanksgiving was leaving money on the table.",
       "image": "/stories/meta-pays-anti-lgbtq-accounts.jpg"
-    },
-    {
-      "title": "Jaime West Said What Every Hoosier Democrat Says After One F@#king Beer",
-      "link": "https://www.thedailywhatevershow.com/p/jaime-west-fayette-county-viral-forum",
-      "date": "Oct 15, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Asked what unpopular decision she’d make, a Fayette County candidate said, “Firing all Republicans.” Then came 8.2 million engagements.",
-      "image": "/stories/jaime-west-fayette-county-forum.jpg"
     }
   ]
 }

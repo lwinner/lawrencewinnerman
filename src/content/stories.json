@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "anthropic-junior-hiring",
+      "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
+      "dek": "Interactive AI agents now log six hours for every human hour. The humans got more meetings.",
+      "date": "2026-10-20",
+      "tags": [
+        "AI",
+        "Work",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Anthropic did something tech companies almost never do: it pointed its research team at itself and published what it found. Since early 2025, the junior share of its technical departments fell from 21% to 14%, and the junior share of new technical hires dropped from 27% to 9%. Interactive AI agents now log six hours for every human hour, and the humans who remain got more meetings.",
+        "Two days later came the Anthropic Public Benefit Fund: 5% of the company’s shares, roughly $48 billion on paper by my math, with no governance, no recipients, and no milestones yet. I spent 25 years in tech, and the industry ran on juniors who got to be bad at things on somebody else’s payroll. You can’t hire a ten-year veteran in 2036 if nobody hired the first-year in 2026."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund"
+        }
+      ],
+      "image": "/stories/anthropic-junior-hiring.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "world-war-three-started",
       "title": "World War Three Is Here. We’re Still Arguing About the Start Date.",
       "dek": "Ukraine. Iran. Sabotage in Europe. The next world war may already be underway—and Trump is making America’s promises impossible to trust.",
