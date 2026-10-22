@@ -19,6 +19,11 @@
           "label": "The Daily Whatever Show",
           "platform": "Substack",
           "url": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/anthropic-studied-its-own-workforce-and-one-number-should-scare-every-new-grad-07424b032105"
         }
       ],
       "image": "/stories/anthropic-junior-hiring.jpg",

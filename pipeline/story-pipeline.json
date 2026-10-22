@@ -335,6 +335,14 @@
       "seen_at": "2026-10-21",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://medium.com/the-daily-whatever-show/anthropic-studied-its-own-workforce-and-one-number-should-scare-every-new-grad-07424b032105",
+      "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
+      "source": "medium",
+      "seen_at": "2026-10-21",
+      "decision": "link-added",
+      "story_slug": "anthropic-junior-hiring"
     }
   ]
 }
