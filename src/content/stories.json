@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "top-7-good-signs-midterms",
+      "title": "Top 7 Good Signs 12 Days Out from the Midterms",
+      "dek": "Donald Trump has been the best Democratic field organizer in America. Now the rest of us have to show up early and in massive numbers.",
+      "date": "2026-10-22",
+      "tags": [
+        "Politics",
+        "Midterms",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "With 12 days to go, the news is good, and I don’t know what to do with my hands. I’m a gay man who came of age in the AIDS years, so my nervous system treats good news like a suspicious package. But the numbers are the numbers, so I counted them down Casey Kasem–style, from No. 7 to No. 1.",
+        "Trump’s approval sits at 31 to 36 percent in the latest polls. Democrats lead the generic ballot by 10 to 12 points. Cook moved 29 House races toward them in a week. Georgia’s first day of early voting shattered its record, and Dallas County more than doubled its 2022 opening day. And Democrats flipped the Florida House district that includes Mar-a-Lago. Then the part where I stop smiling: polls are not votes, so vote early."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/top-7-good-signs-12-days-out-midterms"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/top-7-good-signs-12-days-out-from-the-midterms-d177d0c15684"
+        }
+      ],
+      "image": "/stories/top-7-good-signs-midterms.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "wedgewood-fake-poll",
       "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
       "dek": "Wedgewood Polls called it an experiment. Mallory McMorrow called it what it was: “It killed us.”",

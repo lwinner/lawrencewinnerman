@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Top 7 Good Signs 12 Days Out from the Midterms",
+      "link": "https://www.thedailywhatevershow.com/p/top-7-good-signs-12-days-out-midterms",
+      "date": "Oct 22, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Trump’s approval is at record lows, Democrats lead the generic ballot by double digits, and early voting is shattering records.",
+      "image": "/stories/top-7-good-signs-midterms.jpg"
+    },
+    {
       "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
       "link": "https://www.thedailywhatevershow.com/p/wedgewood-polls-fake-pollster-mcmorrow",
       "date": "Oct 22, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "One rebrand, four miracles, and the state’s name is 223 years older than the country he’s mad at.",
       "image": "/stories/trump-new-america-new-mexico.jpg"
-    },
-    {
-      "title": "El-Sayed Disavowed the Muslim Brotherhood on the Spot. Tommy Wouldn’t Disavow Sh!t.",
-      "link": "https://www.thedailywhatevershow.com/p/abdul-el-sayed-tommy-teepell-christian-nationalism",
-      "date": "Oct 19, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "A former Josh Hawley staffer demanded that Michigan’s Muslim Senate nominee disavow the Muslim Brotherhood. He did, on the spot. “Tommy” couldn’t disavow putting his own religion into our laws.",
-      "image": "/stories/el-sayed-tommy-teepell.jpg"
     }
   ]
 }

@@ -359,6 +359,30 @@
       "seen_at": "2026-10-22",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/top-7-good-signs-12-days-out-midterms",
+      "title": "Top 7 Good Signs 12 Days Out from the Midterms",
+      "source": "dws",
+      "seen_at": "2026-10-22",
+      "decision": "page+campaign",
+      "story_slug": "top-7-good-signs-midterms"
+    },
+    {
+      "url": "https://medium.com/the-daily-whatever-show/top-7-good-signs-12-days-out-from-the-midterms-d177d0c15684",
+      "title": "Top 7 Good Signs 12 Days Out from the Midterms",
+      "source": "medium",
+      "seen_at": "2026-10-22",
+      "decision": "link-existing",
+      "story_slug": "top-7-good-signs-midterms"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/mornings-with-tdws-womens-healthcare",
+      "title": "Mornings with TDWS: Women's Healthcare in Crisis",
+      "source": "dws",
+      "seen_at": "2026-10-22",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }
