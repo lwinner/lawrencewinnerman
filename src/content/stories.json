@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "wedgewood-fake-poll",
+      "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
+      "dek": "Wedgewood Polls called it an experiment. Mallory McMorrow called it what it was: “It killed us.”",
+      "date": "2026-10-22",
+      "tags": [
+        "Politics",
+        "Media",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "A polling firm with no office, no staff list, and no phone number admitted this week that it made up its numbers. Wedgewood Polls called it an experiment. In June its fake Michigan survey put Mallory McMorrow at 9%, her donations dried up, and on July 5 she suspended her Senate campaign. “It killed us,” she wrote.",
+        "The outlets that ran Wedgewood’s numbers were warned early. Its debut poll in Louisiana missed by almost 18 points, and its website lived on a Google Site registered the day before its first release. The New York Times even labeled it a pollster that doesn’t meet its criteria, then kept it in the tracker. FiftyPlusOne asked for the raw data and found it fabricated. Wedgewood’s reply was two words I won’t print here. My argument: every donor and campaign it burned should sue, and every editor who ran a number without making a phone call owes McMorrow’s volunteers an apology."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/wedgewood-polls-fake-pollster-mcmorrow"
+        }
+      ],
+      "image": "/stories/wedgewood-fake-poll.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "anthropic-junior-hiring",
       "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
       "dek": "Interactive AI agents now log six hours for every human hour. The humans got more meetings.",

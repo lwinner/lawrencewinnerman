@@ -343,6 +343,22 @@
       "seen_at": "2026-10-21",
       "decision": "link-added",
       "story_slug": "anthropic-junior-hiring"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/wedgewood-polls-fake-pollster-mcmorrow",
+      "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
+      "source": "dws",
+      "seen_at": "2026-10-22",
+      "decision": "page+campaign",
+      "story_slug": "wedgewood-fake-poll"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/vivek-ramaswamy-is-spending-4-million",
+      "title": "Vivek Ramaswamy Is Spending $4 Million to Have Amy Acton's Mother Call",
+      "source": "dws",
+      "seen_at": "2026-10-22",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }

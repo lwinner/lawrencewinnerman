@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
+      "link": "https://www.thedailywhatevershow.com/p/wedgewood-polls-fake-pollster-mcmorrow",
+      "date": "Oct 22, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "A made-up pollster killed a real Senate campaign, then sent the reporters who caught it a two-word reply.",
+      "image": "/stories/wedgewood-fake-poll.jpg"
+    },
+    {
       "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
       "link": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund",
       "date": "Oct 20, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "A former Josh Hawley staffer demanded that Michigan’s Muslim Senate nominee disavow the Muslim Brotherhood. He did, on the spot. “Tommy” couldn’t disavow putting his own religion into our laws.",
       "image": "/stories/el-sayed-tommy-teepell.jpg"
-    },
-    {
-      "title": "Facebook Found a Way to Make Homophobia Financially Rewarding",
-      "link": "https://www.thedailywhatevershow.com/p/meta-monetization-anti-lgbtq-accounts-midterms",
-      "date": "Oct 16, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "At least 29 anti-LGBTQ accounts landed in Meta’s pay-for-engagement program. Apparently, just ruining Thanksgiving was leaving money on the table.",
-      "image": "/stories/meta-pays-anti-lgbtq-accounts.jpg"
     }
   ]
 }
