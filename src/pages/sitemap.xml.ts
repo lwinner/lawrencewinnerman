@@ -9,6 +9,7 @@ export const GET: APIRoute = ({ site }) => {
   const urls = [
     { loc: new URL("/", base).href, lastmod: latest, priority: "1.0" },
     { loc: new URL("/writing/", base).href, lastmod: latest, priority: "0.9" },
+    { loc: new URL("/keys/", base).href, lastmod: "2026-10-23", priority: "0.8" },
     ...stories.map((s) => ({ loc: new URL(`/writing/${s.slug}/`, base).href, lastmod: s.date, priority: "0.7" })),
   ];
   const body = `<?xml version="1.0" encoding="UTF-8"?>

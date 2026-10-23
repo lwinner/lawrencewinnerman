@@ -1,0 +1,177 @@
+---
+// /keys/ — The Hardware Key Guide: a plain-language security guide for
+// non-technical readers, readable in full here and downloadable as a PDF.
+// The guide body is generated HTML in src/content/hardware-key-guide.html.
+import Base from "../../layouts/Base.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import guideHtml from "../../content/hardware-key-guide.html?raw";
+import { PERSON_ID, WEBSITE_ID } from "../../data/site-schema";
+
+const site = Astro.site!;
+const url = new URL("/keys/", site).href;
+const pdf = "/downloads/hardware-key-guide.pdf";
+const title = "The Hardware Key Guide";
+const dek = "How to lock down your accounts, phone, and privacy, step by step, with no technical background.";
+const description = "A plain-language, step-by-step guide to hardware security keys, password managers, AI-scam defenses, doxxing cleanup, and protest-day phone safety. Read it here or download the PDF.";
+const published = "2026-10-23";
+
+const ld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    alternativeHeadline: dek,
+    description,
+    datePublished: published,
+    dateModified: published,
+    url,
+    mainEntityOfPage: url,
+    keywords: "security keys, passkeys, YubiKey, password manager, two-factor authentication, AI scams, doxxing, Signal, digital security",
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+    associatedMedia: { "@type": "MediaObject", contentUrl: new URL(pdf, site).href, encodingFormat: "application/pdf", name: `${title} (PDF)` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.href },
+      { "@type": "ListItem", position: 2, name: title, item: url },
+    ],
+  },
+];
+---
+<Base title={`${title} | Lawrence Winnerman`} description={description} ogType="article">
+  <Fragment slot="head">
+    <meta property="article:published_time" content={published} />
+    <meta property="article:author" content="Lawrence Winnerman" />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </Fragment>
+  <Nav />
+  <main>
+    <article class="keys-page">
+      <header class="container narrow head">
+        <p class="eyebrow">A Field Guide &middot; October 2026</p>
+        <h1>{title}</h1>
+        <p class="dek">{dek}</p>
+        <p class="byline">By Lawrence Winnerman</p>
+
+        <div class="download" aria-labelledby="dl-h">
+          <div class="dl-text">
+            <h2 id="dl-h">Take it with you</h2>
+            <p>The whole guide is below. If you would rather print it, mark it up, and keep it with your spare key, download the PDF.</p>
+          </div>
+          <a class="btn" href={pdf} download="The-Hardware-Key-Guide.pdf">
+            Download the PDF <span class="dl-size">25 pages &middot; 284 KB</span>
+          </a>
+        </div>
+
+        <p class="checked">Prices, products, and menu names were checked against each company&rsquo;s own help pages on October 22, 2026. Menus change; if a screen looks different from what is described here, search that company&rsquo;s help center for &ldquo;security key&rdquo; and follow its current steps.</p>
+      </header>
+
+      <div class="container narrow guide" set:html={guideHtml} />
+
+      <div class="container narrow">
+        <div class="download end" aria-labelledby="dl-h2">
+          <div class="dl-text">
+            <h2 id="dl-h2">Print it and keep it</h2>
+            <p>Same guide, 25 pages, ready for paper.</p>
+          </div>
+          <a class="btn" href={pdf} download="The-Hardware-Key-Guide.pdf">
+            Download the PDF <span class="dl-size">284 KB</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .narrow { max-width: calc(46rem + 2 * var(--gutter)); }
+  .head { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+  h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: var(--text-h1); line-height: 1.04;
+    letter-spacing: -0.01em; color: var(--lw-slate); margin: 0 0 1.25rem;
+    text-wrap: balance;
+  }
+  .dek {
+    font-family: var(--font-display); font-style: italic;
+    font-size: var(--fs-tagline); line-height: 1.3; color: var(--lw-slate-soft); margin: 0 0 1.25rem;
+    text-wrap: balance;
+  }
+  .byline { font-family: var(--font-ui); font-size: var(--fs-small); color: var(--color-text-secondary); margin: 0 0 2rem; }
+  .download {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.5rem;
+    background: var(--lw-cream-card); border: 1px solid var(--lw-rule); border-top: 3px solid var(--lw-red);
+    border-radius: 6px; padding: 1.25rem 1.5rem; margin: 0 0 1.75rem;
+  }
+  .dl-text { flex: 1 1 18rem; min-width: 0; }
+  .download h2 { font-size: var(--fs-h3); margin: 0 0 0.35rem; }
+  .download p { margin: 0; font-size: 1.0625rem; line-height: 1.5; }
+  .download .btn { flex: 0 0 auto; }
+  .dl-size { font-weight: 400; letter-spacing: 0.02em; text-transform: none; opacity: 0.9; }
+  .download.end { margin: 3.5rem 0 0; }
+  .checked { font-style: italic; font-size: 1rem; line-height: 1.5; color: var(--color-text-secondary); margin: 0; }
+  @media (max-width: 520px) {
+    .download .btn { width: 100%; justify-content: center; flex-wrap: wrap; }
+  }
+</style>
+
+<style is:global>
+  /* The guide body arrives as generated HTML, so its styles are global and
+     scoped by the .guide class. Brand tokens only; no new colors. */
+  .guide { padding-top: 2.5rem; }
+  .guide p, .guide li { font-size: 1.125rem; line-height: 1.6; }
+  .guide a { color: var(--lw-red); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .guide a:hover { color: var(--lw-red-hover); }
+  .guide strong { font-weight: 700; }
+
+  .g-toc { background: var(--lw-cream-card); border: 1px solid var(--lw-rule); border-radius: 6px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+  .guide .g-toc-label { font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow); letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-text-secondary); margin: 0 0 0.75rem; }
+  .g-toc ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 2rem; }
+  .g-toc li { break-inside: avoid; padding: 0.2rem 0; font-size: 1rem !important; line-height: 1.4 !important; }
+  .guide .g-toc a { color: var(--lw-slate); text-decoration: none; }
+  .guide .g-toc a:hover { color: var(--lw-red); text-decoration: underline; }
+
+  .g-part { scroll-margin-top: 88px; padding-top: 3.5rem; }
+  .g-part h2 { font-size: clamp(1.75rem, 3.4vw, 2.375rem); line-height: 1.12; margin: 0 0 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--lw-rule); text-wrap: balance; }
+  .g-part-no { display: block; font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow); letter-spacing: 0.18em; text-transform: uppercase; color: var(--lw-red); margin-bottom: 0.5rem; }
+  .guide h3 { font-family: var(--font-subhead); font-weight: 700; font-size: var(--text-h3); line-height: 1.25; margin: 2.25rem 0 0.75rem; text-wrap: balance; }
+  .guide h4 { font-family: var(--font-subhead); font-weight: 700; font-size: 1.15rem; line-height: 1.3; color: var(--lw-slate); margin: 1.75rem 0 0.5rem; text-wrap: balance; }
+
+  .g-steps { list-style: none; counter-reset: step; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0.7rem; }
+  .g-steps > li { counter-increment: step; position: relative; padding-left: 2.75rem; }
+  .g-steps > li::before {
+    content: counter(step); position: absolute; left: 0; top: 0.15rem;
+    width: 1.8rem; height: 1.8rem; border-radius: 999px; background: var(--lw-red); color: var(--lw-cream);
+    font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem; line-height: 1;
+    display: grid; place-items: center; font-variant-numeric: tabular-nums;
+  }
+  .g-bullets { padding-left: 1.3rem; margin: 0 0 1.5rem; display: grid; gap: 0.5rem; }
+  .g-bullets li::marker { color: var(--lw-red); }
+  .g-check { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0.5rem; }
+  .g-check li { position: relative; padding-left: 2rem; }
+  .g-check li::before { content: ""; position: absolute; left: 0.1rem; top: 0.35rem; width: 1.05rem; height: 1.05rem; border: 1.5px solid var(--lw-slate-soft); border-radius: 3px; }
+
+  .g-callout { background: var(--lw-cream-card); border: 1px solid var(--lw-rule); border-left: 5px solid var(--lw-slate-soft); border-radius: 0 6px 6px 0; padding: 1.1rem 1.35rem; margin: 1.5rem 0 2rem; }
+  .g-callout.g-warn { border-left-color: var(--lw-red); }
+  .g-callout-kind { font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow) !important; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lw-slate-soft); margin: 0 0 0.25rem; }
+  .g-warn .g-callout-kind { color: var(--lw-red); }
+  .g-callout-title { font-family: var(--font-subhead); font-weight: 700; font-size: 1.2rem !important; margin: 0 0 0.5rem; }
+  .g-callout p:last-child { margin-bottom: 0; }
+
+  .g-table { overflow-x: auto; margin: 0 0 1.75rem; border: 1px solid var(--lw-rule); border-radius: 6px; background: var(--lw-cream-card); }
+  .g-table table { border-collapse: collapse; width: 100%; font-family: var(--font-body); font-size: 1rem; line-height: 1.45; }
+  .g-table th, .g-table td { text-align: left; vertical-align: top; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--lw-rule); min-width: 7rem; }
+  .g-table th { font-family: var(--font-ui); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.02em; background: var(--lw-cream); }
+  .g-table tr:last-child td { border-bottom: 0; }
+
+  @media print {
+    .nav, footer, .download { display: none !important; }
+    .g-callout, .g-table, .g-steps > li, .g-check li { break-inside: avoid; }
+  }
+</style>
