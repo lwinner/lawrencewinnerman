@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "security-key-guide",
+      "title": "You Asked for the Security Key Guide. Here It Is.",
+      "dek": "Plain-language, tap-by-tap instructions for locking down your accounts, your phone, and your privacy, written for people who would rather not think about any of it.",
+      "date": "2026-10-23",
+      "tags": [
+        "Security",
+        "Privacy",
+        "Technology"
+      ],
+      "summary": [
+        "On Fucked Up Friday I talked about the little hardware keys I keep telling everyone I love to buy, and my inbox did something it almost never does on a Friday: it filled up with people asking for the instructions. So here they are, all of them, tap by tap. I wrote the guide for my friends first, for people who’d rather not think about any of this.",
+        "The core costs about $60: two security keys, one for your keychain and one hidden at home. A key checks the real address of the website before it answers, so a fake login page gets nothing, and there’s no code to read back to the nice man from “your bank.” The rest takes three sittings of about an hour each: a password manager, your main accounts, a lock on your phone number, and your phone and computer. Pick a family safe word this weekend. And follow the no-lockout rules: two keys on every account."
+      ],
+      "links": [
+        {
+          "label": "The Hinge & The Near Field",
+          "platform": "Substack",
+          "url": "https://lwinner.substack.com/p/hardware-security-key-guide"
+        }
+      ],
+      "image": "/stories/security-key-guide.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "top-7-good-signs-midterms",
       "title": "Top 7 Good Signs 12 Days Out from the Midterms",
       "dek": "Donald Trump has been the best Democratic field organizer in America. Now the rest of us have to show up early and in massive numbers.",

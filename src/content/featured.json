@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "You Asked for the Security Key Guide. Here It Is.",
+      "link": "https://lwinner.substack.com/p/hardware-security-key-guide",
+      "date": "Oct 23, 2026",
+      "outlet": "The Hinge & The Near Field",
+      "excerpt": "Two $60 security keys, three one-hour sittings, and a guide that tells you exactly where to tap.",
+      "image": "/stories/security-key-guide.jpg"
+    },
+    {
       "title": "Top 7 Good Signs 12 Days Out from the Midterms",
       "link": "https://www.thedailywhatevershow.com/p/top-7-good-signs-12-days-out-midterms",
       "date": "Oct 22, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "The FT asked if we’re sleepwalking into World War III. Olga Lautman called it in 2024, Julie Roginsky put it in three headlines, and I said it in my very first post.",
       "image": "/stories/ft-world-war-iii.jpg"
-    },
-    {
-      "title": "Trump Wants to Rename New Mexico “New America,” and Holy Sh!t, He’s Serious This Time",
-      "link": "https://www.thedailywhatevershow.com/p/trump-wants-to-rename-new-mexico",
-      "date": "Oct 19, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "One rebrand, four miracles, and the state’s name is 223 years older than the country he’s mad at.",
-      "image": "/stories/trump-new-america-new-mexico.jpg"
     }
   ]
 }
