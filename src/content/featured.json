@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Trump Is Suing Alaska Because There Are Two Dan Sullivans, and the Brief Is Missing a F@#king Verb",
+      "link": "https://www.thedailywhatevershow.com/p/trump-doj-sues-alaska-two-dan-sullivans",
+      "date": "Oct 25, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "The theory is that Alaskans can’t read the word “incumbent.” The only person confused about which Dan is which is the president.",
+      "image": "/stories/trump-alaska-two-dan-sullivans.jpg"
+    },
+    {
       "title": "You Asked for the Security Key Guide. Here It Is.",
       "link": "https://lwinner.substack.com/p/hardware-security-key-guide",
       "date": "Oct 23, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Hinge & The Near Field",
       "excerpt": "Ukraine. Iran. Sabotage in Europe. The next world war may already be underway, and nobody agrees on the start date.",
       "image": "/stories/world-war-three-started.jpg"
-    },
-    {
-      "title": "The FT Just Noticed World War III. Welcome to the F@#king Party.",
-      "link": "https://www.thedailywhatevershow.com/p/ft-just-noticed-world-war-iii",
-      "date": "Oct 20, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "The FT asked if we’re sleepwalking into World War III. Olga Lautman called it in 2024, Julie Roginsky put it in three headlines, and I said it in my very first post.",
-      "image": "/stories/ft-world-war-iii.jpg"
     }
   ]
 }

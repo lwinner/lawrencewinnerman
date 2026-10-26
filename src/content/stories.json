@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "trump-alaska-two-dan-sullivans",
+      "title": "Trump Is Suing Alaska Because There Are Two Dan Sullivans, and the Brief Is Missing a F@#king Verb",
+      "dek": "The theory is that Alaskans can’t read the word “incumbent.” The only person confused about which Dan is which is the president.",
+      "date": "2026-10-25",
+      "tags": [
+        "Politics",
+        "Elections",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "The Justice Department has sued Alaska to freeze its U.S. Senate results if Sen. Dan Sullivan loses, on the theory that voters can’t tell him from Dan J. Sullivan, a retired schoolteacher from Petersburg. The ballot literally prints “incumbent” next to the senator’s name. Dan J. took 2.5 percent in the August primary and polls at 1.7.",
+        "The legal hook is the preamble of the 1993 motor voter law, and Notre Dame’s Derek Muller noted that one paragraph is missing the verb that would ask the court to do anything. The suit will probably go nowhere, but it doesn’t have to win. It only has to sit there, loaded, while Alaska counts absentee ballots for up to 15 days, so the excuse is already filed."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/trump-doj-sues-alaska-two-dan-sullivans"
+        }
+      ],
+      "image": "/stories/trump-alaska-two-dan-sullivans.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "security-key-guide",
       "title": "You Asked for the Security Key Guide. Here It Is.",
       "dek": "Plain-language, tap-by-tap instructions for locking down your accounts, your phone, and your privacy, written for people who would rather not think about any of it.",
