@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Microsoft Made $133.7 Billion and Still Wants 60,000 Workers to F@#k Off Quietly",
+      "link": "https://www.thedailywhatevershow.com/p/microsoft-buyouts-60000-employees-voluntary-exit-offer",
+      "date": "Oct 27, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Microsoft cleared $133.7 billion in profit and is inviting 60,000 workers to take a voluntary exit before the holidays.",
+      "image": "/stories/microsoft-voluntary-exit-offer.jpg"
+    },
+    {
       "title": "Trump Is Suing Alaska Because There Are Two Dan Sullivans, and the Brief Is Missing a F@#king Verb",
       "link": "https://www.thedailywhatevershow.com/p/trump-doj-sues-alaska-two-dan-sullivans",
       "date": "Oct 25, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Anthropic’s junior share of new technical hires fell from 27% to 9%, and AI agents now log six hours for every human hour.",
       "image": "/stories/anthropic-junior-hiring.jpg"
-    },
-    {
-      "title": "World War Three Is Here. We’re Still Arguing About the Start Date.",
-      "link": "https://lwinner.substack.com/p/world-war-three-already-started",
-      "date": "Oct 20, 2026",
-      "outlet": "The Hinge & The Near Field",
-      "excerpt": "Ukraine. Iran. Sabotage in Europe. The next world war may already be underway, and nobody agrees on the start date.",
-      "image": "/stories/world-war-three-started.jpg"
     }
   ]
 }

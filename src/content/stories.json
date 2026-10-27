@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "microsoft-voluntary-exit-offer",
+      "title": "Microsoft Made $133.7 Billion and Still Wants 60,000 Workers to F@#k Off Quietly",
+      "dek": "The “Voluntary Exit Offer” comes with a severance formula, a December deadline, and $76.8 billion still sitting in the bank. Basically, the data centers got your raise.",
+      "date": "2026-10-27",
+      "tags": [
+        "Work",
+        "Technology",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Microsoft cleared $133.7 billion in profit last fiscal year, and now roughly 60,000 of its people have an email inviting them to leave before the holidays. The company calls it the Voluntary Exit Offer. It’s open to vice presidents and below in the US, Canada, India, and the UK, about 27 percent of a 223,000-person workforce. As a freelancer, I can translate “shape your next chapter”: you get to find out what COBRA costs.",
+        "Per Business Insider, the lower levels get a week of pay for every six months worked, and the deadline to accept is early December. Microsoft calls the program “new for us,” but a spring pilot drew more than 30 percent of those eligible, and July brought 4,800 outright cuts. Data center roles are excluded, and the company expects to spend $175 billion on AI infrastructure this year. The machines get babysitters. The people who built the company get a severance calculator."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/microsoft-buyouts-60000-employees-voluntary-exit-offer"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/microsoft-made-133-7-billion-and-still-wants-60-000-workers-to-f-k-off-quietly-737c896abaef"
+        }
+      ],
+      "image": "/stories/microsoft-voluntary-exit-offer.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "trump-alaska-two-dan-sullivans",
       "title": "Trump Is Suing Alaska Because There Are Two Dan Sullivans, and the Brief Is Missing a F@#king Verb",
       "dek": "The theory is that Alaskans can’t read the word “incumbent.” The only person confused about which Dan is which is the president.",
