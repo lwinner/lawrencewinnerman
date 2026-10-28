@@ -503,6 +503,30 @@
       "seen_at": "2026-10-26",
       "decision": "linked",
       "story_slug": "trump-alaska-two-dan-sullivans"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/cindy-hyde-smith-nine-word-speech-trump-corinth-rally",
+      "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
+      "source": "substack",
+      "seen_at": "2026-10-27",
+      "decision": "page+campaign",
+      "story_slug": "cindy-hyde-smith-nine-words"
+    },
+    {
+      "url": "https://medium.com/the-daily-whatever-show/pick-another-protein-cindy-hyde-smith-won-t-debate-but-she-will-say-nine-words-cc55c221c48c",
+      "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
+      "source": "medium",
+      "seen_at": "2026-10-27",
+      "decision": "page+campaign",
+      "story_slug": "cindy-hyde-smith-nine-words"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/mornings-with-tdws-one-week-til-election",
+      "title": "Mornings With TDWS: One Week 'Til Election Day— and Microsoft Tells 60k Employees to Go",
+      "source": "substack",
+      "seen_at": "2026-10-27",
+      "decision": "skip",
+      "story_slug": null
     }
   ]
 }

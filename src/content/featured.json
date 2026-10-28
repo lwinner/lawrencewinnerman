@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
+      "link": "https://www.thedailywhatevershow.com/p/cindy-hyde-smith-nine-word-speech-trump-corinth-rally",
+      "date": "Oct 27, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Hyde-Smith won’t debate, but at Trump’s Corinth rally she delivered a nine-word speech. He called it a record.",
+      "image": "/stories/cindy-hyde-smith-nine-words.jpg"
+    },
+    {
       "title": "Microsoft Made $133.7 Billion and Still Wants 60,000 Workers to F@#k Off Quietly",
       "link": "https://www.thedailywhatevershow.com/p/microsoft-buyouts-60000-employees-voluntary-exit-offer",
       "date": "Oct 27, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "A made-up pollster killed a real Senate campaign, then sent the reporters who caught it a two-word reply.",
       "image": "/stories/wedgewood-fake-poll.jpg"
-    },
-    {
-      "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
-      "link": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund",
-      "date": "Oct 20, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Anthropic’s junior share of new technical hires fell from 27% to 9%, and AI agents now log six hours for every human hour.",
-      "image": "/stories/anthropic-junior-hiring.jpg"
     }
   ]
 }

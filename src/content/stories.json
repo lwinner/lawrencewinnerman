@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "cindy-hyde-smith-nine-words",
+      "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
+      "dek": "Trump called it a record. Her opponent, Scott Colom, would still like the full-length version, with a moderator.",
+      "date": "2026-10-27",
+      "tags": [
+        "Politics",
+        "Mississippi",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Sen. Cindy Hyde-Smith has finally found a campaign format she’s comfortable with: one sentence, nine words, and out. At Trump’s rally in Corinth, Mississippi, the first visit by a sitting president since FDR, he talked for more than 80 minutes, then called her up. She asked, “Is this not the best president in our lifetime?” and stepped back. Trump loved it. “That was a record,” he said.",
+        "The Gettysburg Address runs 272 words, and “Where’s the beef?” is three. Hyde-Smith clocked in at exactly three Clara Pellers. The last time she took a beef question, back in February, she told WLOX that Americans who can’t afford it “have so many proteins to choose from.” Her opponent, Scott Colom, now calls her “Cindy High Prices.” You can see why she’d keep her remarks short."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/cindy-hyde-smith-nine-word-speech-trump-corinth-rally"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/pick-another-protein-cindy-hyde-smith-won-t-debate-but-she-will-say-nine-words-cc55c221c48c"
+        }
+      ],
+      "image": "/stories/cindy-hyde-smith-nine-words.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "microsoft-voluntary-exit-offer",
       "title": "Microsoft Made $133.7 Billion and Still Wants 60,000 Workers to F@#k Off Quietly",
       "dek": "The “Voluntary Exit Offer” comes with a severance formula, a December deadline, and $76.8 billion still sitting in the bank. Basically, the data centers got your raise.",
