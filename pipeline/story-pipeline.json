@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "url": "https://medium.com/the-daily-whatever-show/i-asked-google-who-won-in-2020-it-took-three-tries-and-a-raised-voice-a5bdfc6cc108",
+      "title": "I Asked Google Who Won in 2020. It Took Three Tries and a Raised Voice.",
+      "source": "medium",
+      "seen_at": "2026-10-28",
+      "decision": "page+campaign",
+      "story_slug": "google-ai-mode-2020"
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/google-ai-mode-who-won-2020-election",
+      "title": "Google Is Kissing Trump’s A$$ So Hard Its AI Forgot Who Won 2020",
+      "source": "dws",
+      "seen_at": "2026-10-28",
+      "decision": "page+campaign",
+      "story_slug": "google-ai-mode-2020"
+    },
+    {
       "url": "https://medium.com/the-daily-whatever-show/microsoft-made-133-7-billion-and-still-wants-60-000-workers-to-f-k-off-quietly-737c896abaef",
       "title": "Microsoft Made $133.7 Billion and Still Wants 60,000 Workers to F@#k Off Quietly",
       "source": "medium",

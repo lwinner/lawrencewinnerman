@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "google-ai-mode-2020",
+      "title": "Google Is Kissing Trump’s A$$ So Hard Its AI Forgot Who Won 2020",
+      "dek": "It remembers 2016 and 2024 just fine. Everything is fine. Please consult the National Archives.",
+      "date": "2026-10-28",
+      "tags": [
+        "Politics",
+        "Technology",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Five words. That’s all I typed into Google’s AI Mode this afternoon: who won the 2020 election. It’s the easiest question in modern American history, and the biggest search engine on the planet answered like a hostage reading a statement off a cue card.",
+        "It gave me a name, Joe Biden, and then slammed the door. No vote totals, no state results, no links. Just homework: consult the Federal Election Commission, the National Archives, or the state election portals. When I asked where the links were, it told me to consult the same portals again. A company whose entire reason for existing is handing you links handed me a reading assignment. I shook the most famous search engine in human history like a Magic 8-Ball, and it floated up “Reply hazy, try again.”"
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/google-ai-mode-who-won-2020-election"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/i-asked-google-who-won-in-2020-it-took-three-tries-and-a-raised-voice-a5bdfc6cc108"
+        }
+      ],
+      "image": "/stories/google-ai-mode-2020.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "cindy-hyde-smith-nine-words",
       "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
       "dek": "Trump called it a record. Her opponent, Scott Colom, would still like the full-length version, with a moderator.",

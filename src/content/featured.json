@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Google Is Kissing Trump’s A$$ So Hard Its AI Forgot Who Won 2020",
+      "link": "https://www.thedailywhatevershow.com/p/google-ai-mode-who-won-2020-election",
+      "date": "Oct 28, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "I asked Google’s AI Mode who won the 2020 election. It named Biden, then sent me to the National Archives for homework.",
+      "image": "/stories/google-ai-mode-2020.jpg"
+    },
+    {
       "title": "‘Pick Another Protein’ Cindy Hyde-Smith Won’t Debate, but She Will Say Nine Words",
       "link": "https://www.thedailywhatevershow.com/p/cindy-hyde-smith-nine-word-speech-trump-corinth-rally",
       "date": "Oct 27, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Trump’s approval is at record lows, Democrats lead the generic ballot by double digits, and early voting is shattering records.",
       "image": "/stories/top-7-good-signs-midterms.jpg"
-    },
-    {
-      "title": "A Fake Pollster Tanked a Real Senate Campaign, Then Told Everyone to F@#k Off",
-      "link": "https://www.thedailywhatevershow.com/p/wedgewood-polls-fake-pollster-mcmorrow",
-      "date": "Oct 22, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "A made-up pollster killed a real Senate campaign, then sent the reporters who caught it a two-word reply.",
-      "image": "/stories/wedgewood-fake-poll.jpg"
     }
   ]
 }
