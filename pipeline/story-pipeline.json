@@ -567,6 +567,14 @@
       "seen_at": "2026-10-28",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/phone-deleted-photos-hidden-claude-code",
+      "title": "Your Phone Is Spying On You",
+      "source": "The Daily Whatever Show",
+      "seen_at": "2026-10-29",
+      "decision": "page+campaign",
+      "story_slug": "phone-secret-photos"
     }
   ]
 }

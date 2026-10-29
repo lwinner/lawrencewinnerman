@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Your Phone Is Spying On You",
+      "link": "https://www.thedailywhatevershow.com/p/phone-deleted-photos-hidden-claude-code",
+      "date": "Oct 29, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Claude found thousands of photos my phone took of me without my asking, plus 145,000 I thought I’d deleted.",
+      "image": "/stories/phone-secret-photos.jpg"
+    },
+    {
       "title": "Google Is Kissing Trump’s A$$ So Hard Its AI Forgot Who Won 2020",
       "link": "https://www.thedailywhatevershow.com/p/google-ai-mode-who-won-2020-election",
       "date": "Oct 28, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Hinge & The Near Field",
       "excerpt": "Two $60 security keys, three one-hour sittings, and a guide that tells you exactly where to tap.",
       "image": "/stories/security-key-guide.jpg"
-    },
-    {
-      "title": "Top 7 Good Signs 12 Days Out from the Midterms",
-      "link": "https://www.thedailywhatevershow.com/p/top-7-good-signs-12-days-out-midterms",
-      "date": "Oct 22, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "Trump’s approval is at record lows, Democrats lead the generic ballot by double digits, and early voting is shattering records.",
-      "image": "/stories/top-7-good-signs-midterms.jpg"
     }
   ]
 }

@@ -1,6 +1,31 @@
 {
   "stories": [
     {
+      "slug": "phone-secret-photos",
+      "title": "Your Phone Is Spying On You",
+      "dek": "Claude found that your phone — iPhone or Android — is taking 10,000 secret pictures of you, every day.",
+      "date": "2026-10-29",
+      "tags": [
+        "Technology",
+        "Privacy",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "A man on Twitter (I’m never calling it X) plugged his Android phone into a laptop, told Claude Code to hunt for pictures of his face that he never took, and got back 14,219 of them. His phone took them, through the cameras that run face unlock, and parked them in a cache folder nowhere near the gallery or Recently Deleted.",
+        "Then he ran the same search on an iPhone backup and, by his account, found more than 145,000 deleted images and videos, including a passport photo, banking screenshots, and a crypto wallet seed phrase. Other outlets keep coming back with bigger hauls. I dig into who can read all this, and why the most useful thing an AI did all week was snitch on a phone."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/phone-deleted-photos-hidden-claude-code"
+        }
+      ],
+      "image": "/stories/phone-secret-photos.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "google-ai-mode-2020",
       "title": "Google Is Kissing Trump’s A$$ So Hard Its AI Forgot Who Won 2020",
       "dek": "It remembers 2016 and 2024 just fine. Everything is fine. Please consult the National Archives.",
