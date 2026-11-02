@@ -647,6 +647,22 @@
       "seen_at": "2026-11-02",
       "decision": "skip",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/tucker-pickaxe-mountain-chris-murphy-stroke-dots",
+      "title": "Trump Named the Mountain, Tucker Says Nuke, and the Senator Who Called It “Insane” Had a Stroke",
+      "source": "The Daily Whatever Show (Substack)",
+      "seen_at": "2026-11-02",
+      "decision": "page+campaign",
+      "story_slug": "tucker-pickaxe-mountain-dots"
+    },
+    {
+      "url": "https://medium.com/bouncin-and-behavin-academy/trump-named-the-mountain-tucker-says-nuke-and-the-senator-who-called-it-insane-had-a-stroke-f0db5fa02a20",
+      "title": "Trump Named the Mountain, Tucker Says Nuke, and the Senator Who Called It “Insane” Had a Stroke",
+      "source": "medium",
+      "seen_at": "2026-11-02",
+      "decision": "linked",
+      "story_slug": "tucker-pickaxe-mountain-dots"
     }
   ]
 }

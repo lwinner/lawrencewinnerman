@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Trump Named the Mountain, Tucker Says Nuke, and the Senator Who Called It “Insane” Had a Stroke",
+      "link": "https://www.thedailywhatevershow.com/p/tucker-pickaxe-mountain-chris-murphy-stroke-dots",
+      "date": "Nov 2, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Tucker Carlson says Trump may nuke a mountain in Iran. I got out the corkboard and tested every dot.",
+      "image": "/stories/tucker-pickaxe-mountain-dots.jpg"
+    },
+    {
       "title": "Haley Stevens Lost the Primary, Then Lost Her F@#king Mind",
       "link": "https://www.thedailywhatevershow.com/p/haley-stevens-endorses-mike-rogers-el-sayed",
       "date": "Nov 1, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "Microsoft cleared $133.7 billion in profit and is inviting 60,000 workers to take a voluntary exit before the holidays.",
       "image": "/stories/microsoft-voluntary-exit-offer.jpg"
-    },
-    {
-      "title": "Trump Is Suing Alaska Because There Are Two Dan Sullivans, and the Brief Is Missing a F@#king Verb",
-      "link": "https://www.thedailywhatevershow.com/p/trump-doj-sues-alaska-two-dan-sullivans",
-      "date": "Oct 25, 2026",
-      "outlet": "The Daily Whatever Show",
-      "excerpt": "The theory is that Alaskans can’t read the word “incumbent.” The only person confused about which Dan is which is the president.",
-      "image": "/stories/trump-alaska-two-dan-sullivans.jpg"
     }
   ]
 }
