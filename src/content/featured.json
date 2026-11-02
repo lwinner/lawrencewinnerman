@@ -2,6 +2,14 @@
   "_comment": "Pinned stories shown above the live Substack feed in #writing. Newest first. Use this for pieces published off the Hinge & The Near Field feed (Medium, The Daily Whatever Show). Remove an entry when it's no longer timely; an empty list hides the block.",
   "stories": [
     {
+      "title": "Haley Stevens Lost the Primary, Then Lost Her F@#king Mind",
+      "link": "https://www.thedailywhatevershow.com/p/haley-stevens-endorses-mike-rogers-el-sayed",
+      "date": "Nov 1, 2026",
+      "outlet": "The Daily Whatever Show",
+      "excerpt": "Two days out, Michigan’s AIPAC favorite endorsed a Trump Republican over a $1,000 internet ad.",
+      "image": "/stories/haley-stevens-endorses-rogers.jpg"
+    },
+    {
       "title": "Your Phone Is Spying On You",
       "link": "https://www.thedailywhatevershow.com/p/phone-deleted-photos-hidden-claude-code",
       "date": "Oct 29, 2026",
@@ -40,14 +48,6 @@
       "outlet": "The Daily Whatever Show",
       "excerpt": "The theory is that Alaskans can’t read the word “incumbent.” The only person confused about which Dan is which is the president.",
       "image": "/stories/trump-alaska-two-dan-sullivans.jpg"
-    },
-    {
-      "title": "You Asked for the Security Key Guide. Here It Is.",
-      "link": "https://lwinner.substack.com/p/hardware-security-key-guide",
-      "date": "Oct 23, 2026",
-      "outlet": "The Hinge & The Near Field",
-      "excerpt": "Two $60 security keys, three one-hour sittings, and a guide that tells you exactly where to tap.",
-      "image": "/stories/security-key-guide.jpg"
     }
   ]
 }

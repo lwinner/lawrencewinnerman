@@ -623,6 +623,22 @@
       "seen_at": "2026-11-01",
       "decision": "blocked-no-text",
       "story_slug": null
+    },
+    {
+      "url": "https://www.thedailywhatevershow.com/p/haley-stevens-endorses-mike-rogers-el-sayed",
+      "title": "Haley Stevens Lost the Primary, Then Lost Her F@#king Mind",
+      "source": "dws-substack",
+      "seen_at": "2026-11-01",
+      "decision": "page+campaign",
+      "story_slug": "haley-stevens-endorses-rogers"
+    },
+    {
+      "url": "https://medium.com/the-daily-whatever-show/haley-stevens-lost-the-primary-then-lost-her-f-king-mind-58a5e044e55d",
+      "title": "Haley Stevens Lost the Primary, Then Lost Her F@#king Mind",
+      "source": "medium",
+      "seen_at": "2026-11-01",
+      "decision": "page+campaign",
+      "story_slug": "haley-stevens-endorses-rogers"
     }
   ]
 }

@@ -1,6 +1,36 @@
 {
   "stories": [
     {
+      "slug": "haley-stevens-endorses-rogers",
+      "title": "Haley Stevens Lost the Primary, Then Lost Her F@#king Mind",
+      "dek": "Two days out, Michigan’s AIPAC favorite endorsed a Trump Republican over a $1,000 internet ad. Her own staff quit before the cameras came on.",
+      "date": "2026-11-01",
+      "tags": [
+        "Politics",
+        "Michigan Senate",
+        "The Daily Whatever Show"
+      ],
+      "summary": [
+        "Two days before an election that could decide who runs the Senate, Rep. Haley Stevens, a Democrat, pointed a phone at her own face from inside her car and endorsed Republican Mike Rogers. This is the same Haley Stevens who lost the August 4 primary to Abdul El-Sayed, 48.45% to 47.55%, despite roughly $62 million in outside spending, nearly $30 million of it from AIPAC.",
+        "She conceded, promised to back the nominee, and did, for about three months. What broke her was a $1,000 online ad from Cenk Uygur’s Rebellion PAC. I’m Jewish, I’ve called Gaza a genocide in print, and I think that ad is garbage, tropes and all. I still don’t think it explains what she did. I walk through the timeline, the staff who quit, and why the ad was an excuse."
+      ],
+      "links": [
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Substack",
+          "url": "https://www.thedailywhatevershow.com/p/haley-stevens-endorses-mike-rogers-el-sayed"
+        },
+        {
+          "label": "The Daily Whatever Show",
+          "platform": "Medium",
+          "url": "https://medium.com/the-daily-whatever-show/haley-stevens-lost-the-primary-then-lost-her-f-king-mind-58a5e044e55d"
+        }
+      ],
+      "image": "/stories/haley-stevens-endorses-rogers.jpg",
+      "imageWidth": 1280,
+      "imageHeight": 720
+    },
+    {
       "slug": "phone-secret-photos",
       "title": "Your Phone Is Spying On You",
       "dek": "Claude found that your phone — iPhone or Android — is taking 10,000 secret pictures of you, every day.",
