@@ -2,7 +2,7 @@
 # account (lwinner@gmail.com), never under TDWS (relay entry 127). Workers Builds deploys it on a merge to main; nothing
 # else does. The Worker's name in the dashboard must match this name, or Workers Builds fails.
 name = "lawrencewinnerman"
-compatibility_date = "2026-10-01"
+compatibility_date = "2026-08-01"
 # Heliostet's site Worker (relay entry 91): the pages as static assets, and /files/ from the site's own R2 bucket when
 # the bucket has the file, else from the build. It must stay above every [table], as routes must.
 main = "node_modules/@vellumandvolt/heliostet/worker/site.js"
