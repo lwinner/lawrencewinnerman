@@ -1,0 +1,79 @@
+name: Check Substack
+
+# Substack's check (SITE-6, decision 0014). Substack refuses requests from Cloudflare's egress with
+# 429, so the watcher Worker does not poll it; this job checks it from GitHub's runners instead,
+# every 30 minutes in the daytime and hourly overnight (relay entry 22a), and runs the Rebuild
+# workflow when the newest posts change. The daily rebuild is still the backstop (SITE-7).
+#
+# - It reads the feed, then the archive, with up to three tries. A 429 or a timeout is a soft miss:
+#   a yellow note, not a red run. Six misses in a row (three hours by day) fail the run.
+# - Its first run, with no record yet, compares against the site's own Substack posts (the checkout's
+#   src/content/substack): newest posts the site doesn't hold count as a change (relay entry 124).
+# - It keeps no state of its own and commits nothing: each run's record is the name of its last
+#   step, and the next run reads it back through GitHub's Actions API with this job's own token. The
+#   watcher's /_heliostet/status reads the same record.
+# - It runs Heliostet's check from the vendored tarball with the runner's Node, with no install,
+#   so a run takes seconds. It uses no secret; the rebuild it calls uses the repository's own.
+# Every third-party action is pinned to a commit SHA (SEC-8).
+
+on:
+  # Every 30 minutes from 7 a.m. to 11 p.m. in America/New_York, and hourly overnight. The hours are UTC, for
+  # the zone's standard time (UTC-05:00); during daylight time the window runs an hour later.
+  # Written from client.json's identity.timeZone (Eastern when it has none) by heliostet-watcher-vars
+  # and heliostet-upgrade; change client.json, never these lines. At 17 and 47 past the hour: off
+  # the hour, when GitHub's scheduler is least crowded.
+  schedule:
+    - cron: '17,47 0-3,12-23 * * *'
+    - cron: '17 4-11 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: substack-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      rebuild: ${{ steps.check.outputs.rebuild }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            client.json
+            vendor
+            src/content/substack
+          sparse-checkout-cone-mode: false
+
+      - name: Unpack Heliostet's check
+        run: tar -xzf vendor/vellumandvolt-heliostet-*.tgz package/dist/watch
+
+      - name: Check Substack
+        id: check
+        run: node package/dist/watch/run-substack-check.js
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      # This step's name is the run's record; the next run and /_heliostet/status read it back.
+      - name: ${{ steps.check.outputs.record || 'No record' }}
+        if: ${{ always() }}
+        run: '[ "$FAIL" != "true" ]'
+        env:
+          FAIL: ${{ steps.check.outputs.fail }}
+
+  rebuild:
+    needs: check
+    if: ${{ needs.check.outputs.rebuild == 'true' }}
+    permissions:
+      contents: write
+    uses: ./.github/workflows/rebuild.yml
+    with:
+      caller: substack
+    secrets: inherit

@@ -1,0 +1,44 @@
+name: Rebuild
+
+# The site's rebuild (relay entry 127, as the Press's in Entry 126): Check Substack runs it when The Hinge & The
+# Near Field has a new post, and once a day it runs by itself as the backstop. It asks Workers Builds to build main
+# again, through the Worker's deploy hook, and that build reads the newest stories from the feed. Workers Builds is
+# the one deploy path: nothing here builds or deploys the site itself. It holds no state and commits nothing.
+# CLOUDFLARE_DEPLOY_HOOK is the deploy hook's address, a secret Lawrence makes in his own Cloudflare account on
+# cutover day; until it exists, the job says so and stops. Uses no third-party action.
+
+on:
+  schedule:
+    # The daily backstop, as the old refresh was: 11:00 UTC, about 6 or 7 am Eastern.
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      caller:
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask Workers Builds to build main
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning title=Rebuild::No CLOUDFLARE_DEPLOY_HOOK secret yet, so nothing was asked to build."
+            exit 0
+          fi
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          echo "The deploy hook answered HTTP $code."
+          [ "$code" -ge 200 ] && [ "$code" -lt 300 ]

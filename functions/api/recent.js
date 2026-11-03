@@ -1,3 +1,7 @@
+// RETIRED (relay entry 127). A Worker on Heliostet runs no Pages Function, so nothing serves this now: Check
+// Substack and Rebuild bring new posts into the build within 30 minutes by day, and the home page's script keeps its
+// build-time cards when this address answers 404, as it was written to. Kept in place, unused.
+//
 // GET /api/recent — live "Recent stories" JSON for lawrencewinnerman.com.
 //
 // Cloudflare Pages Function (auto-deployed from /functions alongside the static
