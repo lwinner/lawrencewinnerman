@@ -1,7 +1,7 @@
 ---
-// Subscribe (#subscribe) — NEW. Sits between Recent stories and Contact and
-// hosts the single Substack inline signup embed for the site (the old embeds in
-// Writing / Contact / Footer are removed so there is exactly one).
+// Subscribe (#subscribe). Sits between Recent stories and Contact. A link out to The Hinge & The Near Field's own
+// subscribe page on Substack: the site never collects an email address itself (ONB-1; Lawrence's ruling, relay
+// entry 127, in place of the old Substack signup embed).
 ---
 <section id="subscribe" class="subscribe">
   <div class="container">
@@ -11,17 +11,9 @@
       <p class="subscribe-lead">
         <strong><em>The Hinge &amp; The Near Field</em></strong>: essays, near-future scenarios, and fiction, delivered as they publish.
       </p>
-      <div class="subscribe-embed">
-        <iframe
-          title="Subscribe to The Hinge & The Near Field on Substack"
-          src="https://lwinner.substack.com/embed?transparent=1"
-          width="480"
-          height="150"
-          loading="lazy"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
-      </div>
+      <p class="subscribe-action">
+        <a class="btn" href="https://lwinner.substack.com/subscribe">Subscribe on Substack <span aria-hidden="true">→</span></a>
+      </p>
     </div>
   </div>
 </section>
@@ -53,15 +45,7 @@
     max-width: 44ch;
     margin: 0 auto 1.5rem;
   }
-  .subscribe-embed {
-    display: flex;
-    justify-content: center;
-  }
-  .subscribe-embed iframe {
-    border: 0;
-    background: transparent;
-    width: 480px;
-    max-width: 100%;
-    height: 150px;
+  .subscribe-action {
+    margin: 0;
   }
 </style>
