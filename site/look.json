@@ -11,6 +11,7 @@
         "family": "arno-pro-display",
         "category": "serif",
         "weights": [
+          600,
           700
         ],
         "styles": [
@@ -21,10 +22,12 @@
         "family": "arno-pro-subhead",
         "category": "serif",
         "weights": [
+          600,
           700
         ],
         "styles": [
-          "normal"
+          "normal",
+          "italic"
         ]
       },
       "body": {
@@ -46,7 +49,8 @@
         "weights": [
           400,
           500,
-          600
+          600,
+          700
         ],
         "styles": [
           "normal"
