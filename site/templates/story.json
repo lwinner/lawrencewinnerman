@@ -1,0 +1,20 @@
+{
+  "collection": "stories",
+  "frame": "none",
+  "frameOptions": {
+    "head": "story"
+  },
+  "rows": [
+    {
+      "id": "story",
+      "main": [
+        {
+          "id": "story",
+          "type": "story-note",
+          "variant": "lw-story",
+          "bind": "item"
+        }
+      ]
+    }
+  ]
+}

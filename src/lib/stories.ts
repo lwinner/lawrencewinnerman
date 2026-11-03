@@ -1,7 +1,25 @@
 // Story catalog for /writing. One entry per story, however many places it lives.
-// Source of truth: src/content/stories.json (newest first). Each story has a
-// first-person summary and links to every published version (Substack, Medium).
-import data from "../content/stories.json";
+// Source of truth: src/content/notes/<slug>.json (relay entry 127), one note each, which Heliostet also reads into its
+// stories collection: a first-person note and links to every published version (Substack, Medium). The old
+// src/content/stories.json is kept as history and read by nothing.
+// Newest first; on the same day, in the order the site always showed them (src/lw/order.json), and a newer note
+// that shares a day sorts by its slug.
+const files = import.meta.glob<{ default: Note }>("../content/notes/*.json", { eager: true });
+import order from "../lw/order.json";
+
+type Note = {
+  slug: string; title: string; dek?: string; date: string; note: string[]; tags?: string[];
+  links: { label: string; platform?: string; url: string }[];
+  image?: { src: string; alt?: string; width?: number; height?: number };
+};
+const rank = new Map((order as string[]).map((slug, i) => [slug, i]));
+const fromNote = (n: Note): Story => ({
+  slug: n.slug, title: n.title, dek: n.dek ?? "", date: n.date, tags: n.tags ?? [], summary: n.note,
+  links: n.links.map((l) => ({ label: l.label, platform: l.platform ?? "", url: l.url })),
+  image: n.image?.src ?? null,
+  ...(n.image?.width ? { imageWidth: n.image.width } : {}),
+  ...(n.image?.height ? { imageHeight: n.image.height } : {}),
+});
 
 export type StoryLink = { label: string; platform: string; url: string };
 export type Story = {
@@ -17,8 +35,8 @@ export type Story = {
   imageHeight?: number;
 };
 
-export const stories: Story[] = [...(data.stories as Story[])].sort((a, b) =>
-  b.date.localeCompare(a.date)
+export const stories: Story[] = Object.values(files).map((f) => fromNote(f.default)).sort((a, b) =>
+  b.date.localeCompare(a.date) || (rank.get(a.slug) ?? Infinity) - (rank.get(b.slug) ?? Infinity) || a.slug.localeCompare(b.slug)
 );
 
 export const storyPath = (s: Story) => `/writing/${s.slug}`;

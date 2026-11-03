@@ -9,17 +9,19 @@ import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { homeGraph } from "../data/site-schema";
-import { keysHead, writingHead } from "./heads";
+import { keysHead, storyHead, writingHead } from "./heads";
 
 const { page } = Astro.props as OwnFrameProps;
 const which = page.options.head;
 const site = Astro.site!;
 const writing = which === "writing" ? writingHead(site) : null;
 const keys = which === "keys" ? keysHead(site) : null;
+const story = page.entry?.collection === "stories" ? storyHead(site, page.entry.params.slug ?? "") : null;
 const props =
   which === "home" ? { ogImage: "/og/og-home-1280x720.png", graph: homeGraph }
   : writing ? { title: writing.title, description: writing.description }
   : keys ? { title: keys.title, description: keys.description, ogType: "article" }
+  : story ? { title: story.title, description: story.description, ogImage: story.image, ogType: "article", ogImageWidth: story.imageWidth, ogImageHeight: story.imageHeight }
   : which === "not-found" ? { title: "Page Not Found | Lawrence Winnerman", description: "This page isn’t here. Find Lawrence Winnerman's essays, fiction, and consulting from the homepage.", noindex: true }
   : { title: page.seo?.title ?? page.title, description: page.seo?.description, noindex: page.seo?.noindex === true };
 ---
@@ -30,6 +32,14 @@ const props =
       <meta property="article:published_time" content={keys.published} />
       <meta property="article:author" content="Lawrence Winnerman" />
       <script type="application/ld+json" set:html={JSON.stringify(keys.ld)} />
+    </Fragment>
+  )}
+  {story && (
+    <Fragment slot="head">
+      <meta property="article:published_time" content={story.date} />
+      <meta property="article:author" content="Lawrence Winnerman" />
+      {story.tags.map((t) => <meta property="article:tag" content={t} />)}
+      <script type="application/ld+json" set:html={JSON.stringify(story.ld)} />
     </Fragment>
   )}
   <Nav />

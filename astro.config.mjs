@@ -34,6 +34,7 @@ const OWN = {
     'list:lw-writing': v('src/lw/variants/Writing.astro', true),
     'download-guide:lw-keys': v('src/lw/variants/Keys.astro', true),
     'prose:lw-not-found': v('src/lw/variants/NotFound.astro', true),
+    'story-note:lw-story': v('src/lw/variants/Story.astro', true),
   },
 };
 

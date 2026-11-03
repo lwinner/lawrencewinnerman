@@ -1,0 +1,28 @@
+{
+  "slug": "the-guardrails-were-us",
+  "title": "The Guardrails Were Us",
+  "dek": "Rewiring the Republic, the Foreword: the repairs are not optional, and it has been done before, in worse weather than this.",
+  "date": "2026-07-20",
+  "note": [
+    "In one night in January 2025, seventeen inspectors general were fired, most by a two-line email, in plain violation of a law requiring thirty days’ notice to Congress. Nothing happened. The law was still on the books the next morning, fully in force and fully irrelevant.",
+    "I grew up believing American democracy was full of guardrails. It turns out most of them were norms, held up only because everyone agreed to behave as if they were walls. The guardrails were us. That can read as despair or as an assignment, and I choose assignment. The people who rewired this house before us weren’t braver. They were just earlier."
+  ],
+  "tags": [
+    "Rewiring the Republic",
+    "Democracy",
+    "Reform"
+  ],
+  "links": [
+    {
+      "label": "Lawrence Winnerman",
+      "platform": "Medium",
+      "url": "https://medium.com/@lwinner/the-guardrails-were-us-ec4a058fae51"
+    }
+  ],
+  "image": {
+    "src": "/stories/the-guardrails-were-us.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

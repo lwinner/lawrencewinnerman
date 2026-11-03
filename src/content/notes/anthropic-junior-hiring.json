@@ -1,0 +1,33 @@
+{
+  "slug": "anthropic-junior-hiring",
+  "title": "Anthropic Studied Its Own Workforce, and One Number Should Scare Every New Grad",
+  "dek": "Interactive AI agents now log six hours for every human hour. The humans got more meetings.",
+  "date": "2026-10-20",
+  "note": [
+    "Anthropic did something tech companies almost never do: it pointed its research team at itself and published what it found. Since early 2025, the junior share of its technical departments fell from 21% to 14%, and the junior share of new technical hires dropped from 27% to 9%. Interactive AI agents now log six hours for every human hour, and the humans who remain got more meetings.",
+    "Two days later came the Anthropic Public Benefit Fund: 5% of the company’s shares, roughly $48 billion on paper by my math, with no governance, no recipients, and no milestones yet. I spent 25 years in tech, and the industry ran on juniors who got to be bad at things on somebody else’s payroll. You can’t hire a ten-year veteran in 2036 if nobody hired the first-year in 2026."
+  ],
+  "tags": [
+    "AI",
+    "Work",
+    "The Daily Whatever Show"
+  ],
+  "links": [
+    {
+      "label": "The Daily Whatever Show",
+      "platform": "Substack",
+      "url": "https://www.thedailywhatevershow.com/p/anthropic-junior-hiring-public-benefit-fund"
+    },
+    {
+      "label": "The Daily Whatever Show",
+      "platform": "Medium",
+      "url": "https://medium.com/the-daily-whatever-show/anthropic-studied-its-own-workforce-and-one-number-should-scare-every-new-grad-07424b032105"
+    }
+  ],
+  "image": {
+    "src": "/stories/anthropic-junior-hiring.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "the-layer-war",
+  "title": "The Layer War",
+  "dek": "China just made the model a commodity. Satya Nadella saw it coming, Apple bet the company on it, and the bill lands on people who were never in the room. Us.",
+  "date": "2026-07-19",
+  "note": [
+    "On a Thursday in July, a Beijing lab most Americans had never heard of released Kimi K3, a model that matched or beat America’s best on the work companies actually pay for, at half the price. Then it promised to give the thing away. Within a day, the chip index fell into a bear market, and the world’s most valuable company became Apple, the one that refused to build a frontier model at all.",
+    "This is the longest essay I’ve written, and it’s about the war underneath the melt: where AI’s money actually settles, who called it early (Satya Nadella did, in public), who bet catastrophically wrong, and who pays when the trillion-dollar promises come due. Someone always pays, and it is never the men in the room."
+  ],
+  "tags": [
+    "AI",
+    "Technology",
+    "Economy"
+  ],
+  "links": [
+    {
+      "label": "The Hinge & The Near Field",
+      "platform": "Substack",
+      "url": "https://lwinner.substack.com/p/layer-war-kimi-k3-ai-bubble"
+    }
+  ],
+  "image": {
+    "src": "/stories/the-layer-war.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

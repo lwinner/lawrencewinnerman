@@ -1,0 +1,33 @@
+{
+  "slug": "the-gotterdammerung-of-software",
+  "title": "The Götterdämmerung of Software",
+  "dek": "A developer cloned Adobe’s suite in a week with an AI model. Napster already showed us who gets paid when the walls come down.",
+  "date": "2026-10-11",
+  "note": [
+    "A developer named Brandon Thomas spent the first week of October posting free, open-source stand-ins for seven Adobe apps, Photoshop through Acrobat, written with Claude Opus 5.5. Adobe charges $69.99 a month for the suite; the clones cost nothing. They’re rough for now, and the project’s own README says they aren’t ready for daily professional work. I give that sentence until Thanksgiving.",
+    "Clean-room cloning has been legal for forty years, since Compaq and Phoenix rebuilt IBM’s BIOS, and copyright protects code, not what the code does. What really protected Photoshop was the payroll it took to copy it, and that bill now fits on a credit card. I spent twenty-five years in technology, including Amazon and Microsoft, and I’ve seen this movie. It’s Napster, round two, and last time the people who built things weren’t the ones who got paid."
+  ],
+  "tags": [
+    "AI",
+    "Technology",
+    "Business"
+  ],
+  "links": [
+    {
+      "label": "Bouncin’ and Behavin’ Blogs",
+      "platform": "Medium",
+      "url": "https://medium.com/bouncin-and-behavin-blogs/the-g%C3%B6tterd%C3%A4mmerung-of-software-cad4a1aaf555?sk=65687eb97c944d74f4db67f92b534edb"
+    },
+    {
+      "label": "Blue Amp Media",
+      "platform": "Substack",
+      "url": "https://www.blueamp.co/p/adobe-ai-clones-napster-software"
+    }
+  ],
+  "image": {
+    "src": "/stories/the-gotterdammerung-of-software.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

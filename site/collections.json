@@ -1,0 +1,6 @@
+{
+  "stories": {
+    "address": "/writing/{slug}",
+    "template": "story"
+  }
+}

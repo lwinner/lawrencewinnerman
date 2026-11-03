@@ -1,0 +1,28 @@
+{
+  "slug": "the-men-racing-to-build-superintelligence",
+  "title": "The Men Racing to Build Superintelligence Are Asking Washington to Slow Them Down",
+  "dek": "Anthropic’s Dario Amodei says the AI race is moving too fast. OpenAI’s Sam Altman agrees. When the two biggest rivals in AI start asking for restraints, we should pay attention.",
+  "date": "2026-09-12",
+  "note": [
+    "One Saturday morning, Dario Amodei published 3,800 words asking the government to regulate his own company, and by lunch Sam Altman, his rival of four years, agreed. It’s easy to file that under corporate responsibility. Don’t. It isn’t a safety pledge. It’s a request for permission to stop, addressed to the only party that can grant it.",
+    "Amodei can’t be the only one who slows down, so he asked to be forced, including coordination among labs that antitrust law currently forbids. The two men are signaling to each other in public: if you back away from the gun, we will. I ask what they see that frightens them, and why the people closest to the models are the most afraid."
+  ],
+  "tags": [
+    "AI",
+    "Regulation",
+    "Technology"
+  ],
+  "links": [
+    {
+      "label": "The Hinge & The Near Field",
+      "platform": "Substack",
+      "url": "https://lwinner.substack.com/p/if-you-back-away-from-the-gun-amodei-altman"
+    }
+  ],
+  "image": {
+    "src": "/stories/the-men-racing-to-build-superintelligence.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

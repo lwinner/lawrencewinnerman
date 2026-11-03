@@ -1,0 +1,28 @@
+{
+  "slug": "calculating-your-impending-p-doom",
+  "title": "Calculating Your Impending P(doom)",
+  "dek": "The people building AI have a number for the odds it ends humanity. They say it out loud, over salad. This week one of them quit and said it in public.",
+  "date": "2026-09-11",
+  "note": [
+    "Inside the AI labs, people casually trade a number: their p(doom), the odds that what they’re building ends humanity. When Jacob Coxon walked away from Anthropic and his stock options to say publicly that no frontier lab is acting responsibly, colleagues lined up behind him within the hour.",
+    "I start from the premise that AI is real and could be miraculous, which is exactly why the race worries me. It isn’t being built in a careful government lab. It’s being built by a handful of very rich companies sprinting to self-improving superintelligence, because the first one wins everything. The people closest to it think the odds are bad, and the stakes are only our entire civilization."
+  ],
+  "tags": [
+    "AI",
+    "Technology",
+    "Superintelligence"
+  ],
+  "links": [
+    {
+      "label": "Bouncin’ and Behavin’ Blogs",
+      "platform": "Medium",
+      "url": "https://medium.com/bouncin-and-behavin-blogs/calculating-your-impending-p-doom-3b037547113f"
+    }
+  ],
+  "image": {
+    "src": "/stories/calculating-your-impending-p-doom.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

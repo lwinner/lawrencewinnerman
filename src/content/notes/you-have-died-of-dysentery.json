@@ -1,0 +1,34 @@
+{
+  "slug": "you-have-died-of-dysentery",
+  "title": "You Have Died of Dysentery",
+  "dek": "The Oregon Trail disease is back, it’s an STI now, and the CDC filed it under food poisoning.",
+  "date": "2026-10-09",
+  "note": [
+    "Shigella, the bacterium that killed your pixelated ox-cart family on an Apple IIe in 1987, has spent the last decade reinventing itself as a sexually transmitted infection. The CDC’s own April report examined 16,788 samples: extensively drug-resistant cases, immune to all five oral antibiotics we would normally use, went from zero in 2011 to 280 in 2023, and more than a third of those patients were hospitalized. The treatment recommendation, quoted in full: there isn’t one.",
+    "How do you breed a superbug? A 2026 Lancet study calls it bystander resistance: you prescribe azithromycin for gonorrhea, and the shigella living in the same patient sits in on the course and graduates. We didn’t lose the fight to this bug. We trained it. And the agency responsible for noticing tracks it through its foodborne surveillance system, which is like tracking carjackings through the DMV."
+  ],
+  "tags": [
+    "Public Health",
+    "CDC",
+    "Antibiotic Resistance",
+    "The Daily Whatever Show"
+  ],
+  "links": [
+    {
+      "label": "The Daily Whatever Show",
+      "platform": "Substack",
+      "url": "https://www.thedailywhatevershow.com/p/drug-resistant-shigella-sti-cdc"
+    },
+    {
+      "label": "genXy",
+      "platform": "Medium",
+      "url": "https://medium.com/genxy/you-have-died-of-dysentery-66820b1509c5"
+    }
+  ],
+  "image": {
+    "src": "/stories/you-have-died-of-dysentery.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "ukraine-took-out-the-bot-farms-servers",
+  "title": "Ukraine Took Out the Bot Farm’s Servers, and Twitter Is F@#king Delightful Again",
+  "dek": "A bot-traffic chart flatlined at zero, Yandex’s status page called a fire “power interruptions,” and my mentions are nothing but people. Real people! Yippee-ki-yay.",
+  "date": "2026-10-11",
+  "note": [
+    "This weekend I posted about Russia on X, and my replies were full of humans. Between October 8 and 11, Ukrainian drones hit three Yandex data centers, in Sasovo, Kaluga, and Vladimir, two of them home to the company’s three AI supercomputers. More than 80 Yandex Cloud services went down, and Yandex Cloud’s status update described a building on fire as “power interruptions.”",
+    "Then there’s the chart. Cloudflare Radar tracks automated traffic by network, and the line for Yandex’s network fell to zero by Sunday morning. The bald-eagle reply guys vanished, and Twitter felt like the Fail Whale years again. Elon Musk promised in 2022 to defeat the spam bots or die trying. The guys who got it done fly drones out of Ukraine for a living."
+  ],
+  "tags": [
+    "Russia",
+    "Ukraine",
+    "The Daily Whatever Show"
+  ],
+  "links": [
+    {
+      "label": "The Daily Whatever Show",
+      "platform": "Substack",
+      "url": "https://www.thedailywhatevershow.com/p/yandex-data-centers-down-russian-bots-twitter-quiet"
+    },
+    {
+      "label": "The Daily Whatever Show",
+      "platform": "Medium",
+      "url": "https://medium.com/the-daily-whatever-show/ukraine-took-out-the-bot-farms-servers-and-twitter-is-f-king-delightful-again-6ac513a233a4?sk=c58e8a482b9d91f8b36f810f1145e79e"
+    }
+  ],
+  "image": {
+    "src": "/stories/ukraine-took-out-the-bot-farms-servers.jpg",
+    "alt": "",
+    "width": 1280,
+    "height": 720
+  }
+}

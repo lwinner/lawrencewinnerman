@@ -2,6 +2,7 @@
 // structured data each page passed its Base layout before it moved onto Heliostet, now given by src/lw/Frame.astro.
 import { PERSON_ID, WEBSITE_ID } from "../data/site-schema";
 import { stories } from "../lib/stories";
+import type { Story } from "../lib/stories";
 
 /** /writing: every story, as a CollectionPage. */
 export function writingHead(site: URL) {
@@ -60,4 +61,39 @@ export function keysHead(site: URL) {
     },
   ];
   return { title: `${title} | Lawrence Winnerman`, description, published, ld };
+}
+
+/** /writing/<slug>: a story, as an Article, with its breadcrumb and its share image. */
+export function storyHead(site: URL, slug: string) {
+  const s: Story = stories.find((x) => x.slug === slug)!;
+  const url = new URL(`/writing/${s.slug}`, site).href;
+  const description = s.summary[0].length > 155 ? s.summary[0].slice(0, 154).replace(/\s+\S*$/, "") + "…" : s.summary[0];
+  const ld = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: s.title,
+      alternativeHeadline: s.dek,
+      description,
+      datePublished: s.date,
+      url,
+      mainEntityOfPage: url,
+      image: s.image ? new URL(s.image, site).href : undefined,
+      keywords: s.tags.join(", "),
+      author: { "@id": PERSON_ID },
+      publisher: { "@id": PERSON_ID },
+      isPartOf: { "@id": WEBSITE_ID },
+      sameAs: s.links.map((l) => l.url),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: site.href },
+        { "@type": "ListItem", position: 2, name: "Writing", item: new URL("/writing", site).href },
+        { "@type": "ListItem", position: 3, name: s.title, item: url },
+      ],
+    },
+  ];
+  return { title: `${s.title} | Lawrence Winnerman`, description, date: s.date, tags: s.tags, image: s.image ?? undefined, imageWidth: s.imageWidth, imageHeight: s.imageHeight, ld };
 }
