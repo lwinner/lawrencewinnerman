@@ -28,7 +28,7 @@ const related = [...tagged, ...others.filter((o) => !tagged.includes(o))].slice(
 
     {s.image && (
       <figure class="container wide hero">
-        <img src={s.image} alt="" width={s.imageWidth ?? 1280} height={s.imageHeight ?? 720} loading="eager" fetchpriority="high" />
+        <img src={s.image} alt={s.imageAlt ?? ""} width={s.imageWidth ?? 1280} height={s.imageHeight ?? 720} loading="eager" fetchpriority="high" />
       </figure>
     )}
 

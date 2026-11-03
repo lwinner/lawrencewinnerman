@@ -17,6 +17,7 @@ const fromNote = (n: Note): Story => ({
   slug: n.slug, title: n.title, dek: n.dek ?? "", date: n.date, tags: n.tags ?? [], summary: n.note,
   links: n.links.map((l) => ({ label: l.label, platform: l.platform ?? "", url: l.url })),
   image: n.image?.src ?? null,
+  ...(n.image?.alt ? { imageAlt: n.image.alt } : {}),
   ...(n.image?.width ? { imageWidth: n.image.width } : {}),
   ...(n.image?.height ? { imageHeight: n.image.height } : {}),
 });
@@ -31,6 +32,8 @@ export type Story = {
   summary: string[];
   links: StoryLink[];
   image: string | null;
+  /** The picture's description, from its note (relay entry 127); the story's own page gives it, the cards don't. */
+  imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
 };
