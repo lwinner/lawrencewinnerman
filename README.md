@@ -1,30 +1,50 @@
 # lawrencewinnerman.com
 
-The personal-brand surface for Lawrence Winnerman. Built in Astro, deployed on Cloudflare Pages.
+The personal-brand surface for Lawrence Winnerman. A Heliostet site (Vellum & Volt's Astro package, vendored in
+`vendor/` with its SHA-256 in `client.json`), served by a Cloudflare Worker in Lawrence's own Cloudflare account
+(lwinner@gmail.com), never under TDWS.
+
+## How it's built
+
+- **The pages are data** in `site/` (relay entry 127): `site/pages/*.json` for the home page, `/writing`, `/keys`
+  (locked: editable, never moved or deleted), and the 404, with `nav.json`, `site.json`, and `look.json`.
+- **The look is today's** (Fork 7): Heliostet draws each page through the site's own frame (`src/lw/Frame.astro`) and
+  its own components, named in `astro.config.mjs` (decision 0019). Nothing a reader sees changed in the move.
+- **Addresses have no trailing slash:** `/writing`, `/writing/<slug>`, `/keys`. Every old slashed address answers a
+  301 from `src/content/redirects.json`, and `/downloads/hardware-key-guide.pdf` answers one to `/files/`.
+- **Files** are served at `/files/` from the site's own R2 bucket, `lawrencewinnerman-files` (`FILES` in
+  `wrangler.toml`), and from `public/files/` when the bucket doesn't have one.
 
 ## Local development
 
 ```powershell
-npm install
+npm ci
 npm run dev        # http://localhost:4321
-npm run build      # outputs to ./dist
-npm run preview    # serves the built site locally
+npm run build      # outputs to ./dist, and runs Heliostet's site check
+npm run preview    # wrangler dev: the Worker, the redirects, and /files/, locally
 ```
 
 ## Deploy
 
-Pushes to `main` auto-deploy via Cloudflare Pages.
+Workers Builds deploys the `lawrencewinnerman` Worker on every merge to `main`: build `npm run build`, deploy
+`npx wrangler deploy`. Nothing else deploys it. Lawrence merges; Code Claude works on `drafts/code-claude/*` branches.
 
-## Recent Stories Feed
+## Stories and Just Published
 
-The "Recent stories" section (`src/components/RecentStories.astro`) shows the four newest posts from The Hinge & The Near Field Substack. It has two layers that share one parser (`scripts/lib/recent-feed.mjs`):
+Stories and Just Published come through the Cockpit now, not the `narrareach` skill's Job 7 or the Story Pipeline:
 
-1. **Build time.** `scripts/fetch-recent.mjs` runs from an Astro integration on every build and writes `src/data/recent.json`, so the first paint already has cards and the section works with JavaScript off. A feed outage never fails the build; the last-good JSON is kept.
-2. **Load time.** `functions/api/recent.js` is a Cloudflare Pages Function at `/api/recent` that fetches the feed on the edge (cached ten minutes) and returns the live top four. A small client script in `RecentStories.astro` calls it on load and swaps in newer cards. New posts appear within about ten minutes of publishing with no redeploy.
+1. **Check Substack** (`.github/workflows/substack.yml`) checks The Hinge & The Near Field every 30 minutes by day
+   and hourly overnight, and runs **Rebuild** (`.github/workflows/rebuild.yml`) when there's a new post. Rebuild also
+   runs once a day as the backstop.
+2. **Rebuild** asks Workers Builds to build `main` again through the Worker's deploy hook (the
+   `CLOUDFLARE_DEPLOY_HOOK` secret), and the build reads the newest posts into the home page's Just Published
+   (`scripts/fetch-recent.mjs`, `src/data/recent.json`). A feed outage never fails the build.
+3. The old daily Pages refresh (`refresh-recent-stories.yml`) and the `/api/recent` Pages Function
+   (`functions/api/recent.js`) are retired in place, unused. The home page's script keeps its build-time cards when
+   `/api/recent` answers 404, as it was written to.
 
-The daily GitHub Action (`.github/workflows/refresh-recent-stories.yml`) is optional belt-and-suspenders that keeps the build-time cards fresh; it needs the `CF_DEPLOY_HOOK_URL` secret to do anything.
-
-Local check of the function: `npx wrangler pages dev dist` after `npm run build`, then `curl http://127.0.0.1:8788/api/recent`.
+The site's sources are Lawrence's own: The Hinge & The Near Field and Medium @lwinner. The Daily Whatever's feed is
+not one of them; his TDWS pieces stay on TDWS.
 
 ## Brand authority
 
