@@ -1,0 +1,40 @@
+---
+// lawrencewinnerman.com's own frame (relay entry 127, decision 0019): Heliostet draws each page from its page file
+// in site/ and asks the site to draw the page around it, exactly as before the move. This is the Base layout, the nav,
+// and the footer every page had, with the head each page passed (its title, description, and structured data), chosen
+// by the page file's frameOptions.head. Its look is today's (Fork 7); nothing here changes what a reader sees. The
+// home page's sections, the Hero first, are its page file's parts, each drawn by its component as before.
+import type { OwnFrameProps } from "@vellumandvolt/heliostet/parts";
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { homeGraph } from "../data/site-schema";
+import { keysHead, writingHead } from "./heads";
+
+const { page } = Astro.props as OwnFrameProps;
+const which = page.options.head;
+const site = Astro.site!;
+const writing = which === "writing" ? writingHead(site) : null;
+const keys = which === "keys" ? keysHead(site) : null;
+const props =
+  which === "home" ? { ogImage: "/og/og-home-1280x720.png", graph: homeGraph }
+  : writing ? { title: writing.title, description: writing.description }
+  : keys ? { title: keys.title, description: keys.description, ogType: "article" }
+  : which === "not-found" ? { title: "Page Not Found | Lawrence Winnerman", description: "This page isn’t here. Find Lawrence Winnerman's essays, fiction, and consulting from the homepage.", noindex: true }
+  : { title: page.seo?.title ?? page.title, description: page.seo?.description, noindex: page.seo?.noindex === true };
+---
+<Base {...props}>
+  {writing && <script slot="head" type="application/ld+json" set:html={JSON.stringify(writing.ld)} />}
+  {keys && (
+    <Fragment slot="head">
+      <meta property="article:published_time" content={keys.published} />
+      <meta property="article:author" content="Lawrence Winnerman" />
+      <script type="application/ld+json" set:html={JSON.stringify(keys.ld)} />
+    </Fragment>
+  )}
+  <Nav />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</Base>

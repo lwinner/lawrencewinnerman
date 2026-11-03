@@ -1,0 +1,27 @@
+{
+  "lockup": {
+    "name": "Lawrence Winnerman"
+  },
+  "menu": [
+    {
+      "label": "About",
+      "to": "/#about"
+    },
+    {
+      "label": "Work",
+      "to": "/#work"
+    },
+    {
+      "label": "Writing",
+      "to": "/writing"
+    },
+    {
+      "label": "Consulting",
+      "to": "/#consulting"
+    },
+    {
+      "label": "Contact",
+      "to": "/#contact"
+    }
+  ]
+}

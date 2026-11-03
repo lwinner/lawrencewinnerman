@@ -21,7 +21,8 @@ const {
   noindex = false,
   graph = [],
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+// Pages build as files (/writing.html) but answer without .html or a trailing slash (relay entry 127).
+const canonical = new URL(Astro.url.pathname.replace(/(?:\/index)?\.html$/, "").replace(/^$/, "/"), Astro.site);
 const ld = { "@context": "https://schema.org", "@graph": [...sitewideGraph, ...graph] };
 ---
 <!doctype html>

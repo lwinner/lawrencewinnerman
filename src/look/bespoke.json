@@ -1,0 +1,119 @@
+{
+  "name": "lawrencewinnerman.com · Bespoke look",
+  "version": 1,
+  "meta": {
+    "look": "lw",
+    "note": "Today's look for lawrencewinnerman.com, kept (relay entry 127, Fork 7): cream, slate, and the sigil's red, with Arno Pro and Acumin Pro through the personal-brand Adobe Fonts project qbo5oht. The site's own frame draws every page; this names its colors for the Cockpit's preview.",
+    "palette": {
+      "cream": "#F4F1EB",
+      "card cream": "#F9F7F2",
+      "slate": "#434A52",
+      "soft slate": "#5C636B",
+      "red": "#C73526",
+      "red hover": "#B22E20",
+      "muted": "#9A9489",
+      "rule": "#C9C5BC"
+    }
+  },
+  "color": {
+    "themes": [
+      {
+        "id": "light",
+        "name": "Light"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "surface",
+        "value": "#F4F1EB",
+        "usage": "Cream: the page ground."
+      },
+      {
+        "name": "surface-raised",
+        "value": "#F9F7F2",
+        "usage": "Card cream: cards and the subscribe panel."
+      },
+      {
+        "name": "surface-sunken",
+        "value": "#F4F1EB",
+        "usage": "Cream."
+      },
+      {
+        "name": "surface-inverse",
+        "value": "#434A52",
+        "usage": "Slate."
+      },
+      {
+        "name": "on-inverse",
+        "value": "#F4F1EB",
+        "usage": "Cream on slate."
+      },
+      {
+        "name": "ink",
+        "value": "#434A52",
+        "usage": "Slate: text, never pure black, 7.96:1 on cream."
+      },
+      {
+        "name": "ink-muted",
+        "value": "#5C636B",
+        "usage": "Soft slate: secondary text, 5.40:1 on cream."
+      },
+      {
+        "name": "ink-faint",
+        "value": "#5C636B",
+        "usage": "Soft slate."
+      },
+      {
+        "name": "rule",
+        "value": "#C9C5BC",
+        "usage": "Hairlines and dividers."
+      },
+      {
+        "name": "rule-strong",
+        "value": "#5C636B",
+        "usage": "Form fields, 3:1."
+      },
+      {
+        "name": "focus",
+        "value": "#C73526",
+        "usage": "The red."
+      },
+      {
+        "name": "volt",
+        "value": "#C73526",
+        "usage": "The red: the sigil, eyebrows, links, primary buttons, 4.70:1 on cream."
+      },
+      {
+        "name": "on-volt",
+        "value": "#F4F1EB",
+        "usage": "Cream on red."
+      },
+      {
+        "name": "volt-text",
+        "value": "#C73526",
+        "usage": "The red, for text."
+      },
+      {
+        "name": "button",
+        "value": "#C73526",
+        "usage": "The red."
+      },
+      {
+        "name": "on-button",
+        "value": "#F4F1EB",
+        "usage": "Cream on red."
+      }
+    ]
+  },
+  "type": {
+    "families": {
+      "display": "\"arno-pro-display\", \"arno-pro\", Georgia, \"Times New Roman\", serif",
+      "text": "\"arno-pro\", Georgia, \"Times New Roman\", serif",
+      "ui": "\"acumin-pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif"
+    },
+    "label": {
+      "textTransform": "uppercase",
+      "usage": "Eyebrows, uppercase, as the site sets them."
+    }
+  }
+}

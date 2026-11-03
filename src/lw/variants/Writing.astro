@@ -1,0 +1,53 @@
+---
+// Writing's own variant (relay entry 127, decision 0019): the page's body as it was; src/lw/Frame.astro draws the page around it, with its head from src/lw/heads.ts.
+// /writing/ — every story, newest first, grouped by year. Each card opens the
+// story's page on this site, which summarizes it and links to every version.
+import StoryCard from "../../components/StoryCard.astro";
+import { stories } from "../../lib/stories";
+
+const years = [...new Set(stories.map((s) => s.date.slice(0, 4)))];
+---
+  <section class="index-head">
+    <div class="container">
+      <p class="eyebrow">The writing</p>
+      <h1>Every story, in one place.</h1>
+      <p class="lead">
+        I publish in a lot of places: The Hinge &amp; The Near Field and The Daily Whatever Show on Substack, and several publications on Medium. Each story gets a page here with a short note from me and links to every version, so you can read it wherever you like.
+      </p>
+    </div>
+  </section>
+  {years.map((y) => (
+    <section class="year" aria-labelledby={`y${y}`}>
+      <div class="container">
+        <h2 id={`y${y}`} class="year-label">{y}</h2>
+        <div class="story-grid" role="list">
+          {stories.filter((s) => s.date.startsWith(y)).map((s, i) => (
+            <StoryCard story={s} eager={y === years[0] && i < 3} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+
+
+<style>
+  .index-head { padding-bottom: 2rem; }
+  h1 {
+    font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h2);
+    line-height: 1.05; margin: 0 0 1.5rem; color: var(--lw-slate);
+  }
+  .lead { max-width: 44rem; color: var(--lw-slate-soft); margin: 0; }
+  .year { padding-top: 1.5rem; padding-bottom: 2.5rem; }
+  .year:last-of-type { padding-bottom: var(--section-pad-y); }
+  .year-label {
+    font-family: var(--font-ui); font-weight: 600; font-size: var(--fs-eyebrow);
+    letter-spacing: 0.18em; color: var(--color-text-secondary); margin: 0 0 1.25rem;
+    padding-top: 1.25rem; border-top: 1px solid var(--lw-rule);
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+</style>

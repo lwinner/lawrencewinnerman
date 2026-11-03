@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/@vellumandvolt/heliostet/schema/page.schema.json",
+  "id": "keys",
+  "address": "/keys",
+  "title": "The Hardware Key Guide",
+  "locked": true,
+  "header": "part",
+  "frame": "none",
+  "frameOptions": {
+    "head": "keys"
+  },
+  "rows": [
+    {
+      "id": "guide",
+      "main": [
+        {
+          "id": "guide",
+          "type": "download-guide",
+          "variant": "lw-keys",
+          "fields": {
+            "body": "The guide is src/content/hardware-key-guide.html.",
+            "pdf": {
+              "src": "/files/hardware-key-guide.pdf",
+              "label": "The Hardware Key Guide, PDF"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "bespoke",
+  "overlay": "src/look/bespoke.json",
+  "fonts": {
+    "kit": {
+      "provider": "adobe",
+      "id": "qbo5oht"
+    },
+    "roles": {
+      "display": {
+        "family": "arno-pro-display",
+        "category": "serif",
+        "weights": [
+          700
+        ],
+        "styles": [
+          "normal"
+        ]
+      },
+      "subhead": {
+        "family": "arno-pro-subhead",
+        "category": "serif",
+        "weights": [
+          700
+        ],
+        "styles": [
+          "normal"
+        ]
+      },
+      "body": {
+        "family": "arno-pro",
+        "category": "serif",
+        "weights": [
+          400,
+          600,
+          700
+        ],
+        "styles": [
+          "normal",
+          "italic"
+        ]
+      },
+      "ui": {
+        "family": "acumin-pro",
+        "category": "sans",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "styles": [
+          "normal"
+        ]
+      },
+      "caption": {
+        "family": "arno-pro-caption",
+        "category": "serif",
+        "weights": [
+          400,
+          600
+        ],
+        "styles": [
+          "normal",
+          "italic"
+        ]
+      }
+    }
+  }
+}

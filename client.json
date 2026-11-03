@@ -1,0 +1,44 @@
+{
+  "heliostet": {
+    "version": "0.12.0",
+    "sha256": "f8d5f9580f9f24ae97190d6dc8f57813c55b6db20c62f80a95356b8e0d27a633"
+  },
+  "identity": {
+    "name": "Lawrence Winnerman",
+    "domain": "lawrencewinnerman.com",
+    "brand": "person",
+    "timeZone": "America/New_York"
+  },
+  "plan": {
+    "edition": "editor",
+    "addOns": {
+      "bespoke": true
+    }
+  },
+  "sources": {
+    "substack": {
+      "url": "https://lwinner.substack.com"
+    },
+    "medium": {
+      "url": "https://medium.com/@lwinner"
+    }
+  },
+  "principals": [
+    {
+      "id": "lawrence",
+      "name": "Lawrence Winnerman",
+      "entityHome": "https://lawrencewinnerman.com/#about"
+    }
+  ],
+  "crawlers": {
+    "training": "allow"
+  },
+  "look": {
+    "kind": "bespoke",
+    "overlay": "src/look/bespoke.json"
+  },
+  "vocabulary": {
+    "unit": "story"
+  },
+  "operatorOwned": true
+}

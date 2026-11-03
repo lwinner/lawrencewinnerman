@@ -1,0 +1,143 @@
+{
+  "$schema": "../../node_modules/@vellumandvolt/heliostet/schema/page.schema.json",
+  "id": "home",
+  "address": "/",
+  "title": "Lawrence Winnerman",
+  "header": "part",
+  "frame": "none",
+  "frameOptions": {
+    "head": "home"
+  },
+  "rows": [
+    {
+      "id": "top",
+      "main": [
+        {
+          "id": "top",
+          "type": "hello",
+          "variant": "lw-hero",
+          "fields": {
+            "name": "Lawrence Winnerman"
+          }
+        }
+      ]
+    },
+    {
+      "id": "featured",
+      "main": [
+        {
+          "id": "featured",
+          "type": "list",
+          "variant": "lw-featured",
+          "fields": {
+            "query": {
+              "source": "stories",
+              "count": 6,
+              "sort": "newest"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "main": [
+        {
+          "id": "work",
+          "type": "prose",
+          "variant": "lw-work",
+          "fields": {
+            "heading": "Work",
+            "body": "The work\n\nEssays, Fiction, and the Podcast\n\nThese started as side projects that didn’t know they were supposed to stay small. They’re related—variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it—but they’re also genuinely their own things. I run them all because I can’t seem to stop.\n\n{featured.map(b => (\n\nAlso made\n\n{also.map(b => ("
+          }
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "main": [
+        {
+          "id": "writing",
+          "type": "list",
+          "variant": "lw-recent",
+          "fields": {
+            "query": {
+              "source": "stories",
+              "count": 4,
+              "sort": "newest"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "consulting",
+      "main": [
+        {
+          "id": "consulting",
+          "type": "prose",
+          "variant": "lw-consulting",
+          "fields": {
+            "heading": "Consulting",
+            "body": "Hire the strategist\n\nConsulting and Strategy\n\nI take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential.\n\n{services.map((s) => (\n\n))} Book a call → Let’s talk."
+          }
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "main": [
+        {
+          "id": "about",
+          "type": "prose",
+          "variant": "lw-bio",
+          "fields": {
+            "heading": "About",
+            "body": "One person, many surfaces\n\nAbout Lawrence Winnerman\n\nI’m a Gen X writer and strategist based in Fort Wayne, Indiana. I spent twenty-five years in technology, including Amazon and Microsoft, where I led the global program team for the Microsoft Store Online. Then I was displaced by ageism and the first wave of AI, the same wave I now happen to be very good with. I rebuilt as an independent operator, served as COO of Blue Amp Media from 2025 to 2026, and this is the most generative run of my working life.\n\nWhat you’ll find here: essays on AI and work, democracy and power, and the near future; Light Shines Through , the first novel in The Shattered World series, serializing on The Hinge & The Near Field ; the podcast I co-host; and the consulting I do. Kintsugi as method, defiant joy as resistance, a small group changing the course of history."
+          }
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "main": [
+        {
+          "id": "quote",
+          "type": "prose",
+          "variant": "lw-pull",
+          "fields": {
+            "body": "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it’s the only thing that ever has.\n\nMargaret Mead"
+          }
+        }
+      ]
+    },
+    {
+      "id": "subscribe",
+      "main": [
+        {
+          "id": "subscribe",
+          "type": "subscribe",
+          "variant": "lw-subscribe",
+          "fields": {
+            "heading": "Subscribe",
+            "publication": "https://lwinner.substack.com"
+          }
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "main": [
+        {
+          "id": "contact",
+          "type": "prose",
+          "variant": "lw-contact",
+          "fields": {
+            "heading": "Contact",
+            "body": "The door is open\n\nContact, Speaking, and Press\n\nFor bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at .\n\n{asks.map(a => (\n\nBook a call → Email me\n\n{PROFILES.map((p) =>\n\n)}"
+          }
+        }
+      ]
+    }
+  ]
+}

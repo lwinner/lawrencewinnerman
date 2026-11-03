@@ -1,0 +1,23 @@
+# lawrencewinnerman.com: a Cloudflare Worker that serves the built pages as static assets, in Lawrence's own Cloudflare
+# account (lwinner@gmail.com), never under TDWS (relay entry 127). Workers Builds deploys it on a merge to main; nothing
+# else does. The Worker's name in the dashboard must match this name, or Workers Builds fails.
+name = "lawrencewinnerman"
+compatibility_date = "2026-10-01"
+# Heliostet's site Worker (relay entry 91): the pages as static assets, and /files/ from the site's own R2 bucket when
+# the bucket has the file, else from the build. It must stay above every [table], as routes must.
+main = "node_modules/@vellumandvolt/heliostet/worker/site.js"
+
+# The domain is attached on cutover day, in the dashboard (Lawrence's steps, item 8), not here: no routes until then.
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "404-page"
+html_handling = "drop-trailing-slash"
+# /files/ goes to the Worker first, so a file in the bucket wins over the build's copy.
+run_worker_first = ["/files/*"]
+
+# The site's own file bucket (relay entries 91 and 127), for files up to 50 MB, made by Lawrence in his own account.
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "lawrencewinnerman-files"

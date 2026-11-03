@@ -1,0 +1,29 @@
+{
+  "$schema": "../../node_modules/@vellumandvolt/heliostet/schema/page.schema.json",
+  "id": "404",
+  "address": "/404",
+  "title": "Page Not Found",
+  "seo": {
+    "noindex": true
+  },
+  "header": "part",
+  "frame": "none",
+  "frameOptions": {
+    "head": "not-found"
+  },
+  "rows": [
+    {
+      "id": "missing",
+      "main": [
+        {
+          "id": "missing",
+          "type": "prose",
+          "variant": "lw-not-found",
+          "fields": {
+            "body": "404\n\nThat page isn’t here.\n\nIt may have moved, or the link may be off by a letter. Here’s where to go instead.\n\nHome →\n\nAll writing\n\n{latest && The latest:\n\n}"
+          }
+        }
+      ]
+    }
+  ]
+}

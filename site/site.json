@@ -1,0 +1,11 @@
+{
+  "without": [
+    "status",
+    "links"
+  ],
+  "shareImages": "own",
+  "titles": "chicago",
+  "locked": [
+    "/keys"
+  ]
+}

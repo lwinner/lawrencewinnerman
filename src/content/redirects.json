@@ -12,6 +12,18 @@
     "to": "/files/hardware-key-guide.pdf"
   },
   {
+    "from": "/about",
+    "to": "/"
+  },
+  {
+    "from": "/latest",
+    "to": "/writing"
+  },
+  {
+    "from": "/subscribe",
+    "to": "/"
+  },
+  {
     "from": "/writing/tucker-pickaxe-mountain-dots/",
     "to": "/writing/tucker-pickaxe-mountain-dots"
   },

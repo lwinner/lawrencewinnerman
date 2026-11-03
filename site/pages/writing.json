@@ -1,0 +1,30 @@
+{
+  "$schema": "../../node_modules/@vellumandvolt/heliostet/schema/page.schema.json",
+  "id": "writing",
+  "address": "/writing",
+  "title": "Writing",
+  "header": "part",
+  "frame": "none",
+  "frameOptions": {
+    "head": "writing"
+  },
+  "rows": [
+    {
+      "id": "all",
+      "main": [
+        {
+          "id": "all",
+          "type": "list",
+          "variant": "lw-writing",
+          "fields": {
+            "query": {
+              "source": "stories",
+              "count": 99,
+              "sort": "newest"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

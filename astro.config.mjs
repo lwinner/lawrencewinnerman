@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import heliostet from '@vellumandvolt/heliostet';
 import { fetchRecent } from './scripts/fetch-recent.mjs';
 
 // Regenerate src/data/recent.json from the Substack feed at the start of every
@@ -14,11 +15,38 @@ const recentStories = {
   },
 };
 
+// The site's own drawing (relay entry 127, decision 0019): Heliostet holds the pages as data in site/, and each is
+// drawn by the site's own frame and components, exactly as before the move, so nothing a reader sees changes (Fork 7).
+// A variant marked title draws the page's main heading.
+const v = (component, title = false) => (title ? { component, title } : component);
+const OWN = {
+  frame: 'src/lw/Frame.astro',
+  variants: {
+    'hello:lw-hero': v('src/components/Hero.astro', true),
+    'list:lw-featured': v('src/components/FeaturedStories.astro'),
+    'prose:lw-work': v('src/components/Work.astro'),
+    'list:lw-recent': v('src/components/RecentStories.astro'),
+    'prose:lw-consulting': v('src/components/Consulting.astro'),
+    'prose:lw-bio': v('src/components/Bio.astro'),
+    'prose:lw-pull': v('src/components/PullQuote.astro'),
+    'subscribe:lw-subscribe': v('src/components/Subscribe.astro'),
+    'prose:lw-contact': v('src/components/Contact.astro'),
+    'list:lw-writing': v('src/lw/variants/Writing.astro', true),
+    'download-guide:lw-keys': v('src/lw/variants/Keys.astro', true),
+    'prose:lw-not-found': v('src/lw/variants/NotFound.astro', true),
+  },
+};
+
 export default defineConfig({
   site: 'https://lawrencewinnerman.com',
+  output: 'static',
+  // Addresses have no trailing slash (Lawrence's ruling, relay entry 127); each old one has a 301 in redirects.json.
+  trailingSlash: 'never',
   build: {
+    format: 'file',
     inlineStylesheets: 'auto',
   },
   prefetch: true,
-  integrations: [recentStories],
+  devToolbar: { enabled: false },
+  integrations: [recentStories, heliostet({ own: OWN })],
 });
