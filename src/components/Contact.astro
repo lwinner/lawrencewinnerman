@@ -1,7 +1,11 @@
 ---
 // Contact (#contact). The email is plain text; the email_off comments keep
 // Cloudflare's obfuscation from hiding it from search engines (workbook 8.5).
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+// The lead runs into the email address, which stays the site's own.
 import { BOOKING_URL, EMAIL, PROFILES } from "../data/site-schema";
+import { em } from "../lw/words";
+const { fields = {} } = Astro.props;
 const asks = [
   { label: "Podcasts and press", note: "Long-form audio, panels, and on-the-record commentary on AI and Gen X workers, democracy as infrastructure, and the generational turning." },
   { label: "Speaking", note: "Running a one-person media company with AI, and what the near future asks of the rest of us." },
@@ -10,10 +14,10 @@ const asks = [
 ---
 <section id="contact" class="contact">
   <div class="container">
-    <p class="eyebrow">The door is open</p>
-    <h2>Contact, Speaking, and Press</h2>
+    {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+    <h2 set:html={em(fields.heading)} />
     <p class="contact-lead">
-      For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at
+      <Fragment set:html={em(fields.body)} />
       <!--email_off--><a class="email" href={`mailto:${EMAIL}`}>{EMAIL}</a><!--/email_off-->.
     </p>
 

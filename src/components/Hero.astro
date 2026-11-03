@@ -1,7 +1,14 @@
 ---
 // Hero, Layout A: the sigil leads; the name, rule, and slogan; then the photo
 // byline with the role eyebrow, the hero sentence (workbook 2.1), and the doors.
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+// The name and tagline set one line to each word group, as they always have.
 import { BOOKING_URL } from "../data/site-schema";
+import { em, listOf, textOf } from "../lw/words";
+const { fields = {} } = Astro.props;
+const [first, ...rest] = textOf(fields.name).split(" ");
+const taglines = textOf(fields.tagline).match(/[^.]+\.?/g)?.map((t) => t.trim()).filter(Boolean) ?? [];
+const roles = listOf(fields.roles);
 ---
 <section id="top" class="hero">
   <div class="container hero-grid">
@@ -10,25 +17,24 @@ import { BOOKING_URL } from "../data/site-schema";
     </div>
     <div class="hero-name">
       <h1 class="display-name">
-        <span>Lawrence</span>
-        <span>Winnerman</span>
+        <span>{first}</span>
+        {rest.length > 0 && <span>{rest.join(" ")}</span>}
       </h1>
       <hr class="rule-red" aria-hidden="true" />
-      <p class="tagline">
-        <span>Writing the hinge.</span>
-        <span>Building the future.</span>
-      </p>
+      {taglines.length > 0 && (
+        <p class="tagline">
+          {taglines.map((t) => <span set:html={em(t)} />)}
+        </p>
+      )}
       <div class="byline">
         <picture>
           <source srcset="/images/lawrence-winnerman-headshot-192.avif" type="image/avif" />
           <source srcset="/images/lawrence-winnerman-headshot-192.webp" type="image/webp" />
           <img src="/images/lawrence-winnerman-headshot-192.jpg" alt="Lawrence Winnerman" width="56" height="56" />
         </picture>
-        <p class="roles">Essayist · Novelist · Strategist · Podcaster</p>
+        {roles.length > 0 && <p class="roles">{roles.join(" · ")}</p>}
       </div>
-      <p class="hero-sentence">
-        Lawrence Winnerman is a Gen X writer and strategist working the seam where institutions break: what comes next, and how we build it.
-      </p>
+      {fields.sentence && <p class="hero-sentence" set:html={em(fields.sentence)} />}
       <div class="doors">
         <a class="btn" href="#featured">Read the latest <span aria-hidden="true">→</span></a>
         <a class="btn btn-secondary" href="#consulting">Work with me</a>

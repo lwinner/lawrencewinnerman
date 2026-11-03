@@ -2,18 +2,23 @@
 // Subscribe (#subscribe). Sits between Recent stories and Contact. A link out to The Hinge & The Near Field's own
 // subscribe page on Substack: the site never collects an email address itself (ONB-1; Lawrence's ruling, relay
 // entry 127, in place of the old Substack signup embed).
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+import { em, inline } from "../lw/words";
+import { linkOf } from "@vellumandvolt/heliostet/parts/data.ts";
+const { fields = {} } = Astro.props;
+const publication = linkOf(fields.publication);
 ---
 <section id="subscribe" class="subscribe">
   <div class="container">
     <div class="subscribe-card">
-      <p class="eyebrow">Subscribe</p>
-      <h2>Get the next one in your inbox.</h2>
-      <p class="subscribe-lead">
-        <strong><em>The Hinge &amp; The Near Field</em></strong>: essays, near-future scenarios, and fiction, delivered as they publish.
-      </p>
-      <p class="subscribe-action">
-        <a class="btn" href="https://lwinner.substack.com/subscribe">Subscribe on Substack <span aria-hidden="true">→</span></a>
-      </p>
+      {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+      <h2 set:html={em(fields.heading)} />
+      {fields.line && <p class="subscribe-lead" set:html={inline(fields.line)} />}
+      {publication && (
+        <p class="subscribe-action">
+          <a class="btn" href={publication.to}><Fragment set:html={em(publication.label ?? "Subscribe")} /> <span aria-hidden="true">→</span></a>
+        </p>
+      )}
     </div>
   </div>
 </section>

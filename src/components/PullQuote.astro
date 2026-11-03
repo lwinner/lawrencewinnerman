@@ -1,13 +1,17 @@
 ---
 // Pull quote — Margaret Mead, centered, between Bio and Work.
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+// The text is the quote, a blank line, and who said it.
+import { em, textOf } from "../lw/words";
+const { fields = {} } = Astro.props;
+const lines = textOf(fields.body).split(/\n\s*\n/).map((l) => l.trim()).filter(Boolean);
+const who = lines.length > 1 ? lines.pop() : "";
 ---
 <aside class="pullquote" aria-label="Pull quote">
   <div class="container">
     <hr class="rule-red" aria-hidden="true" />
-    <blockquote>
-      Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it&rsquo;s the only thing that ever has.
-    </blockquote>
-    <p class="attribution">Margaret Mead</p>
+    <blockquote set:html={em(lines.join(" "))} />
+    {who && <p class="attribution" set:html={em(who)} />}
   </div>
 </aside>
 

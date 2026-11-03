@@ -2,14 +2,17 @@
 // The not-found page's own variant (relay entry 127, decision 0019): the page's body as it was, inside src/lw/Frame.astro.
 // Real not-found page. With a 404.html in the build, Cloudflare Pages serves
 // it with a 404 status instead of falling back to the homepage.
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
 import { stories, storyPath } from "../../lib/stories";
+import { em } from "../words";
+const { fields = {} } = Astro.props;
 const latest = stories[0];
 ---
   <section class="nf">
     <div class="container">
-      <p class="eyebrow">404</p>
-      <h1>That page isn’t here.</h1>
-      <p class="lead">It may have moved, or the link may be off by a letter. Here’s where to go instead.</p>
+      {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+      <h1 set:html={em(fields.heading)} />
+      {fields.body && <p class="lead" set:html={em(fields.body)} />}
       <ul class="nf-links" role="list">
         <li><a class="btn" href="/">Home <span aria-hidden="true">→</span></a></li>
         <li><a class="btn btn-secondary" href="/writing">All writing</a></li>

@@ -1,19 +1,15 @@
 ---
 // About (#about): first person, from bio-library.md v1.1. Voice in the label,
 // search words in the heading (workbook 7.3).
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+import { em, paragraphs } from "../lw/words";
+const { fields = {} } = Astro.props;
 ---
 <section id="about" class="bio">
   <div class="container">
-    <p class="eyebrow">One person, many surfaces</p>
-    <h2>About Lawrence Winnerman</h2>
-    <div class="bio-body">
-      <p>
-        I’m a Gen X writer and strategist based in Fort Wayne, Indiana. I spent twenty-five years in technology, including Amazon and Microsoft, where I led the global program team for the Microsoft Store Online. Then I was displaced by ageism and the first wave of AI, the same wave I now happen to be very good with. I rebuilt as an independent operator, served as COO of Blue Amp Media from 2025 to 2026, and this is the most generative run of my working life.
-      </p>
-      <p>
-        What you’ll find here: essays on AI and work, democracy and power, and the near future; <em>Light Shines Through</em>, the first novel in The Shattered World series, serializing on <strong><em>The Hinge &amp; The Near Field</em></strong>; the podcast I co-host; and the consulting I do. Kintsugi as method, defiant joy as resistance, a small group changing the course of history.
-      </p>
-    </div>
+    {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+    <h2 set:html={em(fields.heading)} />
+    <div class="bio-body" set:html={paragraphs(fields.body)} />
   </div>
 </section>
 
@@ -23,5 +19,5 @@
     font-size: var(--fs-body);
     line-height: 1.65;
   }
-  .bio-body p + p { margin-top: 1rem; }
+  .bio-body :global(p + p) { margin-top: 1rem; }
 </style>

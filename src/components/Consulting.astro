@@ -2,7 +2,10 @@
 // Consulting (#consulting): the homepage door to the consulting work (workbook
 // 8.4). No client names, no logos, no prices, ever. The full brochure page
 // (/consulting/) comes in Phase 2.
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
 import { BOOKING_URL } from "../data/site-schema";
+import { em } from "../lw/words";
+const { fields = {} } = Astro.props;
 const services = [
   { name: "Content strategy and search", note: "For publishers and newsletters: search and answer-engine optimization, story-page systems, and the work you see on this site." },
   { name: "Fractional operations leadership", note: "For independent media companies that need an operator: the job I did as COO of Blue Amp Media." },
@@ -12,11 +15,9 @@ const services = [
 ---
 <section id="consulting" class="consulting">
   <div class="container">
-    <p class="eyebrow">Hire the strategist</p>
-    <h2>Consulting and Strategy</h2>
-    <p class="consulting-lead">
-      I take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential.
-    </p>
+    {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+    <h2 set:html={em(fields.heading)} />
+    {fields.body && <p class="consulting-lead" set:html={em(fields.body)} />}
     <ul class="services" role="list">
       {services.map((s) => (
         <li class="service">

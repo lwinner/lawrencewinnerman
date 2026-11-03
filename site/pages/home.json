@@ -17,7 +17,15 @@
           "type": "hello",
           "variant": "lw-hero",
           "fields": {
-            "name": "Lawrence Winnerman"
+            "name": "Lawrence Winnerman",
+            "tagline": "Writing the hinge. Building the future.",
+            "roles": [
+              "Essayist",
+              "Novelist",
+              "Strategist",
+              "Podcaster"
+            ],
+            "sentence": "Lawrence Winnerman is a Gen X writer and strategist working the seam where institutions break: what comes next, and how we build it."
           }
         }
       ]
@@ -47,8 +55,9 @@
           "type": "prose",
           "variant": "lw-work",
           "fields": {
-            "heading": "Work",
-            "body": "The work\n\nEssays, Fiction, and the Podcast\n\nThese started as side projects that didn’t know they were supposed to stay small. They’re related—variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it—but they’re also genuinely their own things. I run them all because I can’t seem to stop.\n\n{featured.map(b => (\n\nAlso made\n\n{also.map(b => ("
+            "eyebrow": "The work",
+            "heading": "Essays, Fiction, and the Podcast",
+            "body": "These started as side projects that didn’t know they were supposed to stay small. They’re related—variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it—but they’re also genuinely their own things. I run them all because I can’t seem to stop."
           }
         }
       ]
@@ -78,8 +87,9 @@
           "type": "prose",
           "variant": "lw-consulting",
           "fields": {
-            "heading": "Consulting",
-            "body": "Hire the strategist\n\nConsulting and Strategy\n\nI take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential.\n\n{services.map((s) => (\n\n))} Book a call → Let’s talk."
+            "eyebrow": "Hire the strategist",
+            "heading": "Consulting and Strategy",
+            "body": "I take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential."
           }
         }
       ]
@@ -92,8 +102,9 @@
           "type": "prose",
           "variant": "lw-bio",
           "fields": {
-            "heading": "About",
-            "body": "One person, many surfaces\n\nAbout Lawrence Winnerman\n\nI’m a Gen X writer and strategist based in Fort Wayne, Indiana. I spent twenty-five years in technology, including Amazon and Microsoft, where I led the global program team for the Microsoft Store Online. Then I was displaced by ageism and the first wave of AI, the same wave I now happen to be very good with. I rebuilt as an independent operator, served as COO of Blue Amp Media from 2025 to 2026, and this is the most generative run of my working life.\n\nWhat you’ll find here: essays on AI and work, democracy and power, and the near future; Light Shines Through , the first novel in The Shattered World series, serializing on The Hinge & The Near Field ; the podcast I co-host; and the consulting I do. Kintsugi as method, defiant joy as resistance, a small group changing the course of history."
+            "eyebrow": "One person, many surfaces",
+            "heading": "About Lawrence Winnerman",
+            "body": "I’m a Gen X writer and strategist based in Fort Wayne, Indiana. I spent twenty-five years in technology, including Amazon and Microsoft, where I led the global program team for the Microsoft Store Online. Then I was displaced by ageism and the first wave of AI, the same wave I now happen to be very good with. I rebuilt as an independent operator, served as COO of Blue Amp Media from 2025 to 2026, and this is the most generative run of my working life.\n\nWhat you’ll find here: essays on AI and work, democracy and power, and the near future; *Light Shines Through*, the first novel in The Shattered World series, serializing on ***The Hinge & The Near Field***; the podcast I co-host; and the consulting I do. Kintsugi as method, defiant joy as resistance, a small group changing the course of history."
           }
         }
       ]
@@ -119,8 +130,13 @@
           "type": "subscribe",
           "variant": "lw-subscribe",
           "fields": {
-            "heading": "Subscribe",
-            "publication": "https://lwinner.substack.com"
+            "eyebrow": "Subscribe",
+            "heading": "Get the next one in your inbox.",
+            "line": "***The Hinge & The Near Field***: essays, near-future scenarios, and fiction, delivered as they publish.",
+            "publication": {
+              "to": "https://lwinner.substack.com/subscribe",
+              "label": "Subscribe on Substack"
+            }
           }
         }
       ]
@@ -133,8 +149,9 @@
           "type": "prose",
           "variant": "lw-contact",
           "fields": {
-            "heading": "Contact",
-            "body": "The door is open\n\nContact, Speaking, and Press\n\nFor bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at .\n\n{asks.map(a => (\n\nBook a call → Email me\n\n{PROFILES.map((p) =>\n\n)}"
+            "eyebrow": "The door is open",
+            "heading": "Contact, Speaking, and Press",
+            "body": "For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at"
           }
         }
       ]

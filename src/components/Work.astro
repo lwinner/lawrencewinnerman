@@ -1,15 +1,17 @@
 ---
+// Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
+// The brand cards stay in brands.json.
 import brands from "../content/brands.json";
+import { em } from "../lw/words";
+const { fields = {} } = Astro.props;
 const featured = brands.filter(b => b.tier === "featured");
 const also = brands.filter(b => b.tier === "also");
 ---
 <section id="work" class="work">
   <div class="container">
-    <p class="eyebrow">The work</p>
-    <h2>Essays, Fiction, and the Podcast</h2>
-    <p class="work-lead">
-      These started as side projects that didn’t know they were supposed to stay small. They’re related&mdash;variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it&mdash;but they’re also genuinely their own things. I run them all because I can’t seem to stop.
-    </p>
+    {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
+    <h2 set:html={em(fields.heading)} />
+    {fields.body && <p class="work-lead" set:html={em(fields.body)} />}
 
     <ul class="brand-grid featured" role="list">
       {featured.map(b => (
