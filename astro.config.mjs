@@ -48,5 +48,8 @@ export default defineConfig({
   },
   prefetch: true,
   devToolbar: { enabled: false },
+  // Astro 7's default CSS minifier (Lightning CSS) folds the nav's backdrop-filter into its -webkit- form alone, which
+  // Chrome ignores, losing the frosted nav (relay entry 127, the screenshot check). esbuild keeps both, as Astro 5 did.
+  vite: { build: { cssMinify: 'esbuild' } },
   integrations: [recentStories, heliostet({ own: OWN })],
 });
