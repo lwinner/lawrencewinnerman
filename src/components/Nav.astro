@@ -12,7 +12,7 @@ const items = [
 ].map((i) => ({
   ...i,
   spy: i.href.slice(1),
-  href: isHome ? i.href : i.href === "#writing" ? "/writing/" : `/${i.href}`,
+  href: isHome ? i.href : i.href === "#writing" ? "/writing" : `/${i.href}`,
 }));
 ---
 <nav class="nav" aria-label="Primary">

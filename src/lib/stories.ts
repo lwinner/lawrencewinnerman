@@ -21,7 +21,7 @@ export const stories: Story[] = [...(data.stories as Story[])].sort((a, b) =>
   b.date.localeCompare(a.date)
 );
 
-export const storyPath = (s: Story) => `/writing/${s.slug}/`;
+export const storyPath = (s: Story) => `/writing/${s.slug}`;
 
 const fmt = (iso: string, month: "short" | "long") =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", {

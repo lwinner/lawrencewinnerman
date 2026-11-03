@@ -9,8 +9,8 @@ import guideHtml from "../../content/hardware-key-guide.html?raw";
 import { PERSON_ID, WEBSITE_ID } from "../../data/site-schema";
 
 const site = Astro.site!;
-const url = new URL("/keys/", site).href;
-const pdf = "/downloads/hardware-key-guide.pdf";
+const url = new URL("/keys", site).href;
+const pdf = "/files/hardware-key-guide.pdf";
 const title = "The Hardware Key Guide";
 const dek = "How to lock down your accounts, phone, and privacy, step by step, with no technical background.";
 const description = "A plain-language, step-by-step guide to hardware security keys, password managers, AI-scam defenses, doxxing cleanup, and protest-day phone safety. Read it here or download the PDF.";

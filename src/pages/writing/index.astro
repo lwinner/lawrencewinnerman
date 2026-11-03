@@ -15,14 +15,14 @@ const ld = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Writing by Lawrence Winnerman",
-  url: new URL("/writing/", site).href,
+  url: new URL("/writing", site).href,
   description,
   author: { "@id": "https://lawrencewinnerman.com/#person" },
   isPartOf: { "@id": "https://lawrencewinnerman.com/#website" },
   hasPart: stories.map((s) => ({
     "@type": "Article",
     headline: s.title,
-    url: new URL(`/writing/${s.slug}/`, site).href,
+    url: new URL(`/writing/${s.slug}`, site).href,
     datePublished: s.date,
   })),
 };

@@ -4,8 +4,7 @@ dist/
 
 # Dependencies
 node_modules/
-# Lockfile intentionally omitted — Cloudflare Pages builds via `npm install`.
-package-lock.json
+# The lockfile is committed: Heliostet pins every dependency (SEC-8), and Workers Builds installs from it.
 
 # Astro
 .astro/

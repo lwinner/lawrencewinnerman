@@ -16,7 +16,7 @@ export function getStaticPaths() {
 
 const { story: s } = Astro.props as { story: Story };
 const site = Astro.site!;
-const url = new URL(`/writing/${s.slug}/`, site).href;
+const url = new URL(`/writing/${s.slug}`, site).href;
 const description = s.summary[0].length > 155 ? s.summary[0].slice(0, 154).replace(/\s+\S*$/, "") + "…" : s.summary[0];
 
 // Related: share a tag first, then fill with the newest others.
@@ -46,7 +46,7 @@ const ld = [
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: site.href },
-      { "@type": "ListItem", position: 2, name: "Writing", item: new URL("/writing/", site).href },
+      { "@type": "ListItem", position: 2, name: "Writing", item: new URL("/writing", site).href },
       { "@type": "ListItem", position: 3, name: s.title, item: url },
     ],
   },
@@ -70,7 +70,7 @@ const ld = [
   <main>
     <article class="story-page">
       <header class="container narrow head">
-        <p class="crumbs"><a href="/writing/">Writing</a> <span aria-hidden="true">/</span></p>
+        <p class="crumbs"><a href="/writing">Writing</a> <span aria-hidden="true">/</span></p>
         <p class="eyebrow"><time datetime={s.date}>{longDate(s.date)}</time>{s.tags.length > 0 && <span class="tags"> &middot; {s.tags.join(" · ")}</span>}</p>
         <h1>{s.title}</h1>
         {s.dek && <p class="dek">{s.dek}</p>}
@@ -107,7 +107,7 @@ const ld = [
       <div class="container">
         <div class="more-head">
           <h2 id="more-h">More stories.</h2>
-          <a class="all" href="/writing/">All writing <span aria-hidden="true">→</span></a>
+          <a class="all" href="/writing">All writing <span aria-hidden="true">→</span></a>
         </div>
         <div class="story-grid" role="list">
           {related.map((o) => <StoryCard story={o} />)}

@@ -8,11 +8,18 @@
     "start": "astro dev",
     "fetch:recent": "node scripts/fetch-recent.mjs",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "wrangler dev",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.0",
-    "fast-xml-parser": "^4.5.7"
+    "@vellumandvolt/heliostet": "file:vendor/vellumandvolt-heliostet-0.12.0.tgz",
+    "astro": "7.3.8",
+    "fast-xml-parser": "4.5.7"
+  },
+  "devDependencies": {
+    "wrangler": "4.116.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
