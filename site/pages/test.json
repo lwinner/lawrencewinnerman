@@ -1,0 +1,61 @@
+{
+  "id": "test",
+  "address": "/test",
+  "title": "Test",
+  "recipe": "project",
+  "eyebrow": "A project",
+  "rows": [
+    {
+      "id": "picture",
+      "main": [
+        {
+          "id": "picture",
+          "type": "image",
+          "variant": "wide",
+          "fields": {
+            "image": {
+              "src": "/images/replace-me.jpg",
+              "alt": "[Describe this picture for someone who can’t see it]"
+            },
+            "caption": "[A line under the picture.]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "main": [
+        {
+          "id": "about",
+          "type": "prose",
+          "variant": "normal",
+          "fields": {
+            "heading": "",
+            "body": "[What the project is, and your part in it.]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "links",
+      "main": [
+        {
+          "id": "links",
+          "type": "links",
+          "variant": "buttons",
+          "fields": {
+            "links": [
+              {
+                "label": "Visit it",
+                "to": {
+                  "to": "https://example.com"
+                },
+                "icon": "link"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

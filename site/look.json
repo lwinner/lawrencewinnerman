@@ -1,6 +1,5 @@
 {
-  "kind": "bespoke",
-  "overlay": "src/look/bespoke.json",
+  "kind": "brand",
   "fonts": {
     "kit": {
       "provider": "adobe",
@@ -8,66 +7,33 @@
     },
     "roles": {
       "display": {
-        "family": "arno-pro-display",
-        "category": "serif",
-        "weights": [
-          600,
-          700
-        ],
-        "styles": [
-          "normal"
-        ]
-      },
-      "subhead": {
-        "family": "arno-pro-subhead",
-        "category": "serif",
-        "weights": [
-          600,
-          700
-        ],
-        "styles": [
-          "normal",
-          "italic"
-        ]
+        "family": "anton"
       },
       "body": {
-        "family": "arno-pro",
-        "category": "serif",
-        "weights": [
-          400,
-          600,
-          700
-        ],
-        "styles": [
-          "normal",
-          "italic"
-        ]
+        "family": "arno-pro"
       },
       "ui": {
-        "family": "acumin-pro",
-        "category": "sans",
-        "weights": [
-          400,
-          500,
-          600,
-          700
-        ],
-        "styles": [
-          "normal"
-        ]
-      },
-      "caption": {
-        "family": "arno-pro-caption",
-        "category": "serif",
-        "weights": [
-          400,
-          600
-        ],
-        "styles": [
-          "normal",
-          "italic"
-        ]
+        "family": "acumin-pro"
       }
     }
+  },
+  "shareImage": {
+    "src": "/look/og-home-1280x720.png",
+    "width": 1280,
+    "height": 720
+  },
+  "favicon": {
+    "src": "/look/sigil-master-1024.png"
+  },
+  "colors": {
+    "surface": "#f4f1eb",
+    "surface-raised": "#f4f1eb",
+    "ink": "#434a52",
+    "ink-muted": "#c73526",
+    "volt": "#c73526",
+    "on-volt": "#f4f1eb",
+    "volt-text": "#c73526",
+    "surface-inverse": "#c73526",
+    "on-inverse": "#f4f1eb"
   }
 }

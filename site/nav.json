@@ -1,27 +1,17 @@
 {
-  "lockup": {
-    "name": "Lawrence Winnerman"
-  },
   "menu": [
     {
-      "label": "About",
-      "to": "/#about"
-    },
-    {
-      "label": "Work",
-      "to": "/#work"
-    },
-    {
-      "label": "Writing",
-      "to": "/writing"
-    },
-    {
-      "label": "Consulting",
-      "to": "/#consulting"
-    },
-    {
-      "label": "Contact",
-      "to": "/#contact"
+      "label": "Test",
+      "to": "/test"
     }
-  ]
+  ],
+  "footer": [],
+  "lockup": {
+    "name": "LawrenceWinnerman.com",
+    "mark": {
+      "src": "/look/untitled-february-08-2025-at-12-50-44-1.png",
+      "width": 1344,
+      "height": 256
+    }
+  }
 }
