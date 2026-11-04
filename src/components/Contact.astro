@@ -2,7 +2,8 @@
 // Contact (#contact). The email is plain text; the email_off comments keep
 // Cloudflare's obfuscation from hiding it from search engines (workbook 8.5).
 // Its words are the part's fields (src/lw/words.ts), so what the Cockpit edits is what the site shows.
-// The lead runs into the email address, which stays the site's own.
+// The lead runs into the email address, which stays the site's own. The {" "} keeps the space between them:
+// Astro drops the newline before the email_off comment (relay entry 127, Major 2).
 import { BOOKING_URL, EMAIL, PROFILES } from "../data/site-schema";
 import { em } from "../lw/words";
 const { fields = {} } = Astro.props;
@@ -17,7 +18,7 @@ const asks = [
     {fields.eyebrow && <p class="eyebrow" set:html={em(fields.eyebrow)} />}
     <h2 set:html={em(fields.heading)} />
     <p class="contact-lead">
-      <Fragment set:html={em(fields.body)} />
+      <Fragment set:html={em(fields.body)} />{" "}
       <!--email_off--><a class="email" href={`mailto:${EMAIL}`}>{EMAIL}</a><!--/email_off-->.
     </p>
 

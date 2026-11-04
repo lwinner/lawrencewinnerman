@@ -43,6 +43,10 @@ export default defineConfig({
   output: 'static',
   // Addresses have no trailing slash (Lawrence's ruling, relay entry 127); each old one has a 301 in redirects.json.
   trailingSlash: 'never',
+  // The site's components were written for Astro 5, which kept a space where the markup breaks a line between two
+  // elements. Astro 7's default ('jsx') drops it, so the Hero's name read "LawrenceWinnerman" and the contact line
+  // "athello@" (relay entry 127, Major 2). true is Astro 5's lossless compression.
+  compressHTML: true,
   build: {
     format: 'file',
     inlineStylesheets: 'auto',

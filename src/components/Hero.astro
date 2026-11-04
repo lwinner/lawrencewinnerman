@@ -23,7 +23,7 @@ const roles = listOf(fields.roles);
       <hr class="rule-red" aria-hidden="true" />
       {taglines.length > 0 && (
         <p class="tagline">
-          {taglines.map((t) => <span set:html={em(t)} />)}
+          {taglines.map((t, i) => <>{i > 0 && " "}<span set:html={em(t)} /></>)}
         </p>
       )}
       <div class="byline">
