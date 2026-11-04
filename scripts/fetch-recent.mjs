@@ -6,9 +6,9 @@
 //     host calls `npm run build` or `astro build` directly;
 //   - `npm run fetch:recent` for a manual refresh / debugging.
 // Writes src/data/recent.json for RecentStories.astro to import at build time.
-// That gives the page a correct FIRST PAINT; freshness between deploys comes
-// from functions/api/recent.js + the client script in RecentStories.astro,
-// which share the parser in scripts/lib/recent-feed.mjs.
+// The cards are drawn at build time only; freshness comes from Check Substack's
+// rebuild within 30 minutes of a new post by day (relay entry 127). The parser
+// is scripts/lib/recent-feed.mjs.
 //
 // Graceful behavior: on fetch/parse failure we DO NOT overwrite an existing
 // good recent.json — the last-good data (committed to the repo) is kept so the

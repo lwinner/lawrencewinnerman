@@ -1,10 +1,8 @@
 // Shared Substack-feed parsing for the "Recent stories" section.
 //
-// ONE parser, two callers (per the one-universal-script rule):
-//   - scripts/fetch-recent.mjs  — build-time: writes src/data/recent.json so the
-//     first paint of the page already has cards (no-JS fallback, SEO).
-//   - functions/api/recent.js   — request-time: the Cloudflare Pages Function
-//     that serves fresh JSON to the client script in RecentStories.astro.
+// Its caller is scripts/fetch-recent.mjs, at build time: it writes
+// src/data/recent.json, which RecentStories.astro draws. (The request-time
+// /api/recent Pages Function is gone, relay entry 127.)
 // Keep this module free of Node-only imports (fs, path) so it also runs on the
 // Workers runtime. fast-xml-parser is pure JS and works in both.
 
@@ -141,9 +139,7 @@ function mapItem(item, source) {
 export async function fetchFeed(feed) {
   const res = await fetch(feed.url, {
     headers: { "user-agent": "lawrencewinnerman.com feed bot" },
-    // Workers-only hint (ignored by Node): edge-cache Substack's XML so the
-    // Pages Function never hammers the origin. Matches CACHE_SECONDS in
-    // functions/api/recent.js.
+    // Workers-only hint, ignored by Node at build time: edge-cache Substack's XML.
     cf: { cacheTtl: 600, cacheEverything: true },
   });
   if (!res.ok) throw new Error(`${feed.url} → HTTP ${res.status}`);

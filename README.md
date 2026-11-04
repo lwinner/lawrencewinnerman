@@ -39,9 +39,9 @@ Stories and Just Published come through the Cockpit now, not the `narrareach` sk
 2. **Rebuild** asks Workers Builds to build `main` again through the Worker's deploy hook (the
    `CLOUDFLARE_DEPLOY_HOOK` secret), and the build reads the newest posts into the home page's Just Published
    (`scripts/fetch-recent.mjs`, `src/data/recent.json`). A feed outage never fails the build.
-3. The old daily Pages refresh (`refresh-recent-stories.yml`) and the `/api/recent` Pages Function
-   (`functions/api/recent.js`) are retired in place, unused. The home page's script keeps its build-time cards when
-   `/api/recent` answers 404, as it was written to.
+3. The old daily Pages refresh (`refresh-recent-stories.yml`) is retired in place, unused. The `/api/recent` Pages
+   Function and the home page's script that called it are gone: the cards are drawn at build time only, and a reading
+   page carries no client script (PAGE-6).
 
 The site's sources are Lawrence's own: The Hinge & The Near Field and Medium @lwinner. The Daily Whatever's feed is
 not one of them; his TDWS pieces stay on TDWS.
