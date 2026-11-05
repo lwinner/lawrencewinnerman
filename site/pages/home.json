@@ -198,7 +198,10 @@
             "query": {
               "source": "stories",
               "count": 4,
-              "sort": "newest"
+              "sort": "newest",
+              "filters": {
+                "outlet": "The Hinge & The Near Field"
+              }
             },
             "moreLink": {
               "to": "/latest",
