@@ -75,6 +75,12 @@
   },
   "layout": {
     "cardStyle": "boxed",
-    "type": "scale"
+    "type": "scale",
+    "width": 1098,
+    "sections": {
+      "min": 64,
+      "max": 128
+    },
+    "links": "ink"
   }
 }

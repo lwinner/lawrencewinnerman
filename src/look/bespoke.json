@@ -133,8 +133,63 @@
             "lineHeight": "52px",
             "fontWeight": 700,
             "usage": "Section headings, as today: Arno Subhead 700, at their widest size (clamp 30 to 48)."
+          },
+          {
+            "name": "title",
+            "fontSize": "24px",
+            "lineHeight": "31px",
+            "fontWeight": 700,
+            "usage": "Card titles, as today: Arno Display 700 at 24."
           }
         ]
+      },
+      {
+        "name": "Reading text",
+        "family": "text",
+        "styles": [
+          {
+            "name": "body",
+            "fontSize": "18px",
+            "lineHeight": "28px",
+            "fontWeight": 400,
+            "usage": "Body text, as today: Arno 18 on 1.55."
+          },
+          {
+            "name": "small-serif",
+            "fontSize": "15px",
+            "lineHeight": "23px",
+            "fontWeight": 400,
+            "usage": "Small text, as today: Arno 15."
+          },
+          {
+            "name": "body-lg",
+            "fontSize": "20px",
+            "lineHeight": "30px",
+            "fontWeight": 400,
+            "usage": "The lead, as today: Arno 20."
+          },
+          {
+            "name": "dek",
+            "fontSize": "28px",
+            "lineHeight": "35px",
+            "fontWeight": 400,
+            "usage": "The tagline and a story’s dek, as today: Arno italic 28."
+          }
+        ]
+      }
+    ],
+    "button": {
+      "textTransform": "uppercase",
+      "letterSpacing": "0.04em",
+      "usage": "Buttons in capitals, slightly tracked, as today."
+    }
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "measure",
+        "value": "531px",
+        "usage": "Today’s 62ch at 18 pixels."
       }
     ]
   }

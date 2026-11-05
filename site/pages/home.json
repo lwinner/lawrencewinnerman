@@ -4,6 +4,7 @@
   "address": "/",
   "title": "Lawrence Winnerman",
   "header": "hello",
+  "ownFrame": false,
   "rows": [
     {
       "id": "top",
@@ -72,7 +73,8 @@
               "source": "stories",
               "count": 6,
               "sort": "newest"
-            }
+            },
+            "eyebrow": "New"
           }
         }
       ]
@@ -99,7 +101,7 @@
               {
                 "name": "The Hinge & The Near Field",
                 "role": "Writer and Publisher",
-                "line": "My Substack. Essays on AI and work, democracy and power, and the near future; near-future scenarios;",
+                "line": "My Substack. Essays on AI and work, democracy and power, and the near future; near-future scenarios; and Light Shines Through, the first novel in The Shattered World series, serialized chapter by chapter.",
                 "status": "active",
                 "to": {
                   "to": "https://lwinner.substack.com/",
@@ -109,7 +111,7 @@
               {
                 "name": "The Daily Whatever Show",
                 "role": "Co-host and Co-owner",
-                "line": "Satire and news commentary I co-host and co-own with Dana DuBois, my closest friend for more than four decades.",
+                "line": "Satire and news commentary I co-host and co-own with Dana DuBois, my closest friend for more than four decades. Generational politics, current events, the felt experience of being Gen X right now. Mostly an excuse to keep showing up for each other.",
                 "status": "active",
                 "to": {
                   "to": "https://www.thedailywhatevershow.com/",
@@ -119,7 +121,7 @@
               {
                 "name": "The Shattered World",
                 "role": "Author",
-                "line": "My speculative-fiction series. Book One, Light Shines Through, is serializing chapter by chapter on The Hinge & The Near Field.",
+                "line": "My speculative-fiction series. Book One, Light Shines Through, is serializing chapter by chapter on The Hinge & The Near Field. Book Two, Any Open Door, is in development.",
                 "status": "active",
                 "to": {
                   "to": "https://lwinner.substack.com/",
@@ -141,7 +143,7 @@
               {
                 "name": "Moondark",
                 "role": "Creator",
-                "line": "A web app that tells you whether the Moon is void of course right now, for astrologers, witches, and anyone who has learned the hard way not to schedule…",
+                "line": "A web app that tells you whether the Moon is void of course right now, for astrologers, witches, and anyone who has learned the hard way not to schedule important things during a void Moon. Phone app coming.",
                 "status": "active",
                 "to": {
                   "to": "https://moondark.app/",
@@ -170,9 +172,8 @@
               },
               {
                 "name": "Peptidings",
-                "role": "Founder",
+                "role": "Founder · On hiatus",
                 "line": "A serious publication on peptide science: careful sourcing, no hype. On hiatus for now.",
-                "status": "on hiatus",
                 "to": {
                   "to": "https://peptidings.com/",
                   "label": "Visit"
@@ -324,15 +325,7 @@
           "fields": {
             "eyebrow": "The door is open",
             "heading": "Contact, Speaking, and Press",
-            "body": "For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at [hello@lawrencewinnerman.com](mailto:hello@lawrencewinnerman.com).",
-            "action": {
-              "to": "https://calendar.app.google/f1672UKQNTGLXVPY6",
-              "label": "Book a call"
-            },
-            "secondAction": {
-              "to": "mailto:hello@lawrencewinnerman.com",
-              "label": "Email me"
-            }
+            "body": "For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at [hello@lawrencewinnerman.com](mailto:hello@lawrencewinnerman.com)."
           }
         },
         {
@@ -353,6 +346,29 @@
               {
                 "title": "Consulting",
                 "line": "Content strategy, search, operations, and AI-assisted editorial work. Book a call and we’ll see if it fits."
+              }
+            ],
+            "titles": "label"
+          }
+        },
+        {
+          "id": "contact-actions",
+          "type": "links",
+          "variant": "buttons",
+          "fields": {
+            "main": true,
+            "links": [
+              {
+                "label": "Book a call",
+                "to": {
+                  "to": "https://calendar.app.google/f1672UKQNTGLXVPY6"
+                }
+              },
+              {
+                "label": "Email me",
+                "to": {
+                  "to": "mailto:hello@lawrencewinnerman.com"
+                }
               }
             ]
           }
@@ -433,7 +449,8 @@
                 },
                 "icon": "youtube"
               }
-            ]
+            ],
+            "style": "plain"
           }
         }
       ]
