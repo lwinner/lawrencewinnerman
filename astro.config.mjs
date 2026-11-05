@@ -21,6 +21,8 @@ const recentStories = {
 const v = (component, title = false) => (title ? { component, title } : component);
 const OWN = {
   frame: 'src/lw/Frame.astro',
+  // A page in Heliostet's frame (ownFrame: false) keeps lw's head, exactly (Heliostet 0.13.18's own.head).
+  head: 'src/lw/Head.astro',
   variants: {
     'hello:lw-hero': v('src/components/Hero.astro', true),
     'list:lw-featured': v('src/components/FeaturedStories.astro'),

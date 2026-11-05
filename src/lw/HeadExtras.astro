@@ -1,0 +1,21 @@
+---
+// The tags a page adds to its head beyond HeadTags (heads.ts): /writing's CollectionPage, /keys' article tags and
+// graph, and a story's article tags and graph. Drawn by src/lw/Frame.astro and src/lw/Head.astro alike.
+const { writing, keys, story } = Astro.props;
+---
+{writing && <script type="application/ld+json" set:html={JSON.stringify(writing.ld)} />}
+{keys && (
+  <Fragment>
+    <meta property="article:published_time" content={keys.published} />
+    <meta property="article:author" content="Lawrence Winnerman" />
+    <script type="application/ld+json" set:html={JSON.stringify(keys.ld)} />
+  </Fragment>
+)}
+{story && (
+  <Fragment>
+    <meta property="article:published_time" content={story.date} />
+    <meta property="article:author" content="Lawrence Winnerman" />
+    {story.tags.map((t) => <meta property="article:tag" content={t} />)}
+    <script type="application/ld+json" set:html={JSON.stringify(story.ld)} />
+  </Fragment>
+)}

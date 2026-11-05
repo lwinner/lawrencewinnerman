@@ -1,0 +1,14 @@
+---
+// lawrencewinnerman.com's own head (Heliostet 0.13.17's own.head; Cowork's ruling, November 5): on a page in Heliostet's
+// frame (ownFrame: false), the head lw's frame would give it, exactly: HeadTags and HeadExtras, chosen by heads.ts as
+// src/lw/Frame.astro chooses them. Heliostet leaves out its own title, description, Open Graph, and structured data.
+import type { OwnFrameProps } from "@vellumandvolt/heliostet/parts";
+import HeadTags from "../layouts/HeadTags.astro";
+import HeadExtras from "./HeadExtras.astro";
+import { headFor } from "./heads";
+
+const { page } = Astro.props as OwnFrameProps;
+const { props, writing, keys, story } = headFor(page, Astro.site!);
+---
+<HeadTags {...props} />
+<HeadExtras writing={writing} keys={keys} story={story} />

@@ -1,29 +1,8 @@
 ---
-// Base layout: meta tags, Open Graph, structured data, favicons, fonts.
-import { sitewideGraph } from "../data/site-schema";
-export interface Props {
-  title?: string;
-  description?: string;
-  ogImage?: string;
-  ogType?: string;
-  ogImageWidth?: number;
-  ogImageHeight?: number;
-  noindex?: boolean;
-  graph?: object[];
-}
-const {
-  title = "Lawrence Winnerman | Writer and Strategist",
-  description = "Lawrence Winnerman, Gen X writer and strategist, on AI and work, American democracy, and the near future. Essays, fiction, a podcast, and consulting.",
-  ogImage = "/og/og-default-1280x720.png",
-  ogType = "website",
-  ogImageWidth = 1280,
-  ogImageHeight = 720,
-  noindex = false,
-  graph = [],
-} = Astro.props;
-// Pages build as files (/writing.html) but answer without .html or a trailing slash (relay entry 127).
-const canonical = new URL(Astro.url.pathname.replace(/(?:\/index)?\.html$/, "").replace(/^$/, "/"), Astro.site);
-const ld = { "@context": "https://schema.org", "@graph": [...sitewideGraph, ...graph] };
+// Base layout: meta tags, Open Graph, structured data, favicons, fonts. The tags are HeadTags.astro's, which a page in
+// Heliostet's frame draws too (src/lw/Head.astro).
+import HeadTags from "./HeadTags.astro";
+export type { Props } from "./HeadTags.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -31,40 +10,7 @@ const ld = { "@context": "https://schema.org", "@graph": [...sitewideGraph, ...g
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonical.href} />
-    {noindex && <meta name="robots" content="noindex" />}
-
-    <!-- Icons -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon-180.png" sizes="180x180" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#F4F1EB" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content={ogType} />
-    <meta property="og:site_name" content="Lawrence Winnerman" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical.href} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
-    <meta property="og:image:width" content={String(ogImageWidth)} />
-    <meta property="og:image:height" content={String(ogImageHeight)} />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Typography: Adobe Fonts kit qbo5oht (Arno Pro + Acumin Pro, 8 faces) -->
-    <link rel="preconnect" href="https://use.typekit.net" />
-    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
-    <link rel="stylesheet" href="https://use.typekit.net/qbo5oht.css" />
-
-    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
-
-    <link rel="alternate" type="application/rss+xml" title="The Hinge & The Near Field" href="https://lwinner.substack.com/feed" />
-    <link rel="sitemap" href="/sitemap.xml" />
+    <HeadTags {...Astro.props} />
     <slot name="head" />
   </head>
   <body>

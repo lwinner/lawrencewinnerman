@@ -1,8 +1,10 @@
 // The head of each page the site draws itself (relay entry 127, decision 0019): the title, description, and
 // structured data each page passed its Base layout before it moved onto Heliostet, now given by src/lw/Frame.astro.
-import { PERSON_ID, WEBSITE_ID } from "../data/site-schema";
+import type { OwnFrameProps } from "@vellumandvolt/heliostet/parts";
+import { PERSON_ID, WEBSITE_ID, homeGraph } from "../data/site-schema";
 import { stories } from "../lib/stories";
 import type { Story } from "../lib/stories";
+type OwnPage = OwnFrameProps["page"];
 
 /** /writing: every story, as a CollectionPage. */
 export function writingHead(site: URL) {
@@ -96,4 +98,21 @@ export function storyHead(site: URL, slug: string) {
     },
   ];
   return { title: `${s.title} | Lawrence Winnerman`, description, date: s.date, tags: s.tags, image: s.image ?? undefined, imageWidth: s.imageWidth, imageHeight: s.imageHeight, ld };
+}
+
+/** The head a page passes Base (HeadTags), by its page file's frameOptions.head or its collection, and the tags it
+ *  adds beyond them (HeadExtras): one choice, made here, for src/lw/Frame.astro and src/lw/Head.astro alike. */
+export function headFor(page: OwnPage, site: URL) {
+  const which = page.options.head;
+  const writing = which === "writing" ? writingHead(site) : null;
+  const keys = which === "keys" ? keysHead(site) : null;
+  const story = page.entry?.collection === "stories" ? storyHead(site, page.entry.params.slug ?? "") : null;
+  const props =
+    which === "home" ? { ogImage: "/og/og-home-1280x720.png", graph: homeGraph }
+    : writing ? { title: writing.title, description: writing.description }
+    : keys ? { title: keys.title, description: keys.description, ogType: "article" }
+    : story ? { title: story.title, description: story.description, ogImage: story.image, ogType: "article", ogImageWidth: story.imageWidth, ogImageHeight: story.imageHeight }
+    : which === "not-found" ? { title: "Page Not Found | Lawrence Winnerman", description: "This page isn’t here. Find Lawrence Winnerman's essays, fiction, and consulting from the homepage.", noindex: true }
+    : { title: page.seo?.title ?? page.title, description: page.seo?.description, noindex: page.seo?.noindex === true };
+  return { props, writing, keys, story };
 }
