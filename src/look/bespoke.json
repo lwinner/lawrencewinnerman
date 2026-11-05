@@ -114,6 +114,28 @@
     "label": {
       "textTransform": "uppercase",
       "usage": "Eyebrows, uppercase, as the site sets them."
-    }
+    },
+    "groups": [
+      {
+        "name": "Display",
+        "family": "display",
+        "styles": [
+          {
+            "name": "display-xl",
+            "fontSize": "96px",
+            "lineHeight": "94px",
+            "fontWeight": 700,
+            "usage": "The hero name, as today: Arno Display 700, at its widest size (clamp 48 to 96)."
+          },
+          {
+            "name": "headline",
+            "fontSize": "48px",
+            "lineHeight": "52px",
+            "fontWeight": 700,
+            "usage": "Section headings, as today: Arno Subhead 700, at their widest size (clamp 30 to 48)."
+          }
+        ]
+      }
+    ]
   }
 }

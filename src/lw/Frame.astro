@@ -26,6 +26,8 @@ const props =
   : { title: page.seo?.title ?? page.title, description: page.seo?.description, noindex: page.seo?.noindex === true };
 ---
 <Base {...props}>
+  {/* What Heliostet puts in the head for a page of its parts (their stylesheet), passed on to Base's head. */}
+  <slot name="head" slot="head" />
   {writing && <script slot="head" type="application/ld+json" set:html={JSON.stringify(writing.ld)} />}
   {keys && (
     <Fragment slot="head">

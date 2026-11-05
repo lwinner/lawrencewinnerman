@@ -3,11 +3,7 @@
   "id": "home",
   "address": "/",
   "title": "Lawrence Winnerman",
-  "header": "part",
-  "frame": "none",
-  "frameOptions": {
-    "head": "home"
-  },
+  "header": "hello",
   "rows": [
     {
       "id": "top",
@@ -15,8 +11,12 @@
         {
           "id": "top",
           "type": "hello",
-          "variant": "lw-hero",
+          "variant": "full",
           "fields": {
+            "mark": {
+              "src": "/sigil-master.svg",
+              "alt": "Lawrence Winnerman’s sigil, the letters L and W as nested red chevrons."
+            },
             "name": "Lawrence Winnerman",
             "tagline": "Writing the hinge. Building the future.",
             "roles": [
@@ -25,7 +25,36 @@
               "Strategist",
               "Podcaster"
             ],
-            "sentence": "Lawrence Winnerman is a Gen X writer and strategist working the seam where institutions break: what comes next, and how we build it."
+            "sentence": "Lawrence Winnerman is a Gen X writer and strategist working the seam where institutions break: what comes next, and how we build it.",
+            "headshot": {
+              "src": "/images/lawrence-winnerman-headshot-192.jpg",
+              "alt": "Lawrence Winnerman"
+            },
+            "buttons": [
+              {
+                "link": {
+                  "to": "#featured",
+                  "label": "Read the latest"
+                },
+                "style": "button"
+              },
+              {
+                "link": {
+                  "to": "#consulting",
+                  "label": "Work with me"
+                },
+                "style": "outline"
+              },
+              {
+                "link": {
+                  "to": "https://calendar.app.google/f1672UKQNTGLXVPY6",
+                  "label": "Book a call"
+                },
+                "style": "link"
+              }
+            ],
+            "tall": true,
+            "rule": true
           }
         }
       ]
@@ -36,8 +65,9 @@
         {
           "id": "featured",
           "type": "list",
-          "variant": "lw-featured",
+          "variant": "cards",
           "fields": {
+            "heading": "Just published.",
             "query": {
               "source": "stories",
               "count": 6,
@@ -53,11 +83,105 @@
         {
           "id": "work",
           "type": "prose",
-          "variant": "lw-work",
+          "variant": "section",
           "fields": {
             "eyebrow": "The work",
             "heading": "Essays, Fiction, and the Podcast",
-            "body": "These started as side projects that didn’t know they were supposed to stay small. They’re related—variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it—but they’re also genuinely their own things. I run them all because I can’t seem to stop."
+            "body": "*These started as side projects that didn’t know they were supposed to stay small. They’re related—variations on paying close attention to what’s happening in politics, technology, and culture, and trying to make something useful from it—but they’re also genuinely their own things. I run them all because I can’t seem to stop.*"
+          }
+        },
+        {
+          "id": "work-featured",
+          "type": "project-cards",
+          "variant": "grid",
+          "fields": {
+            "cards": [
+              {
+                "name": "The Hinge & The Near Field",
+                "role": "Writer and Publisher",
+                "line": "My Substack. Essays on AI and work, democracy and power, and the near future; near-future scenarios;",
+                "status": "active",
+                "to": {
+                  "to": "https://lwinner.substack.com/",
+                  "label": "Visit"
+                }
+              },
+              {
+                "name": "The Daily Whatever Show",
+                "role": "Co-host and Co-owner",
+                "line": "Satire and news commentary I co-host and co-own with Dana DuBois, my closest friend for more than four decades.",
+                "status": "active",
+                "to": {
+                  "to": "https://www.thedailywhatevershow.com/",
+                  "label": "Visit"
+                }
+              },
+              {
+                "name": "The Shattered World",
+                "role": "Author",
+                "line": "My speculative-fiction series. Book One, Light Shines Through, is serializing chapter by chapter on The Hinge & The Near Field.",
+                "status": "active",
+                "to": {
+                  "to": "https://lwinner.substack.com/",
+                  "label": "Visit"
+                }
+              }
+            ],
+            "visit": true,
+            "columns": "3"
+          }
+        },
+        {
+          "id": "work-also",
+          "type": "project-cards",
+          "variant": "grid",
+          "fields": {
+            "heading": "Also made",
+            "cards": [
+              {
+                "name": "Moondark",
+                "role": "Creator",
+                "line": "A web app that tells you whether the Moon is void of course right now, for astrologers, witches, and anyone who has learned the hard way not to schedule…",
+                "status": "active",
+                "to": {
+                  "to": "https://moondark.app/",
+                  "label": "Visit"
+                }
+              },
+              {
+                "name": "alpacalunch",
+                "role": "Founder",
+                "line": "A T-shirt and merch shop for rebels, ranters, and smartasses: funny, political, occasionally vulgar, and proudly left-leaning. Yes, the name is one word.",
+                "status": "active",
+                "to": {
+                  "to": "https://alpacalunch.com/",
+                  "label": "Visit"
+                }
+              },
+              {
+                "name": "genXy",
+                "role": "Co-founder",
+                "line": "A generational-writing publication on Medium, where I write alongside other Gen X voices.",
+                "status": "active",
+                "to": {
+                  "to": "https://medium.com/genxy",
+                  "label": "Visit"
+                }
+              },
+              {
+                "name": "Peptidings",
+                "role": "Founder",
+                "line": "A serious publication on peptide science: careful sourcing, no hype. On hiatus for now.",
+                "status": "on hiatus",
+                "to": {
+                  "to": "https://peptidings.com/",
+                  "label": "Visit"
+                }
+              }
+            ],
+            "headingStyle": "label",
+            "columns": "4",
+            "visit": true
           }
         }
       ]
@@ -68,12 +192,17 @@
         {
           "id": "writing",
           "type": "list",
-          "variant": "lw-recent",
+          "variant": "cards",
           "fields": {
+            "heading": "Recent stories.",
             "query": {
               "source": "stories",
               "count": 4,
               "sort": "newest"
+            },
+            "moreLink": {
+              "to": "/latest",
+              "label": "All my writing"
             }
           }
         }
@@ -85,11 +214,50 @@
         {
           "id": "consulting",
           "type": "prose",
-          "variant": "lw-consulting",
+          "variant": "section",
           "fields": {
             "eyebrow": "Hire the strategist",
             "heading": "Consulting and Strategy",
             "body": "I take on a small number of engagements as projects, retainers, or advisory hours, for technology companies and independent media. Clients stay confidential."
+          }
+        },
+        {
+          "id": "consulting-services",
+          "type": "services",
+          "variant": "grid",
+          "fields": {
+            "label": "Consulting services",
+            "items": [
+              {
+                "title": "Content strategy and search",
+                "line": "For publishers and newsletters: search and answer-engine optimization, story-page systems, and the work you see on this site."
+              },
+              {
+                "title": "Fractional operations leadership",
+                "line": "For independent media companies that need an operator: the job I did as COO of Blue Amp Media."
+              },
+              {
+                "title": "AI-assisted editorial operations",
+                "line": "Skill-based workflows for small teams that want them, designed by someone who runs them every day."
+              },
+              {
+                "title": "Program leadership for complex launches",
+                "line": "Twenty-five years of it, including Microsoft-scale programs across three continents."
+              }
+            ],
+            "card": "open"
+          }
+        },
+        {
+          "id": "consulting-book",
+          "type": "booking",
+          "variant": "inline",
+          "fields": {
+            "heading": "Let’s talk.",
+            "bookingLink": {
+              "to": "https://calendar.app.google/f1672UKQNTGLXVPY6",
+              "label": "Book a call"
+            }
           }
         }
       ]
@@ -100,7 +268,7 @@
         {
           "id": "about",
           "type": "prose",
-          "variant": "lw-bio",
+          "variant": "section",
           "fields": {
             "eyebrow": "One person, many surfaces",
             "heading": "About Lawrence Winnerman",
@@ -114,10 +282,12 @@
       "main": [
         {
           "id": "quote",
-          "type": "prose",
-          "variant": "lw-pull",
+          "type": "quote",
+          "variant": "pull",
           "fields": {
-            "body": "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it’s the only thing that ever has.\n\nMargaret Mead"
+            "quote": "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it’s the only thing that ever has.",
+            "name": "Margaret Mead",
+            "permission": true
           }
         }
       ]
@@ -128,7 +298,7 @@
         {
           "id": "subscribe",
           "type": "subscribe",
-          "variant": "lw-subscribe",
+          "variant": "card",
           "fields": {
             "eyebrow": "Subscribe",
             "heading": "Get the next one in your inbox.",
@@ -147,11 +317,120 @@
         {
           "id": "contact",
           "type": "prose",
-          "variant": "lw-contact",
+          "variant": "section",
           "fields": {
             "eyebrow": "The door is open",
             "heading": "Contact, Speaking, and Press",
-            "body": "For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at"
+            "body": "For bookings, interviews, consulting, collaborations, or just to say hello, book a time or write to me at [hello@lawrencewinnerman.com](mailto:hello@lawrencewinnerman.com).",
+            "action": {
+              "to": "https://calendar.app.google/f1672UKQNTGLXVPY6",
+              "label": "Book a call"
+            },
+            "secondAction": {
+              "to": "mailto:hello@lawrencewinnerman.com",
+              "label": "Email me"
+            }
+          }
+        },
+        {
+          "id": "contact-asks",
+          "type": "services",
+          "variant": "list",
+          "fields": {
+            "label": "What to ask about",
+            "items": [
+              {
+                "title": "Podcasts and press",
+                "line": "Long-form audio, panels, and on-the-record commentary on AI and Gen X workers, democracy as infrastructure, and the generational turning."
+              },
+              {
+                "title": "Speaking",
+                "line": "Running a one-person media company with AI, and what the near future asks of the rest of us."
+              },
+              {
+                "title": "Consulting",
+                "line": "Content strategy, search, operations, and AI-assisted editorial work. Book a call and we’ll see if it fits."
+              }
+            ]
+          }
+        },
+        {
+          "id": "contact-links",
+          "type": "links",
+          "variant": "inline",
+          "fields": {
+            "links": [
+              {
+                "label": "Substack",
+                "to": {
+                  "to": "https://lwinner.substack.com/"
+                },
+                "icon": "substack"
+              },
+              {
+                "label": "LinkedIn",
+                "to": {
+                  "to": "https://www.linkedin.com/in/lawrencewinnerman"
+                },
+                "icon": "linkedin"
+              },
+              {
+                "label": "Bluesky",
+                "to": {
+                  "to": "https://bsky.app/profile/lwinner.bsky.social"
+                },
+                "icon": "bluesky"
+              },
+              {
+                "label": "X",
+                "to": {
+                  "to": "https://x.com/L_Winnerman"
+                },
+                "icon": "link"
+              },
+              {
+                "label": "Threads",
+                "to": {
+                  "to": "https://www.threads.net/@lwinnerman"
+                },
+                "icon": "threads"
+              },
+              {
+                "label": "Instagram",
+                "to": {
+                  "to": "https://www.instagram.com/lwinnerman"
+                },
+                "icon": "instagram"
+              },
+              {
+                "label": "Medium",
+                "to": {
+                  "to": "https://medium.com/@lwinner"
+                },
+                "icon": "medium"
+              },
+              {
+                "label": "TikTok",
+                "to": {
+                  "to": "https://www.tiktok.com/@lawrencewinnerman"
+                },
+                "icon": "link"
+              },
+              {
+                "label": "Pinterest",
+                "to": {
+                  "to": "https://www.pinterest.com/lwinnerman"
+                },
+                "icon": "link"
+              },
+              {
+                "label": "YouTube",
+                "to": {
+                  "to": "https://www.youtube.com/@LawrenceWinnerman"
+                },
+                "icon": "youtube"
+              }
+            ]
           }
         }
       ]
