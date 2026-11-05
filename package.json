@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "fetch:recent": "node scripts/fetch-recent.mjs",
+    "check:head": "node scripts/check-head.mjs",
     "build": "astro build",
     "preview": "wrangler dev",
     "astro": "astro"
