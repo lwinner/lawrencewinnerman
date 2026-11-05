@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@vellumandvolt/heliostet": "file:vendor/vellumandvolt-heliostet-0.13.18.tgz",
+    "@vellumandvolt/heliostet": "file:vendor/vellumandvolt-heliostet-0.13.20.tgz",
     "astro": "7.3.8",
     "fast-xml-parser": "4.5.7"
   },

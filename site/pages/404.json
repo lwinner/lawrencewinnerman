@@ -2,27 +2,55 @@
   "$schema": "../../node_modules/@vellumandvolt/heliostet/schema/page.schema.json",
   "id": "404",
   "address": "/404",
-  "title": "Page Not Found",
+  "title": "That page isn’t here.",
+  "eyebrow": "404",
+  "intro": "It may have moved, or the link may be off by a letter. Here’s where to go instead.",
   "seo": {
     "noindex": true
   },
-  "header": "part",
-  "frame": "none",
+  "header": "page",
+  "ownFrame": false,
   "frameOptions": {
     "head": "not-found"
   },
   "rows": [
     {
-      "id": "missing",
+      "id": "go",
+      "tight": true,
       "main": [
         {
-          "id": "missing",
-          "type": "prose",
-          "variant": "lw-not-found",
+          "id": "go",
+          "type": "links",
+          "variant": "buttons",
           "fields": {
-            "eyebrow": "404",
-            "heading": "That page isn’t here.",
-            "body": "It may have moved, or the link may be off by a letter. Here’s where to go instead."
+            "main": true,
+            "links": [
+              {
+                "label": "Home",
+                "to": {
+                  "to": "/"
+                }
+              },
+              {
+                "label": "All writing",
+                "to": {
+                  "to": "/writing"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "latest",
+          "type": "list",
+          "variant": "line",
+          "fields": {
+            "heading": "The latest",
+            "query": {
+              "source": "stories",
+              "count": 1,
+              "sort": "newest"
+            }
           }
         }
       ]
