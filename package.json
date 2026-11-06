@@ -8,6 +8,7 @@
     "start": "astro dev",
     "fetch:recent": "node scripts/fetch-recent.mjs",
     "check:head": "node scripts/check-head.mjs",
+    "size:images": "node scripts/size-story-images.mjs",
     "build": "astro build",
     "preview": "wrangler dev",
     "astro": "astro"

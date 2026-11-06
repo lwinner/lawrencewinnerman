@@ -6,6 +6,8 @@
 // Lawrence plus links to every place the full piece is published. The note is
 // original text that lives on this domain (the point, for search), and the
 // links send readers on to Substack or Medium.
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import StoryCard from "../../components/StoryCard.astro";
 import { stories, type Story, longDate } from "../../lib/stories";
 
@@ -16,6 +18,11 @@ const s: Story = stories.find((x) => x.slug === entry?.params.slug)!;
 const others = stories.filter((o) => o.slug !== s.slug);
 const tagged = others.filter((o) => o.tags.some((t) => s.tags.includes(t)));
 const related = [...tagged, ...others.filter((o) => !tagged.includes(o))].slice(0, 3);
+
+// The picture is the page's Largest Contentful Paint: a phone takes its 720-pixel copy (npm run size:images), when
+// there is one, and a wider screen the original. The copy sits at public/stories/w720/<name>.webp.
+const copy = s.image && /^\/stories\/[^/]+\.(jpe?g|png|webp)$/i.test(s.image) ? s.image.replace(/^\/stories\/([^/]+)\.[^.]+$/, "/stories/w720/$1.webp") : null;
+const srcset = copy && existsSync(join(process.cwd(), "public", copy)) ? `${copy} 720w, ${s.image} ${s.imageWidth ?? 1280}w` : undefined;
 
 ---
   <article class="story-page">
@@ -28,7 +35,7 @@ const related = [...tagged, ...others.filter((o) => !tagged.includes(o))].slice(
 
     {s.image && (
       <figure class="container wide hero">
-        <img src={s.image} alt={s.imageAlt ?? ""} width={s.imageWidth ?? 1280} height={s.imageHeight ?? 720} loading="eager" fetchpriority="high" />
+        <img src={s.image} alt={s.imageAlt ?? ""} srcset={srcset} sizes={srcset ? "(min-width: 1120px) 1024px, calc(100vw - 48px)" : undefined} width={s.imageWidth ?? 1280} height={s.imageHeight ?? 720} loading="eager" fetchpriority="high" />
       </figure>
     )}
 
